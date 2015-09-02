@@ -1,0 +1,248 @@
+@import ('normalize.css');
+@import ('vars');
+@import ('mixins');
+@import (nib);
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+    font-family: fontBody;
+    font-size: 100%;
+    line-height: 1.618;
+    min-height: 100%;
+    overflow: visible;
+}
+body {
+    display: flex;
+    overflow-y: hidden;
+    flex-direction: column;
+    color: colorNeutralDarkest;
+    font-size: 1rem;
+    min-height: 100vh;
+    
+}
+h1, h2, h3, h4, h5, h6 {
+    color: colorCool
+    letter-spacing: .1ch;
+    font-family: fontHeaders;
+    font-weight: bold;
+    margin: 0 0 .618rem 0;
+}
+
+p {
+  margin: 1.618rem 0 .618em 0;  
+}
+a {
+  text-decoration: none;
+  outline: none;
+  &:hover, &:focus, &:active {
+
+  }
+}
+table {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+thead {
+  order: -1;
+}
+tbody {
+  flex-grow: 1;
+}
+tfoot {
+  order: 1;
+}
+thead,
+tbody,
+tfoot {
+  display: inherit;
+  flex-direction: inherit;
+  justify-content: space-between;
+  align-items: stretch;
+}
+tr {
+  display: inherit;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-grow: 1;
+}
+td,
+th {
+  flex-basis: 15%;
+  flex-grow: 2;
+  text-align: left;
+}
+.table--reverse {
+  flex-direction: row;
+  min-height: 8em;
+}
+.table--reverse tr {
+  flex-direction: column;
+}
+/*===============
+    #Layout
+===============*/
+headerHeight = 8vh;
+sideWidth = 350px;
+footerHeight= 35px;
+
+.ge-header,
+.ge-footer {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 1;
+    padding: .618rem;
+}
+.ge-header {
+    flex-direction: row;
+    width: 80%
+    height: 120px;
+    min-height: headerHeight;
+    flex-wrap: wrap;
+    &__title, &__subtitle {
+        margin: 0;
+        
+    }
+    &__title {
+      margin: 50px 0 0 150px;
+    }
+    &__subtitle {
+      flex-grow: 1;
+    }
+    &__logo {
+      width: 279px;
+      height: 93px;
+      position: absolute;
+      z-index: -1;
+    }
+}
+.main {
+    display: flex;
+    flex-grow: 1;
+    padding: .618rem;
+    flex-basis: 75vh;
+    height: unquote('calc(100vh - ')headerHeight unquote(' - ')footerHeight unquote(')');
+    overflow: hidden;
+}
+/*===============
+    #Main Area
+===============*/
+
+
+/*===============
+    #Slide Navigation
+===============*/
+
+.slideNav {
+  display: block;
+  overflow-y: scroll;
+  border-right: 12px solid colorNeutralDarkest;
+  height: 80vh;
+  width: sideWidth;
+  margin: 0 1.618em 0 0;
+  flex-shrink: 0;
+  smoothTransition();
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 25%;
+    width: (sideWidth - 15);
+    border: 2px solid colorCool;
+    margin: 0 0 .618em 0
+    overflow: hidden;
+    * {
+      color: #343434;
+    }
+    .slide {
+      padding: 0;
+      height: auto;
+      width: auto;
+      transform-origin: top center;
+      transform: scale(.9, .4);
+    }
+  }
+  &.ui-collapsed {
+    width: 0;
+  }
+}
+/*===============
+    #Slides
+===============*/
+
+.slides {
+    position: relative;
+    display: flex;
+    height: 80vh;
+    width: unquote('calc(100vw - ') sideWidth unquote(')');
+    overflow: hidden;
+}
+.slide {
+    flex-shrink: 0;
+    flex-grow: 0;
+    position: relative;
+    float:left;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 1.618rem .618em;
+    height: 100%;
+    width: unquote('calc(100vw - ') sideWidth unquote(')');
+    border-radius: 4px;
+    margin: 0 0vw 0 0;
+    background-color: #DAE4EC;
+    transition: .25s all ease-in-out;
+    justify-content: space-between;
+    smoothTransition();
+    &__header {
+
+    }
+    &__footer {
+        font-size: .85em;
+    }
+    &.ui-current {
+      
+    }
+    &.ui-prev {
+        margin-left: -100vw;
+
+    }
+    &.ui-next {
+
+    }
+    
+}
+.ge-footer {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 1;
+    height: 49px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    &__legalese {
+        color: colorNeutralLightest
+    }
+}
+
+
+/*===============
+    #Transition effects
+===============*/
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  animation-name: fadeIn
+  animation-duration: .75s;
+}
