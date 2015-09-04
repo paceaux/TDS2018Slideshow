@@ -132,31 +132,7 @@ slideshow.modules.navigation = (function () {
         }
     };
     evtCbs = {
-        toggleFullscreen: function () {
-          if (!document.fullscreenElement &&    // alternative standard method
-              !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
-            if (document.documentElement.requestFullscreen) {
-              document.documentElement.requestFullscreen();
-            } else if (document.documentElement.msRequestFullscreen) {
-              document.documentElement.msRequestFullscreen();
-            } else if (document.documentElement.mozRequestFullScreen) {
-              document.documentElement.mozRequestFullScreen();
-            } else if (document.documentElement.webkitRequestFullscreen) {
-              document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
-            }
-          } else {
-            if (document.exitFullscreen) {
-              document.exitFullscreen();
-            } else if (document.msExitFullscreen) {
-              document.msExitFullscreen();
-            } else if (document.mozCancelFullScreen) {
-              document.mozCancelFullScreen();
-            } else if (document.webkitExitFullscreen) {
-              document.webkitExitFullscreen();
-            }
-          }
 
-        },
         keyup: function (e) {
             e.preventDefault();
             switch (e.which) {
@@ -179,10 +155,25 @@ slideshow.modules.navigation = (function () {
                 default:
                 break;
             }
+        },
+        navClick: function (e) {
+            e.preventDefault();
+            console.log(e);
+            var slides = document.querySelector('.slides'),
+                humanID = e.target.href.slice(e.target.href.indexOf('#')).replace('#',''),
+                targetSlide = slides.querySelector('#'+humanID).parentNode,
+                targetIndex = targetSlide.dataset.slideindex;
+
+            slideshow.modules.navigation.navigate.gotoSlide(targetIndex);
+            history.pushState(null,null,'#'+humanID);
+            console.log(humanID, targetIndex);
         }
     };
     function bindUiEvts () {
         window.addEventListener('keyup', evtCbs.keyup);
+        [].forEach.call(document.querySelectorAll('.slideNav .list__item__link'), function (navLink) {
+            navLink.addEventListener('click', evtCbs.navClick);
+        })
     };
     init = function( ) {
         setupSlides();
@@ -258,6 +249,31 @@ slideshow.modules.ui = (function () {
         var sidebar = document.querySelector('.slideNav');
         sidebar.classList.toggle('ui-expandedfull');
     };
+    public.toggleFullscreen= function () {
+          if (!document.fullscreenElement &&    // alternative standard method
+              !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
+            if (document.documentElement.requestFullscreen) {
+              document.documentElement.requestFullscreen();
+            } else if (document.documentElement.msRequestFullscreen) {
+              document.documentElement.msRequestFullscreen();
+            } else if (document.documentElement.mozRequestFullScreen) {
+              document.documentElement.mozRequestFullScreen();
+            } else if (document.documentElement.webkitRequestFullscreen) {
+              document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+            }
+          } else {
+            if (document.exitFullscreen) {
+              document.exitFullscreen();
+            } else if (document.msExitFullscreen) {
+              document.msExitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+              document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) {
+              document.webkitExitFullscreen();
+            }
+          }
+
+    };
     evtCbs = {
         keydown: function (e) {
             if (e.ctrlKey) {
@@ -269,7 +285,7 @@ slideshow.modules.ui = (function () {
                     break;
                     case 70:
                     //f
-                    slideshow.modules.navigation.evtCbs.toggleFullscreen();
+                    slideshow.modules.ui.toggleFullscreen();
                     break;
                     case 83:
                     //s
@@ -284,15 +300,15 @@ slideshow.modules.ui = (function () {
                 }
             }
         },
-        popstate: function (e) {
+        pushHash: function (e) {
             console.log(e);
+
         }
     };
 
     function bindUiEvts() {
         window.addEventListener('keydown', evtCbs.keydown);
-        window.addEventListener('popstate', evtCbs.popstate);
-        window.addEventListener('hashchange', evtCbs.popstate);
+        window.addEventListener('hashchange', evtCbs.pushHash);
         //to do: add in the history API, Hash by titles or slide number
     };
     function init() {

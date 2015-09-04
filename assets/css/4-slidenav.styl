@@ -13,17 +13,30 @@
   flex-shrink: 0;
   flex-grow: 1;
   smoothTransition();
-  ul {
+  .list {
     box-sizing: border-box;
+    font-weight: bold;
     font-size: 1.5em
     list-style-type: none;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0 1em 1em 1.25em;
+    padding: 0 1em 1em 1.2em;
     height: 90%;
-    ul {
+    &__item {
+      &__link {
+        color: colorCoolDesat3
+        &:hover, &:focus {
+          color: colorCoolDesat2
+        }
+        &.visited {
+          color: colorCoolDesat1
+        }
+      }
+    }
+    .list {
       font-size: .75em;
+      font-weight: normal;
     }
   }
 }

@@ -399,18 +399,30 @@ th {
   flex-grow: 1;
   transition: all 0.3s ease-in-out;
 }
-.slideNav ul {
+.slideNav .list {
   box-sizing: border-box;
+  font-weight: bold;
   font-size: 1.5em;
   list-style-type: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 1em 1em 1.25em;
+  padding: 0 1em 1em 1.2em;
   height: 90%;
 }
-.slideNav ul ul {
+.slideNav .list__item__link {
+  color: #9fca7f;
+}
+.slideNav .list__item__link:hover,
+.slideNav .list__item__link:focus {
+  color: #b8d098;
+}
+.slideNav .list__item__link.visited {
+  color: #19503d;
+}
+.slideNav .list .list {
   font-size: 0.75em;
+  font-weight: normal;
 }
 .slideNav.ui-expandedfull + .slides {
   width: 0%;
@@ -658,7 +670,7 @@ figure pre {
 .prettyprint .pun,
 .prettyprint .opn,
 .prettyprint .clo {
-  color: #323f50;
+  color: #19503d;
 }
 .prettyprint .typ,
 .prettyprint .atn,
