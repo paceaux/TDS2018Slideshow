@@ -1,15 +1,26 @@
 
 /*===============
-    #Slides
+    #Slides fool
 ===============*/
-sideWidth = 350px;
+
+$sideWidth = 350px;
+
+
 .slides {
     position: relative;
     display: flex;
     height: 80vh;
-    width: unquote('calc(100vw - ') sideWidth unquote(')');
     overflow: hidden;
+    width: unquote('calc(100vw - ') $sideWidth unquote(')');
 }
+.slideNav.ui-collapsed + .slides {
+    width: 100%;
+    .slide {
+        width: 100%;
+    }
+
+}
+
 .slide {
     flex-shrink: 0;
     flex-grow: 0;
@@ -19,7 +30,7 @@ sideWidth = 350px;
     flex-direction: column;
     padding: 1.618rem .618em;
     height: 100%;
-    width: unquote('calc(100vw - ') sideWidth unquote(')');
+    width: unquote('calc(100vw - ') $sideWidth unquote(')');
     border-radius: 4px;
     margin: 0 0vw 0 0;
     background-color: #DAE4EC;

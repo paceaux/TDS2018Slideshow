@@ -275,6 +275,10 @@ slideshow.modules.ui = (function () {
                     //s
                     slideshow.modules.ui.toggleSidebar();
                     break;
+                    case 78:
+                    slideshow.modules.ui.toggleSidebar();
+                    //n
+                    break;
                     default: 
                     break;
                 }
