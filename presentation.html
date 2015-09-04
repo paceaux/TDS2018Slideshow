@@ -20,31 +20,59 @@
         <h1 class="ge-header__title">CSS3 and HTML5 for a Better Author Experience</h1>
     </header>
 <main class="main">
-    <nav class="slideNav">
-<ul>
-    <li>Introduction and Agenda</li>
-    <li>HTML
-        <ul>
-            <li>Introducing HTML5 Semantics </li>
-            <li>HTML5-inspired content modelling</li>
-            <li>Less Divy Views </li>
-        </ul>
-    </li>
-    <li>Layout
-        <ul>
-            <li>One Page template to rule them all</li>
-        </ul>
-    </li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-</ul>
-    </nav>
+<nav class="slideNav">
+    <ul class="list list--unordered">
+        <li class="list__item"><a href="#">Introduction and Goals</a></li>
+        <li class="list__item">HTML
+            <ul class="list list--unordered">
+                <li class="list__item"><a href="#html-semantics">Introducing HTML5 Semantics </a></li>
+                <li class="list__item"><a href="#html-content-modelling">HTML5-inspired content modelling</a></li>
+                <li class="list__item"><a href="#html-dediving-templates">De-diving templates and views</a></li>
+            </ul>
+        </a></li>
+        <li class="list__item">CSS
+            <ul class="list list--unordered">
+                <li class="list__item"><a href="#conditional-content-conundrums">Conditional Content Conundrums </a></li>
+                <li class="list__item"><a href="#counting-content-blocks">Counting Content Blocks</a></li>
+                <li class="list__item"><a href="#">Counting Content Blocks</a></li>
+
+            </ul>
+        </li>
+        <li class="list__item">Layout
+            <ul class="list list--unordered">
+                <li class="list__item"><a href="#">One Page template to rule them all</a></li>
+                <li class="list__item"><a href="#">One Page template to rule them all</a></li>
+            </ul>
+        </a></li>
+        <li class="list__item">JavaScript
+            <ul class="list list--unordered">
+                <li class="list__item"><a href="#"></a></li>
+                <li class="list__item"><a href="#"></a></li>
+
+            </ul>
+        </li>
+    </ul>
+</nav>
     <section class="slides"> <article class="slides__slide slide" data-title="">
-<header class="slide__header">
+<header class="slide__header" id="introduction">
         <h1 class="slide__header__title">
             Introduction
         </h1>
     </header>
+<div class="slide__content">
+
+<h2>Who am I?</h2>
+
+<p>Frank M. Taylor. A front-end developer who dabbles in Tridion</p>
+<p>
+I work at Tahzoo worldwide writing front-end code whose final destination is Tridion. I translate PSDs into markup, write jQuery plugins, build frameworks, and generally tinker with the web. 
+</p>
+
+<p>
+    
+</p>
+</div>
+
 <div class="slide__content">
 
 <h2>Why are we here?</h2>
@@ -63,29 +91,24 @@ I'm here because, as a front-end developer who works with CMS developers, I work
     </footer>
 </article>
 <article class="slides__slide slide" data-title="">
-<header class="slide__header" data-title="agenda">
+<header class="slide__header" id="html-semantics">
     <h1 class="slide__header__title">
-    On the Agenda
+    HTML
     </h1>
+    <h2 class="slide__header__subtitle">Introducing HTML5 Semantics</h2>
 </header>
 <div class="slide__content">
-<h2>What's on the Agenda</h2>
-<ul>
-    <li>HTML
-        <ul>
-            <li>Introducing HTML5 Semantics </li>
-            <li>HTML5-inspired content modelling</li>
-            <li>Less Divy Views </li>
-        </ul>
-    </li>
-    <li>Layout
-        <ul>
-            <li>One Page template to rule them all</li>
-        </ul>
-    </li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-</ul>
+<pre data-lang="html">
+    &lt;article>&lt;!--I'm syndicatable content --&gt;&lt;/article&gt;
+    &lt;section&gt;&lt;!-- I'm for a collection of similar pieces of content --&gt;&lt;/section&gt;
+    &lt;aside&gt;Not related to the stuff that's near by&lt;/aside&gt;
+    &lt;figure&gt;
+        &lt;!-- I make the content better and easier to understand. 
+        It doesn't matter where you put me --&gt;
+        &lt;figcaption&gt;explanatory caption&lt;/figcaption&gt;
+        
+    &lt;/figure&gt;
+</pre>
 
 </div>
 
@@ -94,10 +117,30 @@ I'm here because, as a front-end developer who works with CMS developers, I work
     </footer>
 </article>
 <article class="slides__slide slide" data-title="">
-<header class="slide__header">
+<header class="slide__header" id="html-content-modelling">
     <h1 class="slide__header__title">
-    Challenges with Content Authors
+        HTML
     </h1>
+    <h2 class="slide__header__subtitle">HTML5-inspired content modelling</h2>
+</header>
+<div class="slide__content">
+
+
+</div>
+
+
+
+
+    <footer class="slide__footer">
+        <small class="slide__footer__slideNum js-slideNum"></small>
+    </footer>
+</article>
+<article class="slides__slide slide" data-title="">
+<header class="slide__header" id="html-dediving-templates">
+    <h1 class="slide__header__title">
+    HTML
+    </h1>
+    <h2 class="slide__header__subtitle">Dediving templates and views</h2>
 </header>
 <div class="slide__content">
 <h2>Why are we here</h2>
@@ -114,49 +157,14 @@ I'm here because, as a front-end developer who works with CMS developers, I work
     </footer>
 </article>
 <article class="slides__slide slide" data-title="">
-<header class="slide__header">
+<header class="slide__header" id="conditional-content-conundrums">
     <h1 class="slide__header__title">
-    Challenges with Content Authors
+    CSS
     </h1>
+    <h2 class="slide__header__subtitle">Conditional Content Conundrums</h2>
 </header>
 <div class="slide__content">
-<h2>Why are we here</h2>
-<p>I'ts not just about the end-user!</p>
-<p>As implementers of content management systems, we don't have a responsibility to deliver coders</p>
-
-</div>
-
-
-
-
-    <footer class="slide__footer">
-        <small class="slide__footer__slideNum js-slideNum"></small>
-    </footer>
-</article>
-<article class="slides__slide slide" data-title="">
-<header class="slide__header" data-title="Introducing HTML5 Semantics">
-    <h1 class="slide__header__title">
-    On the Agenda
-    </h1>
-</header>
-<div class="slide__content">
-<h2>Panel one</h2>
-<ul>
-    <li>HTML
-        <ul>
-            <li>Introducing HTML5 Semantics </li>
-            <li>HTML5-inspired content modelling</li>
-            <li>Less Divy Views </li>
-        </ul>
-    </li>
-    <li>Layout
-        <ul>
-            <li>One Page template to rule them all</li>
-        </ul>
-    </li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-</ul>
+<h2>Here's a first panel</h2>
 
 </div>
 <div class="slide__content">
@@ -181,24 +189,61 @@ I'm here because, as a front-end developer who works with CMS developers, I work
 </div>
 <div class="slide__content">
 <h2>Panel three</h2>
-<ul>
-    <li>HTML
-        <ul>
-            <li>Introducing HTML5 Semantics </li>
-            <li>HTML5-inspired content modelling</li>
-            <li>Less Divy Views </li>
-        </ul>
-    </li>
-    <li>Layout
-        <ul>
-            <li>One Page template to rule them all</li>
-        </ul>
-    </li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-</ul>
+
 
 </div>
+
+    <footer class="slide__footer">
+        <small class="slide__footer__slideNum js-slideNum"></small>
+    </footer>
+</article>
+<article class="slides__slide slide" data-title="">
+<header class="slide__header" id="counting-content-blocks">
+    <h1 class="slide__header__title">
+    CSS
+    </h1>
+    <h2 class="slide__header__subtitle">Counting Content Blocks</h2>
+</header>
+<div class="slide__content">
+<h2>Why are we here</h2>
+<p>I'ts not just about the end-user!</p>
+<p>As implementers of content management systems, we don't have a responsibility to deliver coders</p>
+<pre class="prettyprint" data-lang="css">
+:nth-child {
+    
+}
+</pre>
+
+</div>
+
+
+
+
+    <footer class="slide__footer">
+        <small class="slide__footer__slideNum js-slideNum"></small>
+    </footer>
+</article>
+<article class="slides__slide slide" data-title="">
+<header class="slide__header" id="scalable-layouts">
+    <h1 class="slide__header__title">
+    CSS
+    </h1>
+    <h2 class="slide__header__subtitle">Scalable Layouts</h2>
+</header>
+<div class="slide__content">
+<h2>Why are we here</h2>
+<p>I'ts not just about the end-user!</p>
+<p>As implementers of content management systems, we don't have a responsibility to deliver coders</p>
+<pre class="prettyprint" data-lang="css">
+:nth-child {
+    
+}
+</pre>
+
+</div>
+
+
+
 
     <footer class="slide__footer">
         <small class="slide__footer__slideNum js-slideNum"></small>

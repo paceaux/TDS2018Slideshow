@@ -571,7 +571,7 @@ th {
 [contenteditable] {
   display: block;
   resize: both;
-  min-height: 4em;
+  min-height: 12em;
   border: 1px dashed transparent;
 }
 [contenteditable="true"]:focus,
@@ -582,7 +582,7 @@ th {
   border: 1px dashed colorNeturalLightest;
 }
 pre {
-  max-height: 12em;
+  min-height: 12em;
   overflow-y: scroll;
 }
 pre,
@@ -594,8 +594,8 @@ pre,
   padding: 10px 0 10px 3em;
   letter-spacing: -1px;
   margin-bottom: 1em;
-  width: 106%;
-  background-color: $gray-1;
+  width: 90%;
+  background-color: #dbdbdb;
   left: 3em;
   position: relative;
   overflow: scroll;
@@ -617,6 +617,12 @@ pre[data-lang]:after,
 }
 pre[data-lang="go"] {
   color: #333;
+}
+pre[data-lang="html"]:after {
+  color: #92278f;
+}
+pre[data-lang="js"]:after {
+  color: #144b7e;
 }
 code {
   font-size: 95%;
@@ -642,7 +648,7 @@ figure pre {
 }
 .prettyprint .com {
 /* a comment */
-  color: $gray-3;
+  color: #646464;
   font-style: italic;
 }
 .prettyprint .lit {
@@ -652,7 +658,7 @@ figure pre {
 .prettyprint .pun,
 .prettyprint .opn,
 .prettyprint .clo {
-  color: #646464;
+  color: #323f50;
 }
 .prettyprint .typ,
 .prettyprint .atn,

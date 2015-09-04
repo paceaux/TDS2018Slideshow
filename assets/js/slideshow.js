@@ -232,14 +232,6 @@ slideshow.modules.navBuilder = (function () {
         return slideLink;
     };
 
-    function setupNavItems() {
-        var slides = getSlideArray();
-        for (var i=0,newNavItem, slide; i< slides.length; i++) {
-            slide = slides[i];
-            newNavItem = navItem(slide);  
-            navContainer.appendChild(newNavItem);  
-        }
-    };
     function bindUiEvts() {
 
     };

@@ -13,7 +13,7 @@
 [contenteditable="true"], [contenteditable] {
   display: block;
   resize: both;
-  min-height: 4em;
+  min-height: 12em;
   border: 1px dashed transparent;
   &:focus, &:active{
     outline: none;
@@ -21,7 +21,7 @@
   }
 }
 pre{
-  max-height: 12em;
+  min-height: 12em;
   overflow-y: scroll;
 }
 pre, [contenteditable="true"], [contenteditable] {
@@ -31,8 +31,8 @@ pre, [contenteditable="true"], [contenteditable] {
   padding: 10px 0 10px 3em;
   letter-spacing: -1px;
   margin-bottom: 1em;
-  width: 106%;
-  background-color: $gray-1;
+  width: 90%;
+  background-color: colorNeutralLight;
   left:  3em;
   position: relative;
   overflow: scroll;
@@ -55,7 +55,19 @@ pre, [contenteditable="true"], [contenteditable] {
 pre[data-lang="go"] {
   color: #333;
 }
+pre[data-lang="css"] {
 
+}
+pre[data-lang="html"] {
+  &:after {
+    color: colorWarm;
+  }
+}
+pre[data-lang="js"] {
+  &:after {
+    color: colorCool;
+  }
+}
 code {
   font-size: 95%;
   font-family: 'Source Code Pro', 'Courier New', monospace;
@@ -80,7 +92,7 @@ figure{
   color: rgb(0, 102, 204);
 }
 .prettyprint .com { /* a comment */
-  color: $gray-3; //rgb(127, 127, 127);
+  color: colorNeutralDarkest; //rgb(127, 127, 127);
   font-style: italic;
 }
 .prettyprint .lit { /* a literal value */
@@ -89,7 +101,7 @@ figure{
 .prettyprint .pun, /* punctuation, lisp open bracket, lisp close bracket */
 .prettyprint .opn,
 .prettyprint .clo {
-  color: colorNeutralDarkest; //rgb(127, 127, 127);
+  color: colorCoolDesat1; //rgb(127, 127, 127);
 }
 .prettyprint .typ, /* a type name */
 .prettyprint .atn, /* a markup attribute name */
