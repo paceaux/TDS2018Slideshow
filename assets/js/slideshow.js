@@ -260,13 +260,21 @@ slideshow.modules.ui = (function () {
 
     public.toggleSidebar = function () {
         var sidebar = document.querySelector('.slideNav');
-        sidebar.classList.toggle('ui-collapsed')
+        sidebar.classList.toggle('ui-collapsed');
+    };
+    public.toggleMain = function () {
+        var sidebar = document.querySelector('.slideNav');
+        sidebar.classList.toggle('ui-expandedfull');
     };
     evtCbs = {
         keydown: function (e) {
             if (e.ctrlKey) {
                 console.log(e.which);
                 switch (e.which) {
+                    case 73:
+                    //i
+                    slideshow.modules.ui.toggleMain();
+                    break;
                     case 70:
                     //f
                     slideshow.modules.navigation.evtCbs.toggleFullscreen();

@@ -12,14 +12,9 @@ $sideWidth = 350px;
     height: 80vh;
     overflow: hidden;
     width: unquote('calc(100vw - ') $sideWidth unquote(')');
+    smoothTransition()
 }
-.slideNav.ui-collapsed + .slides {
-    width: 100%;
-    .slide {
-        width: 100%;
-    }
 
-}
 
 .slide {
     flex-shrink: 0;
