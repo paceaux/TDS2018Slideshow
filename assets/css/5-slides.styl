@@ -1,0 +1,78 @@
+
+/*===============
+    #Slides
+===============*/
+sideWidth = 350px;
+.slides {
+    position: relative;
+    display: flex;
+    height: 80vh;
+    width: unquote('calc(100vw - ') sideWidth unquote(')');
+    overflow: hidden;
+}
+.slide {
+    flex-shrink: 0;
+    flex-grow: 0;
+    position: relative;
+    float:left;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 1.618rem .618em;
+    height: 100%;
+    width: unquote('calc(100vw - ') sideWidth unquote(')');
+    border-radius: 4px;
+    margin: 0 0vw 0 0;
+    background-color: #DAE4EC;
+    transition: .25s all ease-in-out;
+    justify-content: flex-start;
+    smoothTransition();
+    &__header {
+        order: 0;
+    }
+    &__footer {
+        font-size: .85em;
+        order: 2;
+        position: absolute;
+        bottom: 0;
+    }
+    &.ui-current {
+      
+    }
+    &.ui-prev {
+        margin-left: -100vw;
+
+    }
+    &.ui-next {
+
+    }
+    
+}
+.slide__content {
+    flex-grow: 1;
+    flex-shrink: 0;
+    height: 0%;
+    transition: all .5s ease-in-out;
+    &.ui-visible {
+        height: 100%;
+        slideAnim(slideUpToVisible);
+    }
+    &.ui-hiddenTop {
+        flex-grow: 0;
+        flex-shrink: 1;
+        height: 0%;
+        overflow: hidden;
+    }
+}
+.ge-footer {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 1;
+    height: 49px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    &__legalese {
+        color: colorNeutralLightest
+    }
+}
+

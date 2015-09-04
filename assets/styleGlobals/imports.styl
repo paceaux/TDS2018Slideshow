@@ -1,0 +1,666 @@
+/*===============
+#mixins
+===============*/
+//======Golden Ratio Mixin
+golden()
+    if @width
+        height: @width * .618
+    else
+        if @height
+            width: @height * .618
+            
+
+//========== font functions
+hifi()
+    unit(phi, 'em')
+lofi()
+    unit(fi, 'em')
+rem(n)
+    rootEm * n
+
+pxToPt(n)
+    unit(.75 * n,pt)
+
+ptToPx(n)
+    ceil(unit(n * 1.333333333,px))
+
+ptToEm(n)
+    unit(ptToPx(n) / rootPx,em)
+
+emToPx(n)
+    unit(n * 16,px)
+
+pxToEm(n)
+    unit(n/rootEm,em)
+
+emToPercent(n)
+    (n/rootEm)%
+    
+bodyText() {
+    font-family: fontBody;
+    font-style: normal;
+    font-weight: 200;
+}
+calloutText() {
+    font-family: fontCallout;
+    font-style: normal;
+}
+headerText() {
+    font-family: fontHeaders , sans-serif;
+    font-style: normal;
+    font-weight: 400;
+
+}
+smoothTransition() {
+    transition: all .3s ease-in-out;
+}
+
+/* Animations
+***************************************** */
+
+@keyframes animationFadein {
+  0% {
+    color: rgba(68,68,68,0.01);
+  }
+
+  100% {
+    color: #444;
+  }
+}
+fadeIn() {
+  animation-name: animationFadein;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+}
+
+/*===============
+    #vars
+===============*/
+//========== root values
+phi = 1.618
+fi = .618
+golden = 1.61803398875
+
+rootPx = 16px
+rootEm = 1em
+rootPercent = 100%
+rootPt = pxToPt(rootPx)
+
+fontBody= 'Asap', sans-serif;
+fontHeaders='Palanquin Dark', sans-serif;
+
+colorNeutralWhitest = #ffffff;
+colorNeutralLightest = #ebebeb;
+colorNeutralDarkest = #646464;
+
+colorCoolDesat1= #323f50;
+colorCoolDesat2= #b8d098;
+
+colorCoolest = #a7dbd8;
+colorCooler = #057aa8;
+colorCool = #144b7e;
+
+colorCoolMedium= #a7dbd8;
+colorWarm = #92278f;
+colorWarmer= #da8246;
+colorWarmest= #ffde66;
+
+
+sideWidth = 350px;
+/*===============
+#mixins
+===============*/
+//======Golden Ratio Mixin
+golden()
+    if @width
+        height: @width * .618
+    else
+        if @height
+            width: @height * .618
+            
+
+//========== font functions
+hifi()
+    unit(phi, 'em')
+lofi()
+    unit(fi, 'em')
+rem(n)
+    rootEm * n
+
+pxToPt(n)
+    unit(.75 * n,pt)
+
+ptToPx(n)
+    ceil(unit(n * 1.333333333,px))
+
+ptToEm(n)
+    unit(ptToPx(n) / rootPx,em)
+
+emToPx(n)
+    unit(n * 16,px)
+
+pxToEm(n)
+    unit(n/rootEm,em)
+
+emToPercent(n)
+    (n/rootEm)%
+    
+bodyText() {
+    font-family: fontBody;
+    font-style: normal;
+    font-weight: 200;
+}
+calloutText() {
+    font-family: fontCallout;
+    font-style: normal;
+}
+headerText() {
+    font-family: fontHeaders , sans-serif;
+    font-style: normal;
+    font-weight: 400;
+
+}
+smoothTransition() {
+    transition: all .3s ease-in-out;
+}
+
+/* Animations
+***************************************** */
+
+@keyframes animationFadein {
+  0% {
+    color: rgba(68,68,68,0.01);
+  }
+
+  100% {
+    color: #444;
+  }
+}
+fadeIn() {
+  animation-name: animationFadein;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+}
+
+/*===============
+    #vars
+===============*/
+//========== root values
+phi = 1.618
+fi = .618
+golden = 1.61803398875
+
+rootPx = 16px
+rootEm = 1em
+rootPercent = 100%
+rootPt = pxToPt(rootPx)
+
+fontBody= 'Asap', sans-serif;
+fontHeaders='Palanquin Dark', sans-serif;
+
+colorNeutralWhitest = #ffffff;
+colorNeutralLightest = #ebebeb;
+colorNeutralDarkest = #646464;
+
+colorCoolDesat1= #323f50;
+colorCoolDesat2= #b8d098;
+
+colorCoolest = #a7dbd8;
+colorCooler = #057aa8;
+colorCool = #144b7e;
+
+colorCoolMedium= #a7dbd8;
+colorWarm = #92278f;
+colorWarmer= #da8246;
+colorWarmest= #ffde66;
+
+
+sideWidth = 350px;
+/*===============
+#mixins
+===============*/
+//======Golden Ratio Mixin
+golden()
+    if @width
+        height: @width * .618
+    else
+        if @height
+            width: @height * .618
+            
+
+//========== font functions
+hifi()
+    unit(phi, 'em')
+lofi()
+    unit(fi, 'em')
+rem(n)
+    rootEm * n
+
+pxToPt(n)
+    unit(.75 * n,pt)
+
+ptToPx(n)
+    ceil(unit(n * 1.333333333,px))
+
+ptToEm(n)
+    unit(ptToPx(n) / rootPx,em)
+
+emToPx(n)
+    unit(n * 16,px)
+
+pxToEm(n)
+    unit(n/rootEm,em)
+
+emToPercent(n)
+    (n/rootEm)%
+    
+bodyText() {
+    font-family: fontBody;
+    font-style: normal;
+    font-weight: 200;
+}
+calloutText() {
+    font-family: fontCallout;
+    font-style: normal;
+}
+headerText() {
+    font-family: fontHeaders , sans-serif;
+    font-style: normal;
+    font-weight: 400;
+
+}
+smoothTransition() {
+    transition: all .3s ease-in-out;
+}
+
+/* Animations
+***************************************** */
+
+@keyframes animationFadein {
+  0% {
+    color: rgba(68,68,68,0.01);
+  }
+
+  100% {
+    color: #444;
+  }
+}
+fadeIn() {
+  animation-name: animationFadein;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+}
+
+/*===============
+    #vars
+===============*/
+//========== root values
+phi = 1.618
+fi = .618
+golden = 1.61803398875
+
+rootPx = 16px
+rootEm = 1em
+rootPercent = 100%
+rootPt = pxToPt(rootPx)
+
+fontBody= 'Asap', sans-serif;
+fontHeaders='Palanquin Dark', sans-serif;
+
+colorNeutralWhitest = #ffffff;
+colorNeutralLightest = #ebebeb;
+colorNeutralDarkest = #646464;
+
+colorCoolDesat1= #323f50;
+colorCoolDesat2= #b8d098;
+
+colorCoolest = #a7dbd8;
+colorCooler = #057aa8;
+colorCool = #144b7e;
+
+colorCoolMedium= #a7dbd8;
+colorWarm = #92278f;
+colorWarmer= #da8246;
+colorWarmest= #ffde66;
+
+
+sideWidth = 350px;
+/*===============
+#mixins
+===============*/
+//======Golden Ratio Mixin
+golden()
+    if @width
+        height: @width * .618
+    else
+        if @height
+            width: @height * .618
+            
+
+//========== font functions
+hifi()
+    unit(phi, 'em')
+lofi()
+    unit(fi, 'em')
+rem(n)
+    rootEm * n
+
+pxToPt(n)
+    unit(.75 * n,pt)
+
+ptToPx(n)
+    ceil(unit(n * 1.333333333,px))
+
+ptToEm(n)
+    unit(ptToPx(n) / rootPx,em)
+
+emToPx(n)
+    unit(n * 16,px)
+
+pxToEm(n)
+    unit(n/rootEm,em)
+
+emToPercent(n)
+    (n/rootEm)%
+    
+bodyText() {
+    font-family: fontBody;
+    font-style: normal;
+    font-weight: 200;
+}
+calloutText() {
+    font-family: fontCallout;
+    font-style: normal;
+}
+headerText() {
+    font-family: fontHeaders , sans-serif;
+    font-style: normal;
+    font-weight: 400;
+
+}
+smoothTransition() {
+    transition: all .3s ease-in-out;
+}
+
+/* Animations
+***************************************** */
+
+@keyframes animationFadein {
+  0% {
+    color: rgba(68,68,68,0.01);
+  }
+
+  100% {
+    color: #444;
+  }
+}
+fadeIn() {
+  animation-name: animationFadein;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+}
+
+/*===============
+    #vars
+===============*/
+//========== root values
+phi = 1.618
+fi = .618
+golden = 1.61803398875
+
+rootPx = 16px
+rootEm = 1em
+rootPercent = 100%
+rootPt = pxToPt(rootPx)
+
+fontBody= 'Asap', sans-serif;
+fontHeaders='Palanquin Dark', sans-serif;
+
+colorNeutralWhitest = #ffffff;
+colorNeutralLightest = #ebebeb;
+colorNeutralDarkest = #646464;
+
+colorCoolDesat1= #323f50;
+colorCoolDesat2= #b8d098;
+
+colorCoolest = #a7dbd8;
+colorCooler = #057aa8;
+colorCool = #144b7e;
+
+colorCoolMedium= #a7dbd8;
+colorWarm = #92278f;
+colorWarmer= #da8246;
+colorWarmest= #ffde66;
+
+
+sideWidth = 350px;
+/*===============
+#mixins
+===============*/
+//======Golden Ratio Mixin
+golden()
+    if @width
+        height: @width * .618
+    else
+        if @height
+            width: @height * .618
+            
+
+//========== font functions
+hifi()
+    unit(phi, 'em')
+lofi()
+    unit(fi, 'em')
+rem(n)
+    rootEm * n
+
+pxToPt(n)
+    unit(.75 * n,pt)
+
+ptToPx(n)
+    ceil(unit(n * 1.333333333,px))
+
+ptToEm(n)
+    unit(ptToPx(n) / rootPx,em)
+
+emToPx(n)
+    unit(n * 16,px)
+
+pxToEm(n)
+    unit(n/rootEm,em)
+
+emToPercent(n)
+    (n/rootEm)%
+    
+bodyText() {
+    font-family: fontBody;
+    font-style: normal;
+    font-weight: 200;
+}
+calloutText() {
+    font-family: fontCallout;
+    font-style: normal;
+}
+headerText() {
+    font-family: fontHeaders , sans-serif;
+    font-style: normal;
+    font-weight: 400;
+
+}
+smoothTransition() {
+    transition: all .3s ease-in-out;
+}
+
+/* Animations
+***************************************** */
+
+@keyframes animationFadein {
+  0% {
+    color: rgba(68,68,68,0.01);
+  }
+
+  100% {
+    color: #444;
+  }
+}
+fadeIn() {
+  animation-name: animationFadein;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+}
+
+/*===============
+    #vars
+===============*/
+//========== root values
+phi = 1.618
+fi = .618
+golden = 1.61803398875
+
+rootPx = 16px
+rootEm = 1em
+rootPercent = 100%
+rootPt = pxToPt(rootPx)
+
+fontBody= 'Asap', sans-serif;
+fontHeaders='Palanquin Dark', sans-serif;
+
+colorNeutralWhitest = #ffffff;
+colorNeutralLightest = #ebebeb;
+colorNeutralDarkest = #646464;
+
+colorCoolDesat1= #323f50;
+colorCoolDesat2= #b8d098;
+
+colorCoolest = #a7dbd8;
+colorCooler = #057aa8;
+colorCool = #144b7e;
+
+colorCoolMedium= #a7dbd8;
+colorWarm = #92278f;
+colorWarmer= #da8246;
+colorWarmest= #ffde66;
+
+
+sideWidth = 350px;
+/*===============
+#mixins
+===============*/
+//======Golden Ratio Mixin
+golden()
+    if @width
+        height: @width * .618
+    else
+        if @height
+            width: @height * .618
+            
+
+//========== font functions
+hifi()
+    unit(phi, 'em')
+lofi()
+    unit(fi, 'em')
+rem(n)
+    rootEm * n
+
+pxToPt(n)
+    unit(.75 * n,pt)
+
+ptToPx(n)
+    ceil(unit(n * 1.333333333,px))
+
+ptToEm(n)
+    unit(ptToPx(n) / rootPx,em)
+
+emToPx(n)
+    unit(n * 16,px)
+
+pxToEm(n)
+    unit(n/rootEm,em)
+
+emToPercent(n)
+    (n/rootEm)%
+    
+bodyText() {
+    font-family: fontBody;
+    font-style: normal;
+    font-weight: 200;
+}
+calloutText() {
+    font-family: fontCallout;
+    font-style: normal;
+}
+headerText() {
+    font-family: fontHeaders , sans-serif;
+    font-style: normal;
+    font-weight: 400;
+
+}
+smoothTransition() {
+    transition: all .3s ease-in-out;
+}
+
+/* Animations
+***************************************** */
+
+@keyframes animationFadein {
+  0% {
+    color: rgba(68,68,68,0.01);
+  }
+
+  100% {
+    color: #444;
+  }
+}
+fadeIn() {
+  animation-name: animationFadein;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+}
+
+/*===============
+    #vars
+===============*/
+//========== root values
+phi = 1.618
+fi = .618
+golden = 1.61803398875
+
+rootPx = 16px
+rootEm = 1em
+rootPercent = 100%
+rootPt = pxToPt(rootPx)
+
+fontBody= 'Asap', sans-serif;
+fontHeaders='Palanquin Dark', sans-serif;
+
+colorNeutralWhitest = #ffffff;
+colorNeutralLightest = #ebebeb;
+colorNeutralDarkest = #646464;
+
+colorCoolDesat1= #323f50;
+colorCoolDesat2= #b8d098;
+
+colorCoolest = #a7dbd8;
+colorCooler = #057aa8;
+colorCool = #144b7e;
+
+colorCoolMedium= #a7dbd8;
+colorWarm = #92278f;
+colorWarmer= #da8246;
+colorWarmest= #ffde66;
+
+
+sideWidth = 350px;

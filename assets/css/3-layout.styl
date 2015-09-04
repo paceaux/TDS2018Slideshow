@@ -1,0 +1,44 @@
+
+/*===============
+    #Layout
+===============*/
+.ge-header,
+.ge-footer {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 1;
+  padding: 0.618rem;
+}
+.ge-header {
+  flex-direction: row;
+  width: 80%;
+  height: 120px;
+  min-height: 8vh;
+  flex-wrap: wrap;
+}
+.ge-header__title,
+.ge-header__subtitle {
+  margin: 0;
+}
+.ge-header__title {
+  font-size: 2.25vw;
+  margin: 50px 0 0 150px;
+}
+.ge-header__subtitle {
+  font-size: 2.25vw;
+  flex-grow: 1;
+}
+.ge-header__logo {
+  width: 279px;
+  height: 93px;
+  position: absolute;
+  z-index: -1;
+}
+.main {
+  display: flex;
+  flex-grow: 1;
+  padding: 0.618rem;
+  flex-basis: 75vh;
+  height: calc(100vh -  8vh  -  35px );
+  overflow: hidden;
+}

@@ -1,0 +1,39 @@
+
+/*===============
+    #Slide Navigation
+===============*/
+
+.slideNav {
+  display: block;
+  overflow-y: scroll;
+  border-right: 12px solid colorNeutralDarkest;
+  height: 80vh;
+  width: sideWidth;
+  margin: 0 1.618em 0 0;
+  flex-shrink: 0;
+  smoothTransition();
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 25%;
+    width: (sideWidth - 15);
+    border: 2px solid colorCool;
+    margin: 0 0 .618em 0
+    overflow: hidden;
+    * {
+      color: #343434;
+    }
+    .slide {
+      padding: 0;
+      height: auto;
+      width: auto;
+      transform-origin: top center;
+      transform: scale(.9, .4);
+    }
+  }
+  &.ui-collapsed {
+    width: 0;
+  }
+}

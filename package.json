@@ -1,0 +1,17 @@
+{
+  "name": "slideshow",
+  "version": "0.0.1",
+  "devDependencies": {
+    "gulp": "~3.9.0",
+    "gulp-wrap": "^0.11.0"
+  },
+  "description": "A web based flexbox slideshow",
+  "main": "gulpfile.js",
+  "keywords": [
+    "markdown",
+    "slideshow",
+    "stylus"
+  ],
+  "author": "Frank M. Taylor",
+  "license": "MIT"
+}

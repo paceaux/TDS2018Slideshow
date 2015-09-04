@@ -53,12 +53,22 @@ slideshow.modules.navigation = (function () {
     };
     function setupSlides () {
         var slides = getSlideArray();
-        for (var i=0, slide; i< slides.length; i++) {
+        for (var i=0,panels, slide; i< slides.length; i++) {
             slide = slides[i];
+            panels = slide.querySelectorAll('.slide__content');
             slide.querySelector('.js-slideNum').innerHTML = (i + 1) + ' of ' + slides.length;
             slide.id = 'js-slide--' + i;
             slide.classList.add('js-slide--' + i);
             slide.dataset.slideindex = i;
+            slide.dataset.panelcount = panels.length;
+            for (var n=0, panel; n < panels.length; n++) {
+                panel = panels[n];
+               // panel.id = slide.id + '-panel--' + n;
+                panel.classList.add('js-panel--' + n);
+                if (n === 0) {
+                    panel.classList.add('ui-visible');
+                }
+            }
             if (i === 0) {
                 slide.classList.add('ui-current');
                 currentSlideIndex = i;
@@ -72,10 +82,12 @@ slideshow.modules.navigation = (function () {
         gotoSlide : function (i) {
             var rootSlide = document.querySelector('.slides .slide'),
                 articleWidth = rootSlide.offsetWidth + rootSlide.style.marginRight,
-                currentSlide = document.getElementById('js-slide--' + i);
+                currentSlide = document.getElementById('js-slide--' + i),
+                currentPanel = currentSlide.querySelector('.slide__content');
             rootSlide.style.marginLeft = 0 - (articleWidth * i) + 'px';
             document.querySelector('.ui-current').classList.remove('ui-current');
             currentSlide.classList.add('ui-current');
+            currentPanel.classList.add('ui-visible');
             history.pushState(currentSlide.dataset.title, "slide " + i, '#' + currentSlide.dataset.title.replace(' ', '-'))
         },
         next: function () {
@@ -85,6 +97,38 @@ slideshow.modules.navigation = (function () {
         prev: function () {
             if (this.currentSlide > 0) this.currentSlide--;
             this.gotoSlide(this.currentSlide)
+        }
+    };
+    showPanel = {
+        currentPanel: 0,
+        panelCount: function () {
+            var currentSlide = document.querySelector('.ui-current');
+            return parseInt(currentSlide.dataset.panelcount, 10);
+        },
+        gotoPanel: function (i) {
+            var currentSlide = document.querySelector('.ui-current'),
+                hiddenTopPaneli = i > 0 ? i-1 : 0,
+                hiddenBottomPaneli = i < this.panelCount() ? i + 1 : this.panelCount(), 
+                currentPanel = currentSlide.querySelector('.js-panel--' + i),
+                hiddenTopPanel = currentSlide.querySelector('.js-panel--' + hiddenTopPaneli);
+            hiddenTopPanel.classList.add('ui-hiddenTop');
+            hiddenTopPanel.classList.remove('ui-visible');
+            currentPanel.classList.remove('ui-hiddenTop');
+            currentPanel.classList.add('ui-visible');
+        },
+        next: function () {
+            if (this.currentPanel < this.panelCount() - 1) this.currentPanel++;
+            this.gotoPanel(this.currentPanel);
+
+        },
+        prev: function () {
+            var currentSlide = document.querySelector('.ui-current');
+            if (this.currentPanel > 0) {
+                this.currentPanel--;
+                currentSlide.querySelector('.ui-visible').classList.remove('ui-visible');
+            };
+            this.gotoPanel(this.currentPanel);
+
         }
     };
     evtCbs = {
@@ -126,9 +170,11 @@ slideshow.modules.navigation = (function () {
                 break;
                 case 38: 
                 //up
+                slideshow.modules.navigation.view.prev();
                 break;
                 case 40: 
                 //down
+                slideshow.modules.navigation.view.next();
                 break;
                 default:
                 break;
@@ -148,6 +194,7 @@ slideshow.modules.navigation = (function () {
         slides: getSlideArray(),
         getSlideCount: getSlideArray().length,
         navigate: showSlide,
+        view: showPanel,
         currentSlide : currentSlideIndex   
     }
     return public;
@@ -197,7 +244,7 @@ slideshow.modules.navBuilder = (function () {
 
     };
     function init() {
-        setupNavItems();
+        //setupNavItems();
         bindUiEvts();
     };
     init();

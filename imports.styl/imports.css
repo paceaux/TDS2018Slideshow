@@ -1,0 +1,40 @@
+/*===============
+#mixins
+===============*/
+/* Animations
+***************************************** */
+/*===============
+    #vars
+===============*/
+@-moz-keyframes animationFadein {
+  0% {
+    color: rgba(68,68,68,0.01);
+  }
+  100% {
+    color: #444;
+  }
+}
+@-webkit-keyframes animationFadein {
+  0% {
+    color: rgba(68,68,68,0.01);
+  }
+  100% {
+    color: #444;
+  }
+}
+@-o-keyframes animationFadein {
+  0% {
+    color: rgba(68,68,68,0.01);
+  }
+  100% {
+    color: #444;
+  }
+}
+@keyframes animationFadein {
+  0% {
+    color: rgba(68,68,68,0.01);
+  }
+  100% {
+    color: #444;
+  }
+}
