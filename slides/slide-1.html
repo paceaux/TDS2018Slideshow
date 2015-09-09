@@ -5,16 +5,37 @@
     <h2 class="slide__header__subtitle">Introducing HTML5 Semantics</h2>
 </header>
 <div class="slide__content">
-<pre data-lang="html">
-    &lt;article>&lt;!--I'm syndicatable content --&gt;&lt;/article&gt;
-    &lt;section&gt;&lt;!-- I'm for a collection of similar pieces of content --&gt;&lt;/section&gt;
-    &lt;aside&gt;Not related to the stuff that's near by&lt;/aside&gt;
-    &lt;figure&gt;
-        &lt;!-- I make the content better and easier to understand. 
-        It doesn't matter where you put me --&gt;
-        &lt;figcaption&gt;explanatory caption&lt;/figcaption&gt;
-        
-    &lt;/figure&gt;
+    <h3>Grouping sets of content</h3>
+<pre class="prettyprint lang-html">
+&lt;main&gt;
+  &lt;!-- Just one of me per page. --&gt;
+  &lt;aside&gt;Content not related to other stuff in my container&lt;/aside&gt;
+  &lt;section&gt;&lt;!-- I'm for a collection of similar pieces of content --&gt;&lt;/section&gt;
+&lt;/main&gt;
 </pre>
+</div>
+<div class="slide__content">
+    <h3>Classifying the kinds of content</h3>
+<pre class="prettyprint lang-html">
+&lt;article>&lt;!--I'm syndicatable content --&gt;&lt;/article&gt;
+&lt;figure&gt;
+    &lt;!-- I make the content better and easier to understand. 
+    It doesn't matter where you put me --&gt;
+    &lt;figcaption&gt;explanatory caption&lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+</pre>
+</div>
+<div class="slide__content">
+    <h3>Enhancing sections and content blocks</h3>
+<pre class="prettyprint lang-html">
+&lt;header>&lt;!--the header for any section or block of content --&gt;&lt;/header&gt;
+&lt;footer>&lt;!--the footer for any section or block of content --&gt;&lt;/header&gt;
+</pre>
+</div>
+<div class="slide__content">
+<p>Uncertain as to which semantic element you should use?</p>
+
+<p>There's actually a great <a href="http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf">flowchart</a> on the internet that you can review. </p>
 
 </div>

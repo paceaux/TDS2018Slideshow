@@ -13,6 +13,8 @@
 <link href='http://fonts.googleapis.com/css?family=Asap:700,400|Palanquin+Dark:500' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="assets/css/master.css">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <script type="text/javascript" src="assets/js/modernizr.js"></script>
+
     </head>
     <body>
     <header class="ge-header">
@@ -34,6 +36,7 @@
             <ul class="list list--unordered">
                 <li class="list__item"><a class="list__item__link" href="#conditional-content-conundrums">Conditional Content Conundrums </a></li>
                 <li class="list__item"><a class="list__item__link" href="#counting-content-blocks">Counting Content Blocks</a></li>
+                <li class="list__item"><a class="list__item__link" href="#flexible-backgrounds-colors">Flexible backgrounds and colors</a></li>
                 <li class="list__item"><a class="list__item__link" href="#scalable-layouts">Counting Content Blocks</a></li>
 
             </ul>
@@ -46,8 +49,8 @@
         </a></li>
         <li class="list__item">JavaScript
             <ul class="list list--unordered">
-                <li class="list__item"><a class="list__item__link" href="#"></a></li>
-                <li class="list__item"><a class="list__item__link" href="#"></a></li>
+                <li class="list__item"><a class="list__item__link" href="#">Content Manageable jQuery plugins</a></li>
+                <li class="list__item"><a class="list__item__link" href="#">Image detection with Canvas</a></li>
 
             </ul>
         </li>
@@ -60,29 +63,48 @@
         </h1>
     </header>
 <div class="slide__content">
-
-<h2>Who am I?</h2>
-
-<p>Frank M. Taylor. A front-end developer who dabbles in Tridion</p>
-<p>
-I work at Tahzoo worldwide writing front-end code whose final destination is Tridion. I translate PSDs into markup, write jQuery plugins, build frameworks, and generally tinker with the web. 
-</p>
-
-<p>
-    
-</p>
-</div>
-
-<div class="slide__content">
-
 <h2>Why are we here?</h2>
+<h3>It's all about the users!</h3>
 
-<p>I'ts not just about the end-user!</p>
-<p>
-As implementers of content management systems, we're actually developing for two audiences
-Our job is to strike a balance between each audience. And it's a difficult job
-I'm here because, as a front-end developer who works with CMS developers, I work hard to write code that performs on the website, without making the content author learn a lot of crazy dance moves.
-</p>
+<p>We have two types of users that we need to account for when we implement websites:</p>
+
+<ul>
+    <li>End-users</li>
+    <li>CMS-users (content authors/editors)</li>
+</ul>
+
+<p>When we build websites, we account for both kinds of user &mdash; but usually the back-end (Tridion) developers focus on the CMS user, while the front-end developers focus primarily on the end-user. </p>
+
+</div>
+<div class="slide__content">
+<h3>The Problem is the Balance</h3>
+<p>If front-end developers focus exclusively on the end-user experience, without considering the content-author experience, this can create a lot of strain on the Tridion developer and the Tridion user. </p>
+
+<p>If a Front-end developer codes, without thinking about thinking about how content will be managed, this leads to problems:</p>
+
+<ul>
+    <li>Inconsistent markup for the same content -> too many Component Templates</li>
+    <li>Not enough wrappers -> Site edit becomes a pain</li>
+    <li>Too many divs -> developer gets lost in code, contracts '<code>div</code>itis', perpetuates drinking problem</li>
+    <li>Too many divs -> site isn't SEO friendly or accessible</li>
+    <li>Classes for background images -> too many CTs, or adding lists to components for classes, thus preventing them from being used elsewhere</li>
+    <li>Assuming a container always has content -> blank spaces and weird gaps</li>
+    <li>Hard-coded classes for layout -> no flexibility in adding removing items</li>
+    <li>Hard-coded background images and colors -> no flexibility in changing content areas</li>
+    <li>Every jQuery plugin ever -> content author can't change features in a plugin</li>
+
+</ul>
+</div>
+<div class="slide__content">
+<h3>The solution is in the <del>code</del> content</h3>
+
+<ol>
+    <li>Tell the FE dev about the content models (schemas)</li>
+    <li>Collect authoring rules before writing code</li>
+    <li>Accept FE code that's flexible, not fixed</li>
+</ol>
+
+<p class="js-callout">We're here today to talk about #3. You're on your own for those first two. </p>
 
 </div>
 
@@ -98,17 +120,38 @@ I'm here because, as a front-end developer who works with CMS developers, I work
     <h2 class="slide__header__subtitle">Introducing HTML5 Semantics</h2>
 </header>
 <div class="slide__content">
-<pre data-lang="html">
-    &lt;article>&lt;!--I'm syndicatable content --&gt;&lt;/article&gt;
-    &lt;section&gt;&lt;!-- I'm for a collection of similar pieces of content --&gt;&lt;/section&gt;
-    &lt;aside&gt;Not related to the stuff that's near by&lt;/aside&gt;
-    &lt;figure&gt;
-        &lt;!-- I make the content better and easier to understand. 
-        It doesn't matter where you put me --&gt;
-        &lt;figcaption&gt;explanatory caption&lt;/figcaption&gt;
-        
-    &lt;/figure&gt;
+    <h3>Grouping sets of content</h3>
+<pre class="prettyprint lang-html">
+&lt;main&gt;
+  &lt;!-- Just one of me per page. --&gt;
+  &lt;aside&gt;Content not related to other stuff in my container&lt;/aside&gt;
+  &lt;section&gt;&lt;!-- I'm for a collection of similar pieces of content --&gt;&lt;/section&gt;
+&lt;/main&gt;
 </pre>
+</div>
+<div class="slide__content">
+    <h3>Classifying the kinds of content</h3>
+<pre class="prettyprint lang-html">
+&lt;article>&lt;!--I'm syndicatable content --&gt;&lt;/article&gt;
+&lt;figure&gt;
+    &lt;!-- I make the content better and easier to understand. 
+    It doesn't matter where you put me --&gt;
+    &lt;figcaption&gt;explanatory caption&lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+</pre>
+</div>
+<div class="slide__content">
+    <h3>Enhancing sections and content blocks</h3>
+<pre class="prettyprint lang-html">
+&lt;header>&lt;!--the header for any section or block of content --&gt;&lt;/header&gt;
+&lt;footer>&lt;!--the footer for any section or block of content --&gt;&lt;/header&gt;
+</pre>
+</div>
+<div class="slide__content">
+<p>Uncertain as to which semantic element you should use?</p>
+
+<p>There's actually a great <a href="http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf">flowchart</a> on the internet that you can review. </p>
 
 </div>
 
@@ -208,7 +251,7 @@ I'm here because, as a front-end developer who works with CMS developers, I work
 <h2>Why are we here</h2>
 <p>I'ts not just about the end-user!</p>
 <p>As implementers of content management systems, we don't have a responsibility to deliver coders</p>
-<pre class="prettyprint" data-lang="css">
+<pre class="prettyprint lang-css" data-lang="css">
 :nth-child {
     
 }
@@ -259,7 +302,9 @@ I'm here because, as a front-end developer who works with CMS developers, I work
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script type="text/javascript" src="assets/js/prettify/prettify.js"></script>
+        <script type="text/javascript" src="assets/js/prettify/prettify.js">
+            prettyPrint();
+        </script>
         <script type="text/javascript" src="assets/js/hammer.min.js"></script>
         <script type="text/javascript" src="assets/js/slideshow.js"></script>
     </body>

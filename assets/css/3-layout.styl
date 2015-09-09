@@ -41,3 +41,17 @@
   height: calc(100vh -  8vh  -  35px );
   overflow: hidden;
 }
+body:before {
+  content: "smartphone";
+  display: none; /* Prevent from displaying. */
+}
+@media (min-width: 700px) {
+  body:before {
+    content: "tablet";
+  }
+}
+@media (min-width: 1100px) {
+  body:before {
+    content: "desktop";
+  }
+}

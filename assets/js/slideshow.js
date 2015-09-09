@@ -30,7 +30,19 @@ slideshow.init = function() {
             this.modules[module].init();
         }
     }
+    prettyPrint();
 };
+slideshow.namespace('info');
+slideshow.info = (function () {
+    var getBreakpoint = function () {
+        return window.getComputedStyle(document.querySelector('body'), ':before').getPropertyValue('content').replace(/\"/g, '');
+    }
+    return {
+        breakpoint : (function () {
+            return getBreakpoint();
+        })()
+    }
+})();
 
 /*================
     #MODULES
