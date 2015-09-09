@@ -488,23 +488,22 @@ th {
   -webkit-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out;
 }
-.slide__header {
-  -webkit-box-ordinal-group: 1;
-  -webkit-order: 0;
-      -ms-flex-order: 0;
-          order: 0;
-}
 .slide__footer {
   font-size: 0.85em;
-  -webkit-box-ordinal-group: 3;
-  -webkit-order: 2;
-      -ms-flex-order: 2;
-          order: 2;
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
 }
 .slide.ui-prev {
   margin-left: -100vw;
+}
+.slide__content + .slide__content:before {
+  content: '\21A8';
+  position: relative;
+  top: -60px;
+  font-size: 1.5em;
+  height: 1.5em;
+  width: 1.5em;
+  left: 92%;
 }
 .slide__content {
   -webkit-box-flex: 1;

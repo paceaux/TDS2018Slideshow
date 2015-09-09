@@ -33,13 +33,11 @@ $sideWidth = 350px;
     justify-content: flex-start;
     smoothTransition();
     &__header {
-        order: 0;
     }
     &__footer {
         font-size: .85em;
-        order: 2;
         position: absolute;
-        bottom: 0;
+        bottom: 20px;
     }
     &.ui-current {
       
@@ -52,6 +50,15 @@ $sideWidth = 350px;
 
     }
     
+}
+.slide__content + .slide__content:before {
+    content: '\21A8';
+    position: relative;
+    top: -60px;
+    font-size: 1.5em;
+    height: 1.5em;
+    width: 1.5em;
+    left: 92%;
 }
 .slide__content {
     flex-grow: 1;
