@@ -173,7 +173,22 @@ slideshow.modules.navigation = (function () {
         window.addEventListener('keyup', evtCbs.keyup);
         [].forEach.call(document.querySelectorAll('.slideNav .list__item__link'), function (navLink) {
             navLink.addEventListener('click', evtCbs.navClick);
-        })
+        });
+        var slides = document.querySelector('.slides'),
+            hslides = new Hammer(slides);
+        hslides.on('swipeleft', function (e) {
+            slideshow.modules.navigation.navigate.next();
+        });
+        hslides.on('swiperight', function (e) {
+            slideshow.modules.navigation.navigate.prev();
+        });
+        hslides.on('swipeup', function (e) {
+            slideshow.modules.navigation.view.prev();
+        });
+        hslides.on('swipedown', function (e) {
+            slideshow.modules.navigation.view.next();
+        });
+
     };
     init = function( ) {
         setupSlides();
@@ -307,6 +322,22 @@ slideshow.modules.ui = (function () {
     };
 
     function bindUiEvts() {
+        var nav = document.querySelector('.slideNav'),
+            hNav = new Hammer(nav);
+
+        hNav.on('swipeleft', function (e) {
+            console.log(e);
+            slideshow.modules.ui.toggleSidebar();
+        });
+        hNav.on('swiperight', function (e) {
+            console.log(e);
+            slideshow.modules.ui.toggleSidebar();
+        });
+        hNav.add(new Hammer.Tap({event: 'doubletap', taps: 2}));
+        hNav.on('doubletap', function (e) {
+            slideshow.modules.ui.toggleSidebar();
+            console.log('doubletapped')
+        });
         window.addEventListener('keydown', evtCbs.keydown);
         window.addEventListener('hashchange', evtCbs.pushHash);
         //to do: add in the history API, Hash by titles or slide number

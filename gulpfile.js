@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     stylus = require('gulp-stylus'),
     Filter = require('gulp-filter'),
     nib = require('nib'),
+    autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create();
 
 
@@ -47,6 +48,7 @@ gulp.task('styles', function () {
             use: [nib()],
             compress: false,
         }))
+        .pipe(autoprefixer())
         .pipe(concat('master.css'))
         .pipe(gulp.dest('assets/css/'));
 });
