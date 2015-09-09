@@ -175,17 +175,19 @@ slideshow.modules.navigation = (function () {
             navLink.addEventListener('click', evtCbs.navClick);
         });
         var slides = document.querySelector('.slides'),
-            hslides = new Hammer(slides);
+            body = document.querySelector('body'),
+            hslides = new Hammer(slides),
+            hbody = new Hammer(body);
         hslides.on('swipeleft', function (e) {
             slideshow.modules.navigation.navigate.next();
         });
         hslides.on('swiperight', function (e) {
             slideshow.modules.navigation.navigate.prev();
         });
-        hslides.on('swipeup', function (e) {
+        hslides.on('pandown', function (e) {
             slideshow.modules.navigation.view.prev();
         });
-        hslides.on('swipedown', function (e) {
+        hslides.on('panup', function (e) {
             slideshow.modules.navigation.view.next();
         });
 
