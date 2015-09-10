@@ -27,9 +27,9 @@
         <li class="list__item"><a href="#">Introduction and Goals</a></li>
         <li class="list__item">HTML
             <ul class="list list--unordered">
-                <li class="list__item"><a class="list__item__link" href="#html-semantics">Introducing HTML5 Semantics </a></li>
-                <li class="list__item"><a class="list__item__link" href="#html-content-modelling">HTML5-inspired content modelling</a></li>
-                <li class="list__item"><a class="list__item__link" href="#html-dediving-templates">De-diving templates and views</a></li>
+                <li class="list__item"><a class="list__item__link" href="#html-semantics"> HTML5 Semantics </a></li>
+                <li class="list__item"><a class="list__item__link" href="#html-content-modelling">Markup-based content modelling</a></li>
+                <li class="list__item"><a class="list__item__link" href="#html-dediving-templates">Defeating the <code>div</code></a></li>
             </ul>
         </a></li>
         <li class="list__item">CSS
@@ -83,28 +83,26 @@
 <p>If a Front-end developer codes, without thinking about thinking about how content will be managed, this leads to problems:</p>
 
 <ul>
-    <li>Inconsistent markup for the same content -> too many Component Templates</li>
-    <li>Not enough wrappers -> Site edit becomes a pain</li>
-    <li>Too many divs -> developer gets lost in code, contracts '<code>div</code>itis', perpetuates drinking problem</li>
-    <li>Too many divs -> site isn't SEO friendly or accessible</li>
-    <li>Classes for background images -> too many CTs, or adding lists to components for classes, thus preventing them from being used elsewhere</li>
-    <li>Assuming a container always has content -> blank spaces and weird gaps</li>
-    <li>Hard-coded classes for layout -> no flexibility in adding removing items</li>
-    <li>Hard-coded background images and colors -> no flexibility in changing content areas</li>
-    <li>Every jQuery plugin ever -> content author can't change features in a plugin</li>
+    <li data-fx="fadein">Inconsistent markup for the same content -> too many Component Templates</li>
+    <li data-fx="fadein">Too many divs -> developer gets lost in code, contracts '<code>div</code>itis', perpetuates drinking problem</li>
+    <li data-fx="fadein">Too many divs -> site isn't SEO friendly or accessible</li>
+    <li data-fx="fadein">Assuming a container always has content -> blank spaces and weird gaps</li>
+    <li data-fx="fadein">Hard-coded classes for layout -> no flexibility in adding removing items</li>
+    <li data-fx="fadein">Hard-coded background images and colors -> no flexibility in changing content areas</li>
+    <li data-fx="fadein">Every jQuery plugin ever -> content author can't change features in a plugin</li>
 
 </ul>
 </div>
-<div class="slide__content">
+<div class="slide__content ">
 <h3>The solution is in the <del>code</del> content</h3>
 
-<ol>
+<ol class="fx" data-fx="fadein">
     <li>Tell the FE dev about the content models (schemas)</li>
     <li>Collect authoring rules before writing code</li>
     <li>Accept FE code that's flexible, not fixed</li>
 </ol>
 
-<p class="js-callout">We're here today to talk about #3. You're on your own for those first two. </p>
+<p class="fx" data-fx="callout">We're here today to talk about #3. You're on your own for those first two. </p>
 
 </div>
 
@@ -144,14 +142,22 @@
 <div class="slide__content">
     <h3>Enhancing sections and content blocks</h3>
 <pre class="prettyprint lang-html">
-&lt;header>&lt;!--the header for any section or block of content --&gt;&lt;/header&gt;
-&lt;footer>&lt;!--the footer for any section or block of content --&gt;&lt;/header&gt;
+&lt;article>&lt;!--I'm syndicatable content --&gt;
+    &lt;header>
+    &lt;h1>A title for this piece of content&lt;/h1>
+    &lt;h1>spiffy subtitle&lt;/h1>
+    &lt;/header&gt;
+    &lt;div>
+    All the amazing content goes here
+    &lt;/div>
+&lt;footer>A Conclusion for the content. It was written by Frank. &lt;/footer&gt;
+&lt;/article&gt;
 </pre>
 </div>
 <div class="slide__content">
 <p>Uncertain as to which semantic element you should use?</p>
 
-<p>There's actually a great <a href="http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf">flowchart</a> on the internet that you can review. </p>
+<p data-fx="grow">There's actually a great <a href="http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf">flowchart</a> on the internet that you can review. </p>
 
 </div>
 
@@ -167,10 +173,98 @@
     <h2 class="slide__header__subtitle">HTML5-inspired content modelling</h2>
 </header>
 <div class="slide__content">
+<h3>What does semantic markup mean for front end?</h3>
+<p data-fx="fadein">
+A web page is no longer a clump of content
+</p>
+<p data-fx="fadein">
+    A web page contains collections of content that relate to each other <span class="fx" data-fx="sizebounce">in a meaningful way</span>.
+</p>
+</div>
+<div class="slide__content">
+<pre class="prettyprint lang-html">
+&lt;section class="featuredProducts">
+    &lt;header>
+        &lt;h1>Check out these amazing products&lt;/h1>
+    &lt;/header>
+    &lt;article class="product">
+        &lt;h1 class="product__title">Premium Widget &trade;&lt;/h1>
+        &lt;p>This premium widget is superior to the regular widget&lt;/p>
+        &lt;div class="product__cost">$25.99&lt;/div>
+        &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    &lt;/article>
+    &lt;article class="product">
+        &lt;h1 class="product__title">Premium Widget &trade;&lt;/h1>
+        &lt;p>This premium widget is superior to the regular widget&lt;/p>
+        &lt;div class="product__cost">$25.99&lt;/div>
+        &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    &lt;/article>
+    &lt;article class="product">
+        &lt;h1 class="product__title">Premium Widget &trade;&lt;/h1>
+        &lt;p>This premium widget is superior to the regular widget&lt;/p>
+        &lt;div class="product__cost">$25.99&lt;/div>
+        &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    &lt;/article>
+&lt;/section>
+&lt;aside class="recommendations">
+    &lt;article class="product">
+        &lt;h1 class="product__title">Yesterday's Widget &trade;&lt;/h1>
+        &lt;p>Yep, it's a widget we're trying to get rid of&lt;/p>
+        &lt;div class="product__cost">$15.99&lt;/div>
+        &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    &lt;/article>
+    &lt;article class="product">
+        &lt;h1 class="product__title">Last year's Widget &trade;&lt;/h1>
+        &lt;p>Please buy this widget. Please&lt;/p>
+        &lt;div class="product__cost">$.99&lt;/div>
+        &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    &lt;/article>    
+&lt;/aside> 
+</pre>
 
 
 </div>
-
+<div class="slide__content">
+<div id="demo1">
+<section class="featuredProducts">
+    <header>
+        <h1>Check out these amazing products</h1>
+    </header>
+    <article class="product">
+        <h1 class="product__title">Premium Widget &trade;</h1>
+        <p>This premium widget is superior to the regular widget</p>
+        <div class="product__cost">$25.99</div>
+        <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    </article>
+    <article class="product">
+        <h1 class="product__title">Premium Widget &trade;</h1>
+        <p>This premium widget is superior to the regular widget</p>
+        <div class="product__cost">$25.99</div>
+        <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    </article>
+    <article class="product">
+        <h1 class="product__title">Premium Widget &trade;</h1>
+        <p>This premium widget is superior to the regular widget</p>
+        <div class="product__cost">$25.99</div>
+        <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    </article>
+</section>
+<aside class="recommendations">
+    <article class="product">
+        <h1 class="product__title">Yesterday's Widget &trade;</h1>
+        <p>Yep, it's a widget we're trying to get rid of</p>
+        <div class="product__cost">$15.99</div>
+        <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    </article>
+    <article class="product">
+        <h1 class="product__title">Last year's Widget &trade;</h1>
+        <p>Please buy this widget. Please</p>
+        <div class="product__cost">$.99</div>
+        <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    </article>    
+</aside>  
+</div>  
+</div>
 
 
 
@@ -186,10 +280,14 @@
     <h2 class="slide__header__subtitle">Dediving templates and views</h2>
 </header>
 <div class="slide__content">
-<h2>Why are we here</h2>
-<p>I'ts not just about the end-user!</p>
-<p>As implementers of content management systems, we don't have a responsibility to deliver coders</p>
-
+<h2>Let semantic markup drive meaningful schema design</h2>
+<ul>
+<li data-fx="fadein"><code>header</code> and <code>footer</code> can be embedded schemas</li>
+<li data-fx="fadein"><code>figure</code> can be a multimedia schema &mdash; embedded or content</li>
+<li data-fx="fadein"><code>aside</code> can be a single unit of content, or a collection of content, that isn't directly related to the stuff nearby. This is ideal for user targetted content. </li>
+<li data-fx="fadein"><code>nav</code> can be any collection of link lists</li>
+<li data-fx="fadein"><code>section</code> can be any component that contains component links</li>
+</ul>
 </div>
 
 
