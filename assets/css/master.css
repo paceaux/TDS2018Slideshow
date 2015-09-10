@@ -22,7 +22,7 @@
 }
 html {
   font-family: 'Asap', sans-serif;
-  font-size: 100%;
+  font-size: 1.85vmin;
   line-height: 1.618;
   min-height: 100%;
   overflow: visible;
@@ -714,11 +714,23 @@ body:before {
     #Slide Navigation
 ===============*/
 .slideNav {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow-y: scroll;
   border-right: 12px solid #646464;
   height: 80vh;
-  width: 350px;
+  width: 300px;
   margin: 0 1.618em 0 0;
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
@@ -748,12 +760,13 @@ body:before {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding: 0 1em 1em 1.2em;
   height: 90%;
+  max-width: 300px;
 }
 .slideNav .list__item__link {
   color: #9fca7f;
@@ -861,11 +874,12 @@ body:before {
 .slide__content + .slide__content:before {
   content: '\21A8';
   position: absolute;
-  top: -63px;
+  display: block;
+  top: -26px;
   font-size: 1.45em;
   height: 1.5em;
-  width: 1.5em;
-  left: 92%;
+  width: 1em;
+  left: 97%;
 }
 .slide__content {
   position: relative;
@@ -879,12 +893,13 @@ body:before {
   font-size: 1.4rem;
   padding: 0 1.618em;
   height: 0%;
-  overflow-y: scroll;
+  overflow-y: visible;
   -webkit-transition: all 0.5s ease-in-out;
           transition: all 0.5s ease-in-out;
 }
 .slide__content.ui-visible {
-  height: 95%;
+  height: 93%;
+  overflow-y: scroll;
 }
 .slide__content.ui-hiddenTop {
   -webkit-box-flex: 0;
