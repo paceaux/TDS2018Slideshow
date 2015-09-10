@@ -4,6 +4,54 @@
 		"selected_items":
 		[
 			[
+				"aside",
+				"aside	Tag"
+			],
+			[
+				"header",
+				"header	Tag"
+			],
+			[
+				"pre",
+				"pre	Tag"
+			],
+			[
+				"fx",
+				"fxAnimation"
+			],
+			[
+				"removeClass",
+				"removeClassByPartialName"
+			],
+			[
+				"cur",
+				"currentSlide"
+			],
+			[
+				"show",
+				"showEffect"
+			],
+			[
+				"ctrl",
+				"ctrlPlusKey"
+			],
+			[
+				"div",
+				"div	Tag"
+			],
+			[
+				"ul",
+				"ul	Tag"
+			],
+			[
+				"p",
+				"p	Tag"
+			],
+			[
+				"swipe",
+				"swipeleft"
+			],
+			[
 				"target",
 				"targetIndex"
 			],
@@ -52,10 +100,6 @@
 				"styleGlobals"
 			],
 			[
-				"cur",
-				"currentPanel"
-			],
-			[
 				"last",
 				"lastPanel"
 			],
@@ -102,10 +146,6 @@
 			[
 				"next",
 				"nextSibling"
-			],
-			[
-				"show",
-				"showPanel"
 			],
 			[
 				"cure",
@@ -474,64 +514,32 @@
 			[
 				"di",
 				"display"
-			],
-			[
-				"art",
-				"article	Tag"
-			],
-			[
-				"asid",
-				"aside	Tag"
-			],
-			[
-				"h2",
-				"h2	Tag"
-			],
-			[
-				"her",
-				"hero__title"
-			],
-			[
-				"word",
-				"word-spacing"
-			],
-			[
-				"white",
-				"white-space"
-			],
-			[
-				"pos",
-				"position"
-			],
-			[
-				"backgro",
-				"background-color"
-			],
-			[
-				"margin",
-				"margin-bottom"
-			],
-			[
-				"margi",
-				"margin-left"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "styleImports/vars.styl",
+			"file": "css/7-slideeffects.styl",
 			"settings":
 			{
-				"buffer_size": 646,
+				"buffer_size": 1287,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/gulpfile.js",
+			"file": "css/6-codeedit.styl",
 			"settings":
 			{
-				"buffer_size": 1899,
+				"buffer_size": 2316,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/3-layout.styl",
+			"settings":
+			{
+				"buffer_size": 1994,
 				"line_ending": "Unix"
 			}
 		},
@@ -539,15 +547,7 @@
 			"file": "css/2-transitions.styl",
 			"settings":
 			{
-				"buffer_size": 625,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "templates/shell.html",
-			"settings":
-			{
-				"buffer_size": 3523,
+				"buffer_size": 546,
 				"line_ending": "Unix"
 			}
 		},
@@ -555,15 +555,15 @@
 			"file": "css/5-slides.styl",
 			"settings":
 			{
-				"buffer_size": 1483,
+				"buffer_size": 1687,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "css/4-slidenav.styl",
+			"file": "js/slideshow.js",
 			"settings":
 			{
-				"buffer_size": 985,
+				"buffer_size": 13269,
 				"line_ending": "Unix"
 			}
 		},
@@ -571,7 +571,7 @@
 			"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/intro.html",
 			"settings":
 			{
-				"buffer_size": 970,
+				"buffer_size": 2224,
 				"line_ending": "Unix"
 			}
 		},
@@ -579,7 +579,7 @@
 			"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-1.html",
 			"settings":
 			{
-				"buffer_size": 732,
+				"buffer_size": 1695,
 				"line_ending": "Unix"
 			}
 		},
@@ -587,15 +587,18 @@
 			"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-2.html",
 			"settings":
 			{
-				"buffer_size": 249,
+				"buffer_size": 4064,
 				"line_ending": "Unix"
 			}
 		},
 		{
+			"contents": "<header class=\"slide__header\" id=\"html-dediving-templates\">\n    <h1 class=\"slide__header__title\">\n    HTML\n    </h1>\n    <h2 class=\"slide__header__subtitle\">Dediving templates and views</h2>\n</header>\n<div class=\"slide__content\">\n<h2>Let semantic markup drive meaningful schema design</h2>\n<h3><code>header</code> and footer are </h3>\n\n</div>\n\n\n\n",
 			"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-3.html",
+			"file_size": 410,
+			"file_write_time": 130858767580000000,
 			"settings":
 			{
-				"buffer_size": 410,
+				"buffer_size": 346,
 				"line_ending": "Unix"
 			}
 		},
@@ -611,7 +614,7 @@
 			"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-5.html",
 			"settings":
 			{
-				"buffer_size": 473,
+				"buffer_size": 482,
 				"line_ending": "Unix"
 			}
 		},
@@ -620,14 +623,6 @@
 			"settings":
 			{
 				"buffer_size": 459,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/slideshow.js",
-			"settings":
-			{
-				"buffer_size": 10543,
 				"line_ending": "Unix"
 			}
 		}
@@ -1045,20 +1040,25 @@
 	"expanded_folders":
 	[
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets",
-		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/styleImports",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/js",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/templates",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/slides"
 	],
 	"file_history":
 	[
-		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/master.css",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/gulpfile.js",
+		"/Users/franktaylor/Downloads/Tridion-Developer-Summit-slidedeck-master/js/slide-controller.js",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/js/prettify/prettify.css",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/templates/shell.html",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/package.json",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/styleImports/vars.styl",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/6-codeedit.styl",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/4-slidenav.styl",
+		"/Users/franktaylor/Downloads/Tridion-Developer-Summit-slidedeck-master/js/slide-deck.js",
+		"/Users/franktaylor/Downloads/Tridion-Developer-Summit-slidedeck-master/js/slides.js",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/master.css",
 		"/Users/franktaylor/Downloads/Tridion-Developer-Summit-slidedeck-master/content/slides/22.html",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/styleGlobals/vars.styl",
-		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/4-slidenav.styl",
-		"/Users/franktaylor/Dropbox/web-pieces/slideshow/package.json",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/3-layout.styl",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/1-theme.styl",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/styleGlobals/mixins.styl",
@@ -1173,12 +1173,7 @@
 		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/bcg/bcg-dot-com-app/static/modules/forms/_style.scss",
 		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/bcg/bcg-dot-com-app/static/includes/_header.jade",
 		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/bcg/bcg-dot-com-app/static/modules/parallax-panels/_default.jade",
-		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/bcg/bcg-dot-com-app/static/scss/global/main.scss",
-		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/bcg/bcg-dot-com-app/static/modules/content-types/office-locations/_style.scss",
-		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/bcg/bcg-dot-com-app/static/modules/search-filters/_style.scss",
-		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/bcg/bcg-dot-com-app/static/pages/shallowmodepage_01.jade",
-		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/bcg/bcg-dot-com-app/static/modules/parallax-panels/_script.js",
-		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/bcg/bcg-dot-com-app/static/modules/shallow-mode/_style.scss"
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/bcg/bcg-dot-com-app/static/scss/global/main.scss"
 	],
 	"find":
 	{
@@ -1201,6 +1196,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"class=\"fx\"",
+			"ctrlPlusKey",
+			"prettify",
+			"pretty",
+			"mc",
+			"body",
 			"ul",
 			"><a href=",
 			">",
@@ -1322,13 +1323,7 @@
 			"class=\"anchor\"",
 			"<a href",
 			"<a",
-			"<li>",
-			" <p><a href=",
-			"<li>",
-			"navGroup__menu__sugLinks",
-			"menu_suggestion_links",
-			"navGroup__menu__suggTitle",
-			"menu_suggestion_title"
+			"<li>"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1394,19 +1389,52 @@
 			[
 				{
 					"buffer": 0,
-					"file": "styleImports/vars.styl",
+					"file": "css/7-slideeffects.styl",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 646,
+						"buffer_size": 1287,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								579,
-								579
+								820,
+								820
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "plain text",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 627.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "css/6-codeedit.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2316,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								722,
+								722
 							]
 						],
 						"settings":
@@ -1414,69 +1442,71 @@
 							"WordCountShouldRun": true,
 							"WordCountSyntax": "stylus",
 							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
-							"syntax": "Packages/Stylus/Stylus.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 276.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/gulpfile.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1899,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1173,
-								1173
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"WordCountSyntax": "gulpfile js",
-							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
-							"syntax": "Packages/Seti_UI/Langs/Gulpfile JS.tmLanguage",
-							"tab_size": 4,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 469.0,
+						"translation.y": 255.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "css/2-transitions.styl",
+					"file": "css/3-layout.styl",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 625,
+						"buffer_size": 1994,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								221,
-								221
+								1026,
+								1026
 							]
 						],
 						"settings":
 						{
 							"WordCountShouldRun": true,
-							"WordCountSyntax": "plain text",
+							"WordCountSyntax": "stylus",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 782.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "css/2-transitions.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 546,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								175,
+								61
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "stylus",
 							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
 							"syntax": "Packages/Stylus/Stylus.tmLanguage",
 							"tab_size": 2,
@@ -1486,40 +1516,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "templates/shell.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3523,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2220,
-								2220
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"WordCountSyntax": "plain text",
-							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 31.0,
-						"translation.y": 357.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -1528,15 +1525,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1483,
+						"buffer_size": 1687,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								129,
-								129
+								885,
+								885
 							]
 						],
 						"settings":
@@ -1549,49 +1546,49 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 31.0,
+						"translation.y": 576.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 10,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 8,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 5,
-					"file": "css/4-slidenav.styl",
+					"file": "js/slideshow.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 985,
+						"buffer_size": 13269,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								664,
-								664
+								11107,
+								11107
 							]
 						],
 						"settings":
 						{
-							"WordCountShouldRun": true,
-							"WordCountSyntax": "stylus",
+							"WordCountShouldRun": false,
+							"WordCountSyntax": "javascript",
 							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
-							"syntax": "Packages/Stylus/Stylus.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 91.0,
+						"translation.y": 5131.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -1600,46 +1597,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 970,
+						"buffer_size": 2224,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								46,
-								46
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"WordCountSyntax": "html",
-							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-1.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 732,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								30,
-								30
+								1137,
+								1137
 							]
 						],
 						"settings":
@@ -1651,11 +1617,44 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 2.0,
-						"translation.y": 0.0,
+						"translation.x": 0.0,
+						"translation.y": 449.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-1.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1695,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1258,
+								1258
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "html",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 429.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -1664,15 +1663,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 249,
+						"buffer_size": 4064,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								30,
-								30
+								673,
+								673
 							]
 						],
 						"settings":
@@ -1680,13 +1679,15 @@
 							"WordCountShouldRun": true,
 							"WordCountSyntax": "html",
 							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -1695,15 +1696,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 410,
+						"buffer_size": 346,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								57,
-								34
+								318,
+								324
 							]
 						],
 						"settings":
@@ -1714,10 +1715,10 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 23.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -1733,8 +1734,8 @@
 						"selection":
 						[
 							[
-								177,
-								177
+								434,
+								434
 							]
 						],
 						"settings":
@@ -1746,11 +1747,11 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
+						"translation.x": 9.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1759,15 +1760,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 473,
+						"buffer_size": 482,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								469,
-								469
+								246,
+								246
 							]
 						],
 						"settings":
@@ -1781,7 +1782,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -1812,40 +1813,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "js/slideshow.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10543,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5980,
-								6036
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": false,
-							"WordCountSyntax": "javascript",
-							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2478.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
@@ -1951,7 +1919,7 @@
 		],
 		"width": 392.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
