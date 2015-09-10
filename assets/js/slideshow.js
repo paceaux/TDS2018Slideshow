@@ -1,4 +1,16 @@
 /*===============
+    #PROTOTYPEMODS
+===============*/
+HTMLElement.prototype.removeClassByPartialName = function (partialName) {
+    var classArray = this.className.split(' '), el = this;
+    classArray.forEach(function(elClassName, i) {
+        if (elClassName.indexOf(partialName) !== -1) {
+            el.className = el.className.replace(elClassName,'');
+        }
+    });
+    el.className = el.className.replace(/\s+/g," ");
+};
+/*===============
     #SLIDESHOW
 ===============*/
 var slideshow = slideshow || {};
@@ -303,10 +315,30 @@ slideshow.modules.ui = (function () {
           }
 
     };
+    public.showEffect = function () {
+        var currentSlide = document.querySelector('.slide.ui-current'),
+            currentPanel = currentSlide.querySelector('.ui-visible'),
+            fxItem = currentPanel.querySelector('[data-fx]');
+        fxItem.classList.add('fx-' + fxItem.dataset.fx);
+        fxItem.removeAttribute('data-fx');
+    };
     evtCbs = {
-        keydown: function (e) {
+        shortKey: function (e) {
+            console.log(e.which);
+            switch (e.which) {
+                case 9:
+                //tab
+                e.preventDefault()
+                slideshow.modules.ui.showEffect();
+                break;
+                case 192:
+                //`
+                slideshow.modules.ui.showEffect();
+                break;
+                default: 
+                break;
+            }
             if (e.ctrlKey) {
-                console.log(e.which);
                 switch (e.which) {
                     case 73:
                     //i
@@ -334,7 +366,17 @@ slideshow.modules.ui = (function () {
 
         }
     };
-
+    function setupFadeEffects() {
+        var fadeLists = document.querySelectorAll('ul[data-fx], ol[data-fx]');
+        [].forEach.call(fadeLists, function(fadeList) {
+            var effect = fadeList.dataset.fx,
+                listItems = fadeList.querySelectorAll('li');
+            [].forEach.call(listItems, function(listItem) {
+                listItem.dataset.fx = effect;
+            });
+            fadeList.removeAttribute('data-fx');
+        });
+    }
     function bindUiEvts() {
         var nav = document.querySelector('.slideNav'),
             hNav = new Hammer(nav);
@@ -352,11 +394,12 @@ slideshow.modules.ui = (function () {
             slideshow.modules.ui.toggleSidebar();
             console.log('doubletapped')
         });
-        window.addEventListener('keydown', evtCbs.keydown);
+        window.addEventListener('keyup', evtCbs.shortKey);
         window.addEventListener('hashchange', evtCbs.pushHash);
         //to do: add in the history API, Hash by titles or slide number
     };
     function init() {
+        setupFadeEffects();
         bindUiEvts();
     }
     init();

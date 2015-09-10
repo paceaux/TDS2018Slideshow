@@ -23,10 +23,9 @@ $sideWidth = 350px;
     float:left;
     display: inline-flex;
     flex-direction: column;
-    padding: 1.618rem .618em;
+    padding: 0 .618em 1.618em .618em;
     height: 100%;
     width: unquote('calc(100vw - ') $sideWidth unquote(')');
-    border-radius: 4px;
     margin: 0 0vw 0 0;
     background-color: #DAE4EC;
     transition: .25s all ease-in-out;
@@ -53,14 +52,15 @@ $sideWidth = 350px;
 }
 .slide__content + .slide__content:before {
     content: '\21A8';
-    position: relative;
-    top: -78px;
+    position: absolute;
+    top: -63px;
     font-size: 1.45em;
     height: 1.5em;
     width: 1.5em;
     left: 92%;
 }
 .slide__content {
+    position: relative;
     flex-grow: 1;
     flex-shrink: 0;
     font-size: 1.4rem;

@@ -55,3 +55,41 @@ body:before {
     content: "desktop";
   }
 }
+/*Flex shenanigans*/
+[class*="flex"]
+    display:flex
+    &[class*="column"]
+      flex-direction: column;
+
+    &[class*="row"] 
+      flex-direction: row;
+
+    for prop in space-between space-around center flex-start flex-end        
+        &[class*=\"justify-{prop}\"]
+            justify-content: prop;
+
+    for prop in baseline center flex-start flex-end stretch
+        &[class*=\"align-items-{prop}\"]
+            align-items: prop
+            
+    for prop in baseline center flex-start flex-end stretch
+        &[class*=\"align-content-{prop}\"]
+            align-content: prop
+            
+    for prop in row column row-reverse column-reverse
+        &[class*=\"direction-{prop}\"]
+                flex-direction: prop
+
+    for prop in nowrap wrap wrap-reverse
+        &[class*=\"wrap-{prop}\"]
+                flex-wrap: prop
+
+    for num in -1..10
+        &[class*=\"grow-n{num}\"]
+            flex-grow: num
+        &[class*=\"shrink-n{num}\"]
+            flex-shrink: num
+        &[class*=\"order-n{num}\"]
+            order: num
+    &[class*="basis-full"]
+        flex-basis: 100%
