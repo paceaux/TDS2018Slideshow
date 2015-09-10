@@ -53,11 +53,12 @@ $sideWidth = 350px;
 .slide__content + .slide__content:before {
     content: '\21A8';
     position: absolute;
-    top: -63px;
+    display: block;
+    top: -26px;
     font-size: 1.45em;
     height: 1.5em;
-    width: 1.5em;
-    left: 92%;
+    width: 1em;
+    left: 97%;
 }
 .slide__content {
     position: relative;
@@ -66,11 +67,12 @@ $sideWidth = 350px;
     font-size: 1.4rem;
     padding: 0 1.618em;
     height: 0%;
-    overflow-y: scroll;
+    overflow-y: visible;
     transition: all .5s ease-in-out;
     &.ui-visible {
-        height: 95%;
+        height: 93%;
         slideAnim(slideUpToVisible);
+        overflow-y: scroll;
     }
     &.ui-hiddenTop {
         flex-grow: 0;
