@@ -1,3 +1,45 @@
+main[class*="demo"] {
+    &::after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+}
+[class*="demo"] {
+    article {
+    }
+    .product {
+        &::after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;  
+        }
+        &__cost {
+            display: inline-block;
+            float:left;
+        }
+        &__title {
+            margin: .618em;
+            border-bottom: 2px solid #d9d9d9;
+        }
+        &__img {
+            display: inline-block;
+            height: 45px;
+            width: 45px;
+            padding: 2px;
+            border: 1px solid #dedede;
+        }
+        p {
+            margin: .618em;
+        }
+    }
+}
 .demo4 {
     font-family: arial, sans-serif;
     width: 40em;

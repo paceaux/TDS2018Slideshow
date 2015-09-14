@@ -31,6 +31,9 @@ $sideWidth = 350px;
     transition: .25s all ease-in-out;
     justify-content: flex-start;
     smoothTransition();
+    [contenteditable] {
+        display: none;
+    }
     &__header {
     }
     &__footer {
@@ -39,7 +42,9 @@ $sideWidth = 350px;
         bottom: 20px;
     }
     &.ui-current {
-      
+    }
+    &.ui-hiddenTop {
+
     }
     &.ui-prev {
         margin-left: -100vw;
@@ -73,12 +78,31 @@ $sideWidth = 350px;
         height: 93%;
         slideAnim(slideUpToVisible);
         overflow-y: scroll;
+        visibility: visible;
+        [class*="demo"] {
+            visibility: visible;
+        }
+        [contenteditable] {
+            display: block;
+        }
     }
     &.ui-hiddenTop {
         flex-grow: 0;
         flex-shrink: 1;
         height: 0%;
         overflow: hidden;
+        [class*="demo"] {
+            visibility: hidden;
+        }
+        [contenteditable] {
+            display: none;
+        }
+    }
+    [contenteditable] {
+        display: none;
+    }
+    [class*="demo"] {
+        visibility: hidden;
     }
 }
 .slide__content {
