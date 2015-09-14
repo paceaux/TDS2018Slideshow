@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"query",
+				"querySelectorAll"
+			],
+			[
 				"aside",
 				"aside	Tag"
 			],
@@ -70,10 +74,6 @@
 			[
 				"get",
 				"getElementById"
-			],
-			[
-				"query",
-				"querySelector"
 			],
 			[
 				"add",
@@ -520,30 +520,6 @@
 	"buffers":
 	[
 		{
-			"file": "css/7-slideeffects.styl",
-			"settings":
-			{
-				"buffer_size": 1287,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/6-codeedit.styl",
-			"settings":
-			{
-				"buffer_size": 2316,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/3-layout.styl",
-			"settings":
-			{
-				"buffer_size": 1994,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "css/2-transitions.styl",
 			"settings":
 			{
@@ -552,10 +528,42 @@
 			}
 		},
 		{
+			"file": "css/4-slidenav.styl",
+			"settings":
+			{
+				"buffer_size": 1119,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "styleImports/vars.styl",
+			"settings":
+			{
+				"buffer_size": 646,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "css/5-slides.styl",
 			"settings":
 			{
-				"buffer_size": 1687,
+				"buffer_size": 1757,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/1-theme.styl",
+			"settings":
+			{
+				"buffer_size": 1233,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/gulpfile.js",
+			"settings":
+			{
+				"buffer_size": 1978,
 				"line_ending": "Unix"
 			}
 		},
@@ -563,7 +571,7 @@
 			"file": "js/slideshow.js",
 			"settings":
 			{
-				"buffer_size": 13269,
+				"buffer_size": 13761,
 				"line_ending": "Unix"
 			}
 		},
@@ -584,21 +592,34 @@
 			}
 		},
 		{
-			"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-2.html",
+			"file": "templates/shell.html",
 			"settings":
 			{
-				"buffer_size": 4064,
+				"buffer_size": 3861,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "<header class=\"slide__header\" id=\"html-dediving-templates\">\n    <h1 class=\"slide__header__title\">\n    HTML\n    </h1>\n    <h2 class=\"slide__header__subtitle\">Dediving templates and views</h2>\n</header>\n<div class=\"slide__content\">\n<h2>Let semantic markup drive meaningful schema design</h2>\n<h3><code>header</code> and footer are </h3>\n\n</div>\n\n\n\n",
-			"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-3.html",
-			"file_size": 410,
-			"file_write_time": 130858767580000000,
+			"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-2.html",
 			"settings":
 			{
-				"buffer_size": 346,
+				"buffer_size": 4256,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/package.json",
+			"settings":
+			{
+				"buffer_size": 522,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-3.html",
+			"settings":
+			{
+				"buffer_size": 881,
 				"line_ending": "Unix"
 			}
 		},
@@ -1040,26 +1061,33 @@
 	"expanded_folders":
 	[
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/js",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/styleImports",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/templates",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/slides"
 	],
 	"file_history":
 	[
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/README.md",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/7-slideeffects.styl",
+		"/Users/franktaylor/Downloads/Tridion-Developer-Summit-slidedeck-master/README.md",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/.gitignore",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/js/slideshow.js",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/3-layout.styl",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/6-codeedit.styl",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/gulpfile.js",
 		"/Users/franktaylor/Downloads/Tridion-Developer-Summit-slidedeck-master/js/slide-controller.js",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/js/prettify/prettify.css",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/templates/shell.html",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/package.json",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/styleImports/vars.styl",
-		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/6-codeedit.styl",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/4-slidenav.styl",
 		"/Users/franktaylor/Downloads/Tridion-Developer-Summit-slidedeck-master/js/slide-deck.js",
 		"/Users/franktaylor/Downloads/Tridion-Developer-Summit-slidedeck-master/js/slides.js",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/master.css",
 		"/Users/franktaylor/Downloads/Tridion-Developer-Summit-slidedeck-master/content/slides/22.html",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/styleGlobals/vars.styl",
-		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/3-layout.styl",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/1-theme.styl",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/styleGlobals/mixins.styl",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/master.css/master.css",
@@ -1085,7 +1113,6 @@
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-1.md",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-1.json",
 		"/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-2.json",
-		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/js/slideshow.js",
 		"/Users/franktaylor/Desktop/mm.json",
 		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/Practices/css-guidelines.md",
 		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/README.md",
@@ -1169,11 +1196,7 @@
 		"/Users/franktaylor/Dropbox/web-pieces/Media-Manager-Plugins-for-Tridion/CanvasReadme.md",
 		"/Users/franktaylor/Dropbox/web-pieces/Media-Manager-Plugins-for-Tridion/LICENSE.md",
 		"/Users/franktaylor/Dropbox/web-pieces/Media-Manager-Plugins-for-Tridion/js/mm.filmstrip-module.js",
-		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/bcg/bcg-dot-com-app/static/modules/parallax-panels/_style.scss",
-		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/bcg/bcg-dot-com-app/static/modules/forms/_style.scss",
-		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/bcg/bcg-dot-com-app/static/includes/_header.jade",
-		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/bcg/bcg-dot-com-app/static/modules/parallax-panels/_default.jade",
-		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/bcg/bcg-dot-com-app/static/scss/global/main.scss"
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/bcg/bcg-dot-com-app/static/modules/parallax-panels/_style.scss"
 	],
 	"find":
 	{
@@ -1196,6 +1219,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<",
+			"<li>",
+			"p>",
+			"p",
+			"h3",
 			"class=\"fx\"",
 			"ctrlPlusKey",
 			"prettify",
@@ -1318,12 +1346,7 @@
 			"fields",
 			"container",
 			"::",
-			"navGroup",
-			"navGroup__promo__link",
-			"class=\"anchor\"",
-			"<a href",
-			"<a",
-			"<li>"
+			"navGroup"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1384,110 +1407,11 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "css/7-slideeffects.styl",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1287,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								820,
-								820
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"WordCountSyntax": "plain text",
-							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
-							"syntax": "Packages/Stylus/Stylus.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 627.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "css/6-codeedit.styl",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2316,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								722,
-								722
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"WordCountSyntax": "stylus",
-							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
-							"syntax": "Packages/Stylus/Stylus.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 255.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "css/3-layout.styl",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1994,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1026,
-								1026
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"WordCountSyntax": "stylus",
-							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
-							"syntax": "Packages/Stylus/Stylus.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 782.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "css/2-transitions.styl",
 					"semi_transient": false,
 					"settings":
@@ -1516,24 +1440,88 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "css/5-slides.styl",
+					"buffer": 1,
+					"file": "css/4-slidenav.styl",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1687,
+						"buffer_size": 1119,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								885,
-								885
+								362,
+								362
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "stylus",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 380.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "styleImports/vars.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 646,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								645,
+								645
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "stylus",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/Stylus/Stylus.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 259.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "css/5-slides.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1757,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1377,
+								1377
 							]
 						],
 						"settings":
@@ -1546,33 +1534,99 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 576.0,
+						"translation.y": 847.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 0,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 4,
-			"sheets":
-			[
+				},
 				{
-					"buffer": 5,
-					"file": "js/slideshow.js",
+					"buffer": 4,
+					"file": "css/1-theme.styl",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13269,
+						"buffer_size": 1233,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11107,
-								11107
+								1114,
+								1114
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "stylus",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1149.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/gulpfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1978,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								502,
+								502
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "gulpfile js",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/Seti_UI/Langs/Gulpfile JS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "js/slideshow.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13761,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11681,
+								11681
 							]
 						],
 						"settings":
@@ -1585,14 +1639,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5131.0,
+						"translation.y": 5535.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/intro.html",
 					"semi_transient": false,
 					"settings":
@@ -1621,16 +1675,49 @@
 						"translation.y": 449.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-1.html",
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 1695,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								134,
+								134
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "html",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 1.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "templates/shell.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3861,
 						"regions":
 						{
 						},
@@ -1650,28 +1737,28 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 429.0,
+						"translation.x": 197.0,
+						"translation.y": 191.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 10,
 					"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-2.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4064,
+						"buffer_size": 4256,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								673,
-								673
+								1397,
+								1397
 							]
 						],
 						"settings":
@@ -1684,27 +1771,60 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 473.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-3.html",
+					"buffer": 11,
+					"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/package.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 346,
+						"buffer_size": 522,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								318,
-								324
+								233,
+								233
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "npm json",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/Seti_UI/Langs/npm JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-3.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 881,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								767,
+								865
 							]
 						],
 						"settings":
@@ -1715,14 +1835,14 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 23.0,
+						"translation.y": 9.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 13,
 					"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-4.html",
 					"semi_transient": false,
 					"settings":
@@ -1751,11 +1871,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 14,
 					"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-5.html",
 					"semi_transient": false,
 					"settings":
@@ -1782,11 +1902,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 15,
 					"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-6.html",
 					"semi_transient": false,
 					"settings":
@@ -1813,7 +1933,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 14,
 					"type": "text"
 				}
 			]
@@ -1919,7 +2039,7 @@
 		],
 		"width": 392.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
