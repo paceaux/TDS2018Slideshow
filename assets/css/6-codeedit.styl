@@ -24,6 +24,9 @@ pre{
   min-height: 12em;
   overflow: scroll;
 }
+[contenteditable] {
+  white-space: pre;
+}
 pre, [contenteditable="true"], [contenteditable] {
   font-family: 'Source Code Pro', 'Courier New', monospace;
   font-size: .8em;
@@ -57,12 +60,12 @@ pre[data-lang="go"] {
 pre[data-lang="css"] {
 
 }
-pre[data-lang="html"] {
+[data-lang="html"] {
   &:after {
     color: colorWarm;
   }
 }
-pre[data-lang="js"] {
+[data-lang="js"] {
   &:after {
     color: colorCool;
   }
