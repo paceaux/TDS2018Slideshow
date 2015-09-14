@@ -1,0 +1,60 @@
+<header class="slide__header" id="content-manageable-jquery-plugins">
+    <h1 class="slide__header__title">
+    JavaScript
+    </h1>
+    <h2 class="slide__header__subtitle">Content Manageable jQuery Plugins </h2>
+</header>
+<div class="slide__content">
+<h2>The Problem</h2>
+<p>jQuery plugins are used everywhere, and there's millions to choose from. But few were made to work well with a CMS.</p>
+<p>The challenge is when a content author wants to be able to control something within the jQuery plugin. </p>
+<ul data-fx="fadein">
+<li>Content Authors don't usually know JavaScript</li>
+<li>Generating <code>script</code> elements on the page containing parameters can get messy</li>
+<li>Generating JavaScript from a schema can be time-consuming</li>
+</ul>
+
+</div>
+
+<div class="slide__content">
+<h2>The Solution</h2>
+<p>The best way to output a content-author's preferences for a given jQuery widget is to do it within the markup that has been generated. For this, the <code>data-</code> attribute is our friend</p>.
+<pre class="prettyprint lang-html">
+&lt;div id="video__player2" data-video='{"height": "300px", "type":"embed"}' data-video-url="http://nationwide.dist.sdlmedia.com/Distributions/?o=1F2C97BE-DE64-467C-A6D1-3A5DCFE38215" data-video-player='{"autoplay": "false"}'></div>
+
+</pre>
+</div>
+<div class="slide__content">
+<ul>
+    <li>A data attribute can contain any kind of string we want, even JSON </li>
+    <li>We can give our attribute any name we want, so long as it starts with <code>data-</code></li>
+    <li>Browsers that support the <code>data-</code> attribute will create a <code>dataset</code> property on the element that we can access</li>
+</div>
+
+<div class="slide__content">
+<h2>Modifying a jQuery plugin</h2>
+<p>You can modify  any existing plugin to accept <code>data-</code> attributes.</p>
+
+<pre class="prettyprint lang-js">
+    /*Added to the top of the plugin*/
+this.data = $.extend($(this).data('sdlmm'), params);
+</pre>
+<p>
+Then, loop over the data attributes and add them to the data:
+</p>
+<pre class="prettyprint lang-js">
+    /*Added near the top, before you get too deep into the plugin*/
+for (var attr, i = 0, attrs = $this[0].attributes, l = attrs.length; i < l; i++) {
+    attr = attrs.item(i);
+    if (attr.nodeName.match('data-sdlmm-')) {
+        name = attr.nodeName.replace('data-sdlmm-', '');
+        this.data[name] = attr.nodeValue;
+    }
+}
+    </pre>
+    </div>
+<div class="slide__content">
+<h2>The Big Idea</h2>
+<p>jQuery plugins can easily be made CMS-friendly if you employ <code>data-</code> attributes. </p>
+<p data-fx="callout">You need to partner with your front-end developers to design the schema for your plugins</p>
+</div>
