@@ -5,16 +5,126 @@
     <h2 class="slide__header__subtitle">Counting Content Blocks</h2>
 </header>
 <div class="slide__content">
-<h2>Why are we here</h2>
-<p>I'ts not just about the end-user!</p>
-<p>As implementers of content management systems, we don't have a responsibility to deliver coders</p>
+<h2>New Pseudo classes</h2>
+
+<p>CSS3 introduces new, enumerated pseudo classes.</p>
+<p>We can select any <code>nth</code> element.</p>
 <pre class="prettyprint lang-css" data-lang="css">
-:nth-child {
-    
+/*the fifth element*/
+.demo3 :nth-child(5) {
+outline: 2px solid orange;
+}
+/*Even numbered .products of the same element type*/
+.demo3 .product:nth-of-type(even) {
+background: #fff;
+}
+/* a .product of the same element that's a multiple of 3*/
+.demo3 .product:nth-of-type(3n) {
+color: #c0ffee;
+}
+/*A multiple of four, starting from the last one*/
+.demo3 .product:nth-last-of-type(4n) {
+font-weight: bold;
 }
 </pre>
 
 </div>
+<div class="slide__content">
+    <h2>We can combine pseudo classes to count the number of elements  in a container</h2>
+<pre class="prettyprint lang-css" data-lang="css">
+.demo3 .product:nth-last-of-type(2):first-of-type,
+.demo3 .product:nth-last-of-type(2):first-of-type ~.product {
+width: 50%;
+}
+.demo3 .product:nth-last-of-type(3):first-of-type,
+.demo3 .product:nth-last-of-type(3):first-of-type ~.product {
+width: 33%;
+}
+.demo3 .product:nth-last-of-type(4):first-of-type,
+.demo3 .product:nth-last-of-type(4):first-of-type ~.product {
+width: 25%;
+}
 
 
+</pre>
+
+</div>
+
+<div class="slide__content flex-two-col">
+<style type="text/css">
+.demo3 {
+width: 600px;
+margin: 0 auto;
+background: #dfefff;
+}
+.demo3::after {
+content: ' ';
+display: block;
+clear: both;
+}
+.demo3 article{
+float:left;
+min-width: 20%;
+}
+</style>
+<style type="text/css" contenteditable>
+.demo3 :nth-child(5) {
+outline: 2px solid orange;
+}
+.demo3 .product:nth-of-type(even) {
+background: #fff;
+}
+.demo3 .product:nth-of-type(3n) {
+color: #c0ffee;
+}
+.demo3 .product:nth-last-of-type(4n) {
+font-weight: bold;
+}
+.demo3 .product:nth-last-of-type(2):first-of-type,
+.demo3 .product:nth-last-of-type(2):first-of-type ~.product {
+width: 50%;
+}
+.demo3 .product:nth-last-of-type(3):first-of-type,
+.demo3 .product:nth-last-of-type(3):first-of-type ~.product {
+width: 33%;
+}
+.demo3 .product:nth-last-of-type(4):first-of-type,
+.demo3 .product:nth-last-of-type(4):first-of-type ~.product {
+width: 25%;
+}
+</style>
+ <main class="demo3">
+    <section class="content product features">
+        <header>
+            <h1>Check out these amazing products</h1>
+        </header>
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+    </section></main>   
+
+</div>
 

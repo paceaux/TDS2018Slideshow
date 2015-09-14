@@ -5,31 +5,173 @@
     <h2 class="slide__header__subtitle">Conditional Content Conundrums</h2>
 </header>
 <div class="slide__content">
-<h2>Here's a first panel</h2>
+<h2>Going from 1 to 2 columns: HTML</h2>
+
+<p>When making a container that can flex between one and two columns, put the optional column <em>first</em>.</p>
+
+<p>The block of content that is <em>always present</em> should be placed at the end of the container. </p>
+
+<p>First, Some HTML</p>
+<pre class="prettyprint lang-html">
+&lt;main class="demo2">
+&lt;aside class="recommendations sidebar">
+    &lt;article class="product">
+        &lt;h1 class="product__title">Yesterday's Widget &trade;&lt;/h1>
+        &lt;p>Yep, it's a widget we're trying to get rid of&lt;/p>
+        &lt;div class="product__cost">$15.99&lt;/div>
+        &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    &lt;/article>
+    &lt;article class="product">
+        &lt;h1 class="product__title">Last year's Widget &trade;&lt;/h1>
+        &lt;p>Please buy this widget. Please&lt;/p>
+        &lt;div class="product__cost">$.99&lt;/div>
+        &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    &lt;/article>    
+&lt;/aside>
+&lt;section class="content featuredProducts">
+    &lt;header>
+        &lt;h1>Check out these amazing products&lt;/h1>
+    &lt;/header>
+    &lt;article class="product">
+        &lt;h1 class="product__title">Premium Widget &trade;&lt;/h1>
+        &lt;p>This premium widget is superior to the regular widget&lt;/p>
+        &lt;div class="product__cost">$25.99&lt;/div>
+        &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    &lt;/article>
+    &lt;article class="product">
+        &lt;h1 class="product__title">Premium Widget &trade;&lt;/h1>
+        &lt;p>This premium widget is superior to the regular widget&lt;/p>
+        &lt;div class="product__cost">$25.99&lt;/div>
+        &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    &lt;/article>
+    &lt;article class="product">
+        &lt;h1 class="product__title">Premium Widget &trade;&lt;/h1>
+        &lt;p>This premium widget is superior to the regular widget&lt;/p>
+        &lt;div class="product__cost">$25.99&lt;/div>
+        &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    &lt;/article>
+&lt;/section>
+
+
+</pre>
+
 
 </div>
 <div class="slide__content">
-<h2>Panel two</h2>
-<ul>
-    <li>HTML
-        <ul>
-            <li>Introducing HTML5 Semantics </li>
-            <li>HTML5-inspired content modelling</li>
-            <li>Less Divy Views </li>
-        </ul>
-    </li>
-    <li>Layout
-        <ul>
-            <li>One Page template to rule them all</li>
-        </ul>
-    </li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-</ul>
+<h2>1 to 2 columns: CSS</h2>
+<p>The sibling selectors are a great CSS2 approach to detecting whether an element is present.</p>
+<ol data-fx="fadein">
+    <li>Style the main container first</li>
+    <li>Style the sidebar second</li>
+    <li>Add the conditional style last</li>
+</ol>
+<pre class="prettyprint lang-css" type="text/css" data-lang="css">
+main.demo2 {
+width: 600px;
+margin: 0 auto;
+}
+main.demo2::after {
+content: ' ';
+display: block;
+clear: both;
+}
+.demo2 .sidebar {
+display: block;
+float: left;
+width: 25%;
+height: 100%;
+background: #efefef;
+}
+.demo2 .content {
+display:block;
+width: 100%;
+height: 100%;
+outline: 2px solid red;
+}
+.demo2 .sidebar + .content {
+width: 75%;
+float: left;
+}
+
+
+</pre>
+<style type="text/css" media="screen">
+main.demo2 {
+width: 600px;
+margin: 0 auto;
+}
+main.demo2::after {
+content: ' ';
+display: block;
+clear: both;
+}
+.demo2 .sidebar {
+display: block;
+float: left;
+width: 25%;
+height: 100%;
+background: #efefef;
+}
+.demo2 .content {
+display:block;
+width: 100%;
+height: 100%;
+outline: 2px solid red;
+}
+.demo2 .sidebar + .content {
+width: 75%;
+float: left;
+}
+
+
+</style>
+</div>
+<div class="slide__content">
+<h2>1 to 2 columns: example</h2>
+<main class="demo2" contenteditable>
+    <aside class="recommendations sidebar">
+        <article class="product">
+            <h1 class="product__title">Yesterday's Widget &trade;</h1>
+            <p>Yep, it's a widget we're trying to get rid of</p>
+            <div class="product__cost">$15.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+        <article class="product">
+            <h1 class="product__title">Last year's Widget &trade;</h1>
+            <p>Please buy this widget. Please</p>
+            <div class="product__cost">$.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>    
+    </aside>
+    <section class="content featuredProducts">
+        <header>
+            <h1>Check out these amazing products</h1>
+        </header>
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+    </section>
+</main>
+
 
 </div>
 <div class="slide__content">
-<h2>Panel three</h2>
-
-
+<h2>The Big Idea</h2>
+<p>Sibling selectors are great for detecting whether one or two elements are present.</p>
+<p>The problem is that the sibling selectors only let you select the <em>last</em> element that's there. </p>
 </div>
