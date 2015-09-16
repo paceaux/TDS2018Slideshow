@@ -203,6 +203,11 @@ slideshow.modules.navigation = (function () {
     };
     function bindUiEvts () {
         window.addEventListener('keyup', evtCbs.keyup);
+        [].forEach.call(document.querySelectorAll('[contenteditable]'), function (el) {
+            el.addEventListener('keyup', function (e) {
+                e.stopPropagation();
+            });
+        });
         [].forEach.call(document.querySelectorAll('.slideNav .list__item__link'), function (navLink) {
             navLink.addEventListener('click', evtCbs.navClick);
         });
