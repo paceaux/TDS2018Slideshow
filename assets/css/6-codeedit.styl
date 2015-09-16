@@ -20,14 +20,20 @@
     border: 1px dashed colorNeturalLightest;
   }
 }
-pre{
+pre, [contenteditable]{
   min-height: 12em;
   overflow: scroll;
 }
-[contenteditable] {
-  white-space: pre;
+editAttributes() {
+    position: absolute;
+    color: white;
+    padding: 2px .618em;
+    text-transform: uppercase;
+    border-radius: 0 0 3px 3px;
+    background-color: colorNeutralDarkest;
+
 }
-pre, [contenteditable="true"], [contenteditable] {
+pre, [contenteditable="true"], [contenteditable], style, script {
   font-family: 'Source Code Pro', 'Courier New', monospace;
   font-size: .8em;
   line-height: 1.4;
@@ -39,18 +45,11 @@ pre, [contenteditable="true"], [contenteditable] {
   position: relative;
   overflow: scroll;
   /*overflow: hidden;*/
-
   &[data-lang]:after {
     content: attr(data-lang);
-    background-color: colorNeutralDarkest;
     right: 8px;
     top: 0;
-    position: absolute;
-    font-size: .5em;
-    color: white;
-    padding: 2px .618em;
-    text-transform: uppercase;
-    border-radius: 0 0 3px 3px;
+    editAttributes();
   }
 }
 
@@ -69,6 +68,21 @@ pre[data-lang="css"] {
   &:after {
     color: colorCool;
   }
+}
+[contenteditable] {
+  white-space: pre;
+  &:before {
+    content: 'editable';
+    right: 65px;
+    top: 1em;
+    editAttributes();
+  }
+}
+style[contenteditable]:after {
+  content: 'CSS';
+  top: 1em;
+  right: 8px;
+  editAttributes();
 }
 code {
   font-size: 95%;

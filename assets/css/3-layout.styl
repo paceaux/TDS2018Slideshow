@@ -14,6 +14,7 @@
   width: 80%;
   min-height: 6vh;
   flex-wrap: wrap;
+  order: -1;
 }
 .ge-header__title,
 .ge-header__subtitle {
@@ -33,6 +34,21 @@
   position: absolute;
   z-index: -1;
 }
+.ge-footer {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 1;
+    height: 49px;
+    width: 100%;
+    order: 10;
+    flex-direction: column;
+    align-items: center;
+    &__legalese {
+        color: colorNeutralLightest
+    }
+}
+
+
 .main {
   display: flex;
   flex-grow: 1;
