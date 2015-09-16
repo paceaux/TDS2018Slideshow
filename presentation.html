@@ -37,20 +37,19 @@
                 <li class="list__item"><a class="list__item__link" href="#conditional-content-conundrums">Conditional Content Conundrums </a></li>
                 <li class="list__item"><a class="list__item__link" href="#counting-content-blocks">Counting Content Blocks</a></li>
                 <li class="list__item"><a class="list__item__link" href="#flexible-backgrounds-colors">Flexible backgrounds and colors</a></li>
-                <li class="list__item"><a class="list__item__link" href="#scalable-layouts">Counting Content Blocks</a></li>
 
             </ul>
         </li>
         <li class="list__item">Layout
             <ul class="list list--unordered">
-                <li class="list__item"><a class="list__item__link" href="#">One Page template to rule them all</a></li>
+                <li class="list__item"><a class="list__item__link" href="#one-page-template">One Page template to rule them all</a></li>
                 <li class="list__item"><a class="list__item__link" href="#">One Page template to rule them all</a></li>
             </ul>
         </a></li>
         <li class="list__item">JavaScript
             <ul class="list list--unordered">
                 <li class="list__item"><a class="list__item__link" href="#">Content Manageable jQuery plugins</a></li>
-                <li class="list__item"><a class="list__item__link" href="#">Image detection with Canvas</a></li>
+                <li class="list__item"><a class="list__item__link" href="#brightness-detection">Image detection with Canvas</a></li>
 
             </ul>
         </li>
@@ -433,7 +432,7 @@ float: left;
 </div>
 <div class="slide__content">
 <h2>1 to 2 columns: example</h2>
-<main class="demo2" contenteditable>
+<main class="demo2">
     <aside class="recommendations sidebar">
         <article class="product">
             <h1 class="product__title">Yesterday's Widget &trade;</h1>
@@ -494,8 +493,6 @@ float: left;
 </header>
 <div class="slide__content">
 <h2>New Pseudo classes</h2>
-
-<p>CSS3 introduces new, enumerated pseudo classes.</p>
 <p>We can select any <code>nth</code> element.</p>
 <pre class="prettyprint lang-css" data-lang="css">
 /*the fifth element*/
@@ -826,6 +823,91 @@ width: 25%;
     </pre>
 </div>
 <div class="slide__content">
+<style type="text/css">
+.demo4 {
+  font-family: arial, sans-serif;
+  width: 40em;
+  margin: 0 auto;
+}
+.demo4 .ge-header,
+.demo4 .ge-footer {
+  width: 100%;
+  min-height: 80px;
+}
+.demo4 .ge-header {
+  border-bottom: 2px solid #808080;
+}
+.demo4 .ge-header_hgroup {
+  float: left;
+}
+.demo4 .nav .list {
+  list-style-type: none;
+  width: inherit;
+}
+.demo4 .nav .list_item {
+  margin: 2.5%;
+}
+.demo4 .nav .list-horizontal .list_item {
+  float: left;
+  display: inline-block;
+}
+.demo4 .nav-aux {
+  float: right;
+  width: 45%;
+}
+.demo4 .nav-aux .list {
+  float: right;
+}
+.demo4 .nav-primary {
+  width: 100%;
+  clear: both;
+}
+.demo4 .sidebar {
+  float: left;
+  width: 25%;
+  height: 100%;
+}
+.demo4 .main > .sidebar {
+  border-right: 1px solid #808080;
+}
+.demo4 .main::after,
+.demo4 .main::before {
+  content: '';
+  display: table;
+}
+.demo4 .main::after {
+  clear: both;
+}
+.demo4 .main: {
+  zoom: 1;
+}
+.demo4 article {
+  padding: 2.5%;
+  margin: 2.5%;
+}
+.demo4 .content .sidebar {
+  float: right;
+  border-left: 1px solid #808080;
+}
+.demo4 .content .sidebar + * {
+  float: left;
+}
+.demo4 .featured_product {
+  float: left;
+}
+.demo4 .featured_product:nth-last-of-type(2):first-of-type,
+.demo4 .featured_product:nth-last-of-type(2):first-of-type ~.product {
+  width: 50%;
+}
+.demo4 .featured_product:nth-last-of-type(3):first-of-type,
+.demo4 .featured_product:nth-last-of-type(3):first-of-type ~.product {
+  width: 33%;
+}
+.demo4 .featured_product:nth-last-of-type(4):first-of-type,
+.demo4 .featured_product:nth-last-of-type(4):first-of-type ~.product {
+  width: 25%;
+}
+</style>
 <div class="demo4">
 <header class="ge-header">
     <div class="ge-header_hgroup">
@@ -934,6 +1016,254 @@ width: 25%;
     <footer class="slide__footer">
         <small class="slide__footer__slideNum js-slideNum"></small>
     </footer>
+</article>
+<article class="slides__slide slide" data-title="">
+<header class="slide__header" id="content-manageable-jquery-plugins">
+    <h1 class="slide__header__title">
+    JavaScript
+    </h1>
+    <h2 class="slide__header__subtitle">Content Manageable jQuery Plugins </h2>
+</header>
+<div class="slide__content">
+<h2>The Problem</h2>
+<p>jQuery plugins are used everywhere, and there's millions to choose from. But few were made to work well with a CMS.</p>
+<p>The challenge is when a content author wants to be able to control something within the jQuery plugin. </p>
+<ul data-fx="fadein">
+<li>Content Authors don't usually know JavaScript</li>
+<li>Generating <code>script</code> elements on the page containing parameters can get messy</li>
+<li>Generating JavaScript from a schema can be time-consuming</li>
+</ul>
+
+</div>
+
+<div class="slide__content">
+<h2>The Solution</h2>
+<p>The best way to output a content-author's preferences for a given jQuery widget is to do it within the markup that has been generated. For this, the <code>data-</code> attribute is our friend</p>.
+<pre class="prettyprint lang-html">
+&lt;div id="video__player2" data-video='{"height": "300px", "type":"embed"}' data-video-url="http://nationwide.dist.sdlmedia.com/Distributions/?o=1F2C97BE-DE64-467C-A6D1-3A5DCFE38215" data-video-player='{"autoplay": "false"}'></div>
+
+</pre>
+</div>
+<div class="slide__content">
+<ul>
+    <li>A data attribute can contain any kind of string we want, even JSON </li>
+    <li>We can give our attribute any name we want, so long as it starts with <code>data-</code></li>
+    <li>Browsers that support the <code>data-</code> attribute will create a <code>dataset</code> property on the element that we can access</li>
+</div>
+
+<div class="slide__content">
+<h2>Modifying a jQuery plugin</h2>
+<p>You can modify  any existing plugin to accept <code>data-</code> attributes.</p>
+
+<pre class="prettyprint lang-js">
+    /*Added to the top of the plugin*/
+this.data = $.extend($(this).data('sdlmm'), params);
+</pre>
+<p>
+Then, loop over the data attributes and add them to the data:
+</p>
+<pre class="prettyprint lang-js">
+    /*Added near the top, before you get too deep into the plugin*/
+for (var attr, i = 0, attrs = $this[0].attributes, l = attrs.length; i < l; i++) {
+    attr = attrs.item(i);
+    if (attr.nodeName.match('data-sdlmm-')) {
+        name = attr.nodeName.replace('data-sdlmm-', '');
+        this.data[name] = attr.nodeValue;
+    }
+}
+    </pre>
+    </div>
+<div class="slide__content">
+<h2>The Big Idea</h2>
+<p>jQuery plugins can easily be made CMS-friendly if you employ <code>data-</code> attributes. </p>
+<p data-fx="callout">You need to partner with your front-end developers to design the schema for your plugins</p>
+<p><code>&lt;shameless-plug></code>There's even some examples for you to see:</p>
+<ul>
+    <li><a href="https://github.com/paceaux/Media-Manager-Plugins-for-Tridion" target="_blank">Media Manager plugins</a></li>
+    <li><a href="https://github.com/paceaux/flex-modal" target="blank">Modal Window</a></li>
+    <li><a href="http://blog.frankmtaylor.com/2014/03/27/cms-friendly-jquery-widgets/" target="blank">A helpful blog post</a></li>
+</ul>
+</div>
+    <footer class="slide__footer">
+        <small class="slide__footer__slideNum js-slideNum"></small>
+    </footer>
+</article>
+<article class="slides__slide slide" data-title="">
+<header class="slide__header" id="brightness-detection">
+    <h1 class="slide__header__title">
+    JavaScript
+    </h1>
+    <h2 class="slide__header__subtitle">Brightness Detection with Canvas </h2>
+</header>
+<div class="slide__content">
+<p>One of the new features of 'HTML5' is the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API" target="blank">Canvas API</a>, which allows you to draw bitmap graphics on to the web page. </p>
+
+<p>Canvas has a lesser-known interface, called <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData" target="blank">ImageData</a> that lets us get information about an image that's been loaded into the canvas.   </p>
+
+<pre class="prettyprint lang-javascript">
+getData= function (imgEl) {
+ var _this = imgDetect,
+    ctx = _this.CvsCtx(imgEl), //declare a context of the canvas and then grab it
+    imageData = ctx.getImageData(0,0,imgEl.width,imgEl.height), //get the data about the image in the canvas
+      data = imageData.data,
+      colorSum = 0,
+      imgData = {},
+      r, g, b, avg, brightness; // other variables for later fun and profit
+}
+</pre>
+</div>
+<div class="slide__content">
+<h2>First a pixel, then the world</h2>
+<pre class="prettyprint lang-javascript">
+  getData: function (imgEl) {
+     var _this = imgDetect,
+        ctx = _this.CvsCtx(imgEl),
+        imageData = ctx.getImageData(0,0,imgEl.width,imgEl.height),
+          data = imageData.data,
+          colorSum = 0,
+          imgData = {},
+          r, g, b, avg, brightness;
+    //Loop through the entire array of pixels
+    // every fourth element in the array starts a new pixel
+      for(var x = 0, len = data.length; x < len; x+=4) {
+        r = data[x]; // red value
+        g = data[x+1]; // green value
+        b = data[x+2]; //blue value
+        avg = Math.floor((r+g+b)/3); 
+        colorSum += avg; // let's track the average f=of the colors
+      }
+      imgData.r = r;
+      imgData.g=  g;
+      imgData.b = b;
+      imgData.avg = avg;
+      //simple math to calculate brightness
+      imgData.brightness = Math.floor(colorSum / (imgEl.width*imgEl.height));
+      return imgData;
+  }
+</pre>
+</div>
+<div class="slide__content">
+<pre class="prettyprint lang-javascript">
+//Declare the img detection variable
+var imgDetect;
+imgDetect = {
+  init: function (selector) {
+    var _this = this,
+        els = document.querySelectorAll(selector);
+    //loop through every element 
+    [].forEach.call(els, function (el) {
+      if (el.complete) {
+        _this.setAttributes(el);
+      }
+      
+    });
+  },
+  helpers: {
+    getRelativeBrightness: function (brightness) {
+      return brightness > 125 ? 'imgDetect--lighter' : 'imgDetect--darker';
+    },
+    getRelativeColor:function (data) {
+      var highClr = Math.max(data.r, data.g, data.b),
+          color = '';
+      console.log(data);
+      switch (highClr) {
+        case data.r:
+          color = 'imgDetect--redder';
+          break;
+        case data.g:
+          color = 'imgDetect--greener';
+          break;
+        case data.b:
+          color = 'imgDetect--bluer';
+        default:
+          break;
+      }
+      return color;      
+    }
+  },
+  CvsCtx: function (imgEl) {
+      var canvas = document.createElement('canvas'),
+          ctx = canvas.getContext('2d');
+      canvas.width = imgEl.width;
+      canvas.height = imgEl.height;
+      ctx.drawImage(imgEl,0,0);
+      return ctx;
+  },
+  getData: function (imgEl) {
+     var _this = imgDetect,
+        ctx = _this.CvsCtx(imgEl),
+        imageData = ctx.getImageData(0,0,imgEl.width,imgEl.height),
+          data = imageData.data,
+          colorSum = 0,
+          imgData = {},
+          r, g, b, avg, brightness;
+      for(var x = 0, len = data.length; x < len; x+=4) {
+        r = data[x];
+        g = data[x+1];
+        b = data[x+2];
+        avg = Math.floor((r+g+b)/3);
+        colorSum += avg;
+      }
+      imgData.r = r;
+      imgData.g=  g;
+      imgData.b = b;
+      imgData.avg = avg;
+      imgData.brightness = Math.floor(colorSum / (imgEl.width*imgEl.height));
+      return imgData;
+  },
+  setClass: function (el, className) {
+    el.classList.add(className);
+  },
+
+  setAttributes: function (imgEl) {
+    var _this = imgDetect,
+        data = _this.getData(imgEl);
+    switch (imgEl.getAttribute('data-imgDetect')) {
+      case 'parentClass':
+        _this.setClass(imgEl.parentNode, 'brightness--' + data.brightness);
+        _this.setClass(imgEl.parentNode, _this.helpers.getRelativeBrightness(data.brightness));
+        _this.setClass(imgEl.parentNode, _this.helpers.getRelativeColor(data));
+        break;
+      case 'selfClass':
+        _this.setClass(imgEl, 'brightness--' + data.brightness);
+        _this.setClass(imgEl, _this.helpers.getRelativeBrightness(data.brightness));
+        _this.setClass(imgEl, _this.helpers.getRelativeColor(data));
+
+
+      default:
+      break;
+    }
+  },
+};
+imgDetect.init('[data-imgDetect]');
+
+</pre>
+</div>
+<div class="slide__content">
+<h2>A live action example</h2>
+<div class="demo5">
+   <figure class="figure">
+        <img class="figure__media" src="content-assets/placeimg_200_200_animals.jpg" data-imgDetect="parentClass" />
+        <figcaption class="figure__caption">Animals!</figcaption>
+    </figure>
+    <figure class="figure">
+        <img class="figure__media" src="content-assets/placeimg_200_200_nature.jpg" data-imgDetect="parentClass" />
+        <figcaption class="figure__caption">Nature!</figcaption>
+    </figure>
+    <figure class="figure">
+        <img class="figure__media" src="content-assets/placeimg_200_200_tech.jpg" data-imgDetect="parentClass" />
+        <figcaption class="figure__caption">Tech! Wait, what?</figcaption>
+    </figure>
+    <figure class="figure">
+        <img class="figure__media" src="content-assets/placeimg_200_200_people.jpg" data-imgDetect="parentClass" />
+        <figcaption class="figure__caption">People, everywhere</figcaption>
+    </figure>
+    </div>
+<p>It's only polite to<a href="https://gist.github.com/paceaux/ccc878ec0bcd5e68ef60"> share a gist</a></p>
+</div>
+    <footer class="slide__footer">
+        <small class="slide__footer__slideNum js-slideNum"></small>
+    </footer>
 </article> </section>
 
 </main>
@@ -950,5 +1280,6 @@ width: 25%;
         </script>
         <script type="text/javascript" src="assets/js/hammer.min.js"></script>
         <script type="text/javascript" src="assets/js/slideshow.js"></script>
+        <script type="text/javascript" src="assets/js/imgdetect.js"></script>
     </body>
 </html>
