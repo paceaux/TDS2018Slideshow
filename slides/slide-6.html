@@ -109,7 +109,7 @@
 &lt;/footer>
 &lt;/div>
 </div>
-<div class="slide_content">
+<div class="slide__content">
     <pre class="prettyprint lang-css">
 .demo4 {
   font-family: arial, sans-serif;
@@ -214,6 +214,8 @@
 }
 .demo4 .ge-header_hgroup {
   float: left;
+  display: inline-block;
+  width: 45%;
 }
 .demo4 .nav .list {
   list-style-type: none;
@@ -223,15 +225,20 @@
   margin: 2.5%;
 }
 .demo4 .nav .list-horizontal .list_item {
-  float: left;
   display: inline-block;
 }
 .demo4 .nav-aux {
   float: right;
   width: 45%;
+  display: inline-block;
+}
+.demo4 .nav-aux .list-horizontal .list_item{
+  float:right;
+
 }
 .demo4 .nav-aux .list {
   float: right;
+  width: 100%;
 }
 .demo4 .nav-primary {
   width: 100%;
