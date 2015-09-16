@@ -24,7 +24,7 @@
 <main class="main">
 <nav class="slideNav">
     <ul class="list list--unordered">
-        <li class="list__item"><a href="#">Introduction and Goals</a></li>
+        <li class="list__item"><a href="#introduction">Introduction and Goals</a></li>
         <li class="list__item">HTML
             <ul class="list list--unordered">
                 <li class="list__item"><a class="list__item__link" href="#html-semantics"> HTML5 Semantics </a></li>
@@ -36,14 +36,12 @@
             <ul class="list list--unordered">
                 <li class="list__item"><a class="list__item__link" href="#conditional-content-conundrums">Conditional Content Conundrums </a></li>
                 <li class="list__item"><a class="list__item__link" href="#counting-content-blocks">Counting Content Blocks</a></li>
-                <li class="list__item"><a class="list__item__link" href="#flexible-backgrounds-colors">Flexible backgrounds and colors</a></li>
-
             </ul>
         </li>
         <li class="list__item">Layout
             <ul class="list list--unordered">
                 <li class="list__item"><a class="list__item__link" href="#one-page-template">One Page template to rule them all</a></li>
-                <li class="list__item"><a class="list__item__link" href="#">One Page template to rule them all</a></li>
+                <li class="list__item"><a class="list__item__link" href="#">Layout management</a></li>
             </ul>
         </a></li>
         <li class="list__item">JavaScript
@@ -53,6 +51,7 @@
 
             </ul>
         </li>
+        <li class="list__item"><a href="#conclusion">The Big Ideas</a></li>
     </ul>
 </nav>
     <section class="slides"> <article class="slides__slide slide" data-title="">
@@ -157,7 +156,7 @@
 <div class="slide__content">
 <p>Uncertain as to which semantic element you should use?</p>
 
-<p data-fx="grow">There's actually a great <a href="http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf">flowchart</a> on the internet that you can review. </p>
+<p data-fx="callout">There's actually a great <a href="http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf">flowchart</a> on the internet that you can review. </p>
 
 </div>
 
@@ -282,12 +281,12 @@ A web page is no longer a clump of content
 </header>
 <div class="slide__content">
 <h2>Let semantic markup drive meaningful schema design</h2>
-<ul>
-<li data-fx="fadein"><code>header</code> and <code>footer</code> can be embedded schemas</li>
-<li data-fx="fadein"><code>figure</code> can be a multimedia schema &mdash; embedded or content</li>
-<li data-fx="fadein"><code>aside</code> can be a single unit of content, or a collection of content, that isn't directly related to the stuff nearby. This is ideal for user targetted content. </li>
-<li data-fx="fadein"><code>nav</code> can be any collection of link lists</li>
-<li data-fx="fadein"><code>section</code> can be any component that contains component links</li>
+<ul data-fx="fadein">
+<li ><code>header</code> and <code>footer</code> can be embedded schemas</li>
+<li><code>figure</code> can be a multimedia schema &mdash; embedded or content</li>
+<li><code>aside</code> can be a single unit of content, or a collection of content, that isn't directly related to the stuff nearby. This is ideal for user targetted content. </li>
+<li><code>nav</code> can be any collection of link lists</li>
+<li><code>section</code> can be any component that contains component links</li>
 </ul>
 <h2>It's about relationships</h2>
 <p>A single unit of content can stand on its own, but it can still have a relationship to other pieces of content on the page. </p>
@@ -374,11 +373,6 @@ main.demo2 {
 width: 600px;
 margin: 0 auto;
 }
-main.demo2::after {
-content: ' ';
-display: block;
-clear: both;
-}
 .demo2 .sidebar {
 display: block;
 float: left;
@@ -399,36 +393,6 @@ float: left;
 
 
 </pre>
-<style type="text/css" media="screen">
-main.demo2 {
-width: 600px;
-margin: 0 auto;
-}
-main.demo2::after {
-content: ' ';
-display: block;
-clear: both;
-}
-.demo2 .sidebar {
-display: block;
-float: left;
-width: 25%;
-height: 100%;
-background: #efefef;
-}
-.demo2 .content {
-display:block;
-width: 100%;
-height: 100%;
-outline: 2px solid red;
-}
-.demo2 .sidebar + .content {
-width: 75%;
-float: left;
-}
-
-
-</style>
 </div>
 <div class="slide__content">
 <h2>1 to 2 columns: example</h2>
@@ -448,7 +412,7 @@ float: left;
         </article>    
     </aside>
     <section class="content featuredProducts">
-        <header>
+        <header class="header">
             <h1>Check out these amazing products</h1>
         </header>
         <article class="product">
@@ -514,6 +478,7 @@ font-weight: bold;
 </pre>
 
 </div>
+
 <div class="slide__content">
     <h2>We can combine pseudo classes to count the number of elements  in a container</h2>
 <pre class="prettyprint lang-css" data-lang="css">
@@ -534,7 +499,18 @@ width: 25%;
 </pre>
 
 </div>
+<div class="slide__content">
+<h3>How does this affect <del>my</del> <em>your</em> template development?</h3>
+You can&hellip;
+<ul data-fx="fadein">
+    <li>Adjust dimensions of elements based on the number that appear on the page</li>
+    <li>Create zebra-stripe patterns unique to whether you have even or odd numbered rows or columns</li>
+    <li>Produce layouts that can adapt to the length of the content items on them</li>
+</ul>
+<p data-fx="callout">&hellip; without writing any logic in your templates at all. </p>
 
+<p>There's also a more in depth <a href="http://blog.frankmtaylor.com/2012/10/23/css3-structural-pseudo-class-patterns/">blog post</a> on this subject</p>
+</div>
 <div class="slide__content flex-two-col">
 <style type="text/css">
 .demo3 {

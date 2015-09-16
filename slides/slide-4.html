@@ -70,11 +70,6 @@ main.demo2 {
 width: 600px;
 margin: 0 auto;
 }
-main.demo2::after {
-content: ' ';
-display: block;
-clear: both;
-}
 .demo2 .sidebar {
 display: block;
 float: left;
@@ -95,36 +90,6 @@ float: left;
 
 
 </pre>
-<style type="text/css" media="screen">
-main.demo2 {
-width: 600px;
-margin: 0 auto;
-}
-main.demo2::after {
-content: ' ';
-display: block;
-clear: both;
-}
-.demo2 .sidebar {
-display: block;
-float: left;
-width: 25%;
-height: 100%;
-background: #efefef;
-}
-.demo2 .content {
-display:block;
-width: 100%;
-height: 100%;
-outline: 2px solid red;
-}
-.demo2 .sidebar + .content {
-width: 75%;
-float: left;
-}
-
-
-</style>
 </div>
 <div class="slide__content">
 <h2>1 to 2 columns: example</h2>
@@ -144,7 +109,7 @@ float: left;
         </article>    
     </aside>
     <section class="content featuredProducts">
-        <header>
+        <header class="header">
             <h1>Check out these amazing products</h1>
         </header>
         <article class="product">
