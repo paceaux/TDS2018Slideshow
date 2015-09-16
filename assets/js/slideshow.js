@@ -174,7 +174,14 @@ slideshow.modules.navigation = (function () {
                 break;
                 case 40: 
                 //down
-                slideshow.modules.navigation.view.next();
+                var thisSlide = document.querySelector('.ui-current'),
+                    thisPanel = thisSlide.querySelector('.ui-visible');
+                if (thisPanel.querySelector('[data-fx]')) {
+                    slideshow.modules.ui.showEffect();
+                } else {
+                    slideshow.modules.navigation.view.next();
+
+                }
                 break;
                 default:
                 break;
@@ -326,8 +333,8 @@ slideshow.modules.ui = (function () {
         shortKey: function (e) {
             console.log(e.which);
             switch (e.which) {
-                case 9:
-                //tab
+                case 187:
+                //=
                 e.preventDefault()
                 slideshow.modules.ui.showEffect();
                 break;
