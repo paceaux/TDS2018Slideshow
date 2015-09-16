@@ -936,7 +936,7 @@ body:before {
           transition: all 0.5s ease-in-out;
 }
 .slide__content.ui-visible {
-  height: 93%;
+  height: 94%;
   overflow-y: scroll;
   visibility: visible;
 }
