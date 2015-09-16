@@ -112,7 +112,9 @@ slideshow.modules.navigation = (function () {
             document.querySelector('.ui-current').classList.remove('ui-current');
             currentSlide.classList.add('ui-current');
             currentPanel.classList.add('ui-visible');
-            history.pushState(currentSlide.dataset.title, "slide " + i, '#' + currentSlide.dataset.title.replace(' ', '-'))
+            history.pushState(currentSlide.dataset.title, "slide " + i, '#' + currentSlide.dataset.title.replace(' ', '-'));
+            slideshow.modules.navigation.view.currentPanel = 0;
+
         },
         next: function () {
             if (this.currentSlide < slideshow.modules.navigation.getSlideCount-1) this.currentSlide++;
@@ -141,7 +143,7 @@ slideshow.modules.navigation = (function () {
             currentPanel.classList.add('ui-visible');
         },
         next: function () {
-            if (this.currentPanel < this.panelCount() - 1) this.currentPanel++;
+            if (this.currentPanel < this.panelCount() -1 ) this.currentPanel++;
             this.gotoPanel(this.currentPanel);
 
         },
@@ -189,7 +191,6 @@ slideshow.modules.navigation = (function () {
         },
         navClick: function (e) {
             e.preventDefault();
-            console.log(e);
             var slides = document.querySelector('.slides'),
                 humanID = e.target.href.slice(e.target.href.indexOf('#')).replace('#',''),
                 targetSlide = slides.querySelector('#'+humanID).parentNode,
@@ -331,7 +332,6 @@ slideshow.modules.ui = (function () {
     };
     evtCbs = {
         shortKey: function (e) {
-            console.log(e.which);
             switch (e.which) {
                 case 187:
                 //=
@@ -389,17 +389,14 @@ slideshow.modules.ui = (function () {
             hNav = new Hammer(nav);
 
         hNav.on('swipeleft', function (e) {
-            console.log(e);
             slideshow.modules.ui.toggleSidebar();
         });
         hNav.on('swiperight', function (e) {
-            console.log(e);
             slideshow.modules.ui.toggleSidebar();
         });
         hNav.add(new Hammer.Tap({event: 'doubletap', taps: 2}));
         hNav.on('doubletap', function (e) {
             slideshow.modules.ui.toggleSidebar();
-            console.log('doubletapped')
         });
         window.addEventListener('keyup', evtCbs.shortKey);
         window.addEventListener('hashchange', evtCbs.pushHash);
