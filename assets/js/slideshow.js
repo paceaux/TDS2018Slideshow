@@ -69,8 +69,8 @@ slideshow.info = (function () {
 
 slideshow.namespace('modules.navigation');
 slideshow.modules.navigation = (function () {
-    var public = {},
-        currentSlideIndex = 0,  
+    var pub = {},
+        currentSlideIndex = 0,
         getSlideArray, evtCbs, showSlide, init;
 
     getSlideArray = function () {
@@ -170,11 +170,11 @@ slideshow.modules.navigation = (function () {
                 //right
                 slideshow.modules.navigation.navigate.prev();
                 break;
-                case 38: 
+                case 38:
                 //up
                 slideshow.modules.navigation.view.prev();
                 break;
-                case 40: 
+                case 40:
                 //down
                 var thisSlide = document.querySelector('.ui-current'),
                     thisPanel = thisSlide.querySelector('.ui-visible');
@@ -232,15 +232,15 @@ slideshow.modules.navigation = (function () {
         bindUiEvts();
     };
     init();
-    public = {
+    pub = {
         evtCbs: evtCbs,
         slides: getSlideArray(),
         getSlideCount: getSlideArray().length,
         navigate: showSlide,
         view: showPanel,
-        currentSlide : currentSlideIndex   
+        currentSlide : currentSlideIndex
     };
-    return public;
+    return pub;
 
 })();
 
@@ -290,17 +290,17 @@ slideshow.modules.navBuilder = (function () {
 ===============*/
 slideshow.namespace('modules.ui');
 slideshow.modules.ui = (function () {
-    var public = {}, evtCbs = {};
+    var pub = {}, evtCbs = {};
 
-    public.toggleSidebar = function () {
+    pub.toggleSidebar = function () {
         var sidebar = document.querySelector('.slideNav');
         sidebar.classList.toggle('ui-collapsed');
     };
-    public.toggleMain = function () {
+    pub.toggleMain = function () {
         var sidebar = document.querySelector('.slideNav');
         sidebar.classList.toggle('ui-expandedfull');
     };
-    public.toggleFullscreen= function () {
+    pub.toggleFullscreen= function () {
           if (!document.fullscreenElement &&    // alternative standard method
               !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
             if (document.documentElement.requestFullscreen) {
@@ -325,7 +325,7 @@ slideshow.modules.ui = (function () {
           }
 
     };
-    public.showEffect = function () {
+    pub.showEffect = function () {
         var currentSlide = document.querySelector('.slide.ui-current'),
             currentPanel = currentSlide.querySelector('.ui-visible'),
             fxItem = currentPanel.querySelector('[data-fx]');
@@ -344,7 +344,7 @@ slideshow.modules.ui = (function () {
                 //`
                 slideshow.modules.ui.showEffect();
                 break;
-                default: 
+                default:
                 break;
             }
             if (e.ctrlKey) {
@@ -365,7 +365,7 @@ slideshow.modules.ui = (function () {
                     slideshow.modules.ui.toggleSidebar();
                     //n
                     break;
-                    default: 
+                    default:
                     break;
                 }
             }
@@ -409,7 +409,7 @@ slideshow.modules.ui = (function () {
         bindUiEvts();
     }
     init();
-    return public;
+    return pub;
 })();
 
 slideshow.init();
