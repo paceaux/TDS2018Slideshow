@@ -48,12 +48,12 @@ slideshow.namespace('info');
 slideshow.info = (function () {
     var getBreakpoint = function () {
         return window.getComputedStyle(document.querySelector('body'), ':before').getPropertyValue('content').replace(/\"/g, '');
-    }
+    };
     return {
         breakpoint : (function () {
             return getBreakpoint();
         })()
-    }
+    };
 })();
 
 /*================
@@ -99,7 +99,7 @@ slideshow.modules.navigation = (function () {
             }
 
         }
-    };
+    }
 
     showSlide = {
         currentSlide: 0,
@@ -122,7 +122,7 @@ slideshow.modules.navigation = (function () {
         },
         prev: function () {
             if (this.currentSlide > 0) this.currentSlide--;
-            this.gotoSlide(this.currentSlide)
+            this.gotoSlide(this.currentSlide);
         }
     };
     showPanel = {
@@ -152,7 +152,7 @@ slideshow.modules.navigation = (function () {
             if (this.currentPanel > 0) {
                 this.currentPanel--;
                 currentSlide.querySelector('.ui-visible').classList.remove('ui-visible');
-            };
+            }
             this.gotoPanel(this.currentPanel);
 
         }
@@ -228,7 +228,7 @@ slideshow.modules.navigation = (function () {
             slideshow.modules.navigation.view.next();
         });
 
-    };
+    }
     init = function( ) {
         setupSlides();
         bindUiEvts();
@@ -241,7 +241,7 @@ slideshow.modules.navigation = (function () {
         navigate: showSlide,
         view: showPanel,
         currentSlide : currentSlideIndex   
-    }
+    };
     return public;
 
 })();
@@ -279,8 +279,8 @@ slideshow.modules.navBuilder = (function () {
 
     function bindUiEvts() {
 
-    };
-    function init() {
+    }
+    init = function () {
         //setupNavItems();
         bindUiEvts();
     };
@@ -340,7 +340,7 @@ slideshow.modules.ui = (function () {
             switch (e.which) {
                 case 187:
                 //=
-                e.preventDefault()
+                e.preventDefault();
                 slideshow.modules.ui.showEffect();
                 break;
                 case 192:
@@ -406,7 +406,7 @@ slideshow.modules.ui = (function () {
         window.addEventListener('keyup', evtCbs.shortKey);
         window.addEventListener('hashchange', evtCbs.pushHash);
         //to do: add in the history API, Hash by titles or slide number
-    };
+    }
     function init() {
         setupFadeEffects();
         bindUiEvts();
