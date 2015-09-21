@@ -3,7 +3,7 @@
 ===============*/
 HTMLElement.prototype.removeClassByPartialName = function (partialName) {
     var classArray = this.className.split(' '), el = this;
-    classArray.forEach(function(elClassName, i) {
+    classArray.forEach(function(elClassName) {
         if (elClassName.indexOf(partialName) !== -1) {
             el.className = el.className.replace(elClassName,'');
         }
@@ -37,9 +37,10 @@ slideshow.namespace = function(ns_string) {
 slideshow.namespace('init');
 slideshow.init = function() {
     for (var module in this.modules) {
-        console.log(module);
         if (this.modules[module].hasOwnProperty('init')) {
             this.modules[module].init();
+            console.log(module);
+
         }
     }
     prettyPrint();
@@ -70,7 +71,7 @@ slideshow.namespace('modules.navigation');
 slideshow.modules.navigation = (function () {
     var public = {},
         currentSlideIndex = 0,  
-        getSlideArray, evtCbs,moveHelpers, showSlide, init;
+        getSlideArray, evtCbs, showSlide, init;
 
     getSlideArray = function () {
        return  document.querySelectorAll('.slide');
@@ -134,7 +135,6 @@ slideshow.modules.navigation = (function () {
         gotoPanel: function (i) {
             var currentSlide = document.querySelector('.ui-current'),
                 hiddenTopPaneli = i > 0 ? i-1 : 0,
-                hiddenBottomPaneli = i < this.panelCount() ? i + 1 : this.panelCount(), 
                 currentPanel = currentSlide.querySelector('.js-panel--' + i),
                 hiddenTopPanel = currentSlide.querySelector('.js-panel--' + hiddenTopPaneli);
             hiddenTopPanel.classList.add('ui-hiddenTop');
@@ -212,19 +212,17 @@ slideshow.modules.navigation = (function () {
             navLink.addEventListener('click', evtCbs.navClick);
         });
         var slides = document.querySelector('.slides'),
-            body = document.querySelector('body'),
-            hslides = new Hammer(slides),
-            hbody = new Hammer(body);
-        hslides.on('swipeleft', function (e) {
+            hslides = new Hammer(slides);
+        hslides.on('swipeleft', function () {
             slideshow.modules.navigation.navigate.next();
         });
-        hslides.on('swiperight', function (e) {
+        hslides.on('swiperight', function () {
             slideshow.modules.navigation.navigate.prev();
         });
-        hslides.on('pandown', function (e) {
+        hslides.on('pandown', function () {
             slideshow.modules.navigation.view.prev();
         });
-        hslides.on('panup', function (e) {
+        hslides.on('panup', function () {
             slideshow.modules.navigation.view.next();
         });
 
@@ -251,8 +249,7 @@ slideshow.modules.navigation = (function () {
 ===============*/
 slideshow.namespace('modules.navBuilder');
 slideshow.modules.navBuilder = (function () {
-    var navContainer = document.querySelector('.slideNav'),
-        getSlideArray, navItemArray,navItem, init, evtCbs;
+    var getSlideArray, navItem, init, evtCbs;
 
     getSlideArray = function () {
        return  document.querySelectorAll('.slide');
@@ -393,14 +390,14 @@ slideshow.modules.ui = (function () {
         var nav = document.querySelector('.slideNav'),
             hNav = new Hammer(nav);
 
-        hNav.on('swipeleft', function (e) {
+        hNav.on('swipeleft', function () {
             slideshow.modules.ui.toggleSidebar();
         });
-        hNav.on('swiperight', function (e) {
+        hNav.on('swiperight', function () {
             slideshow.modules.ui.toggleSidebar();
         });
         hNav.add(new Hammer.Tap({event: 'doubletap', taps: 2}));
-        hNav.on('doubletap', function (e) {
+        hNav.on('doubletap', function () {
             slideshow.modules.ui.toggleSidebar();
         });
         window.addEventListener('keyup', evtCbs.shortKey);
