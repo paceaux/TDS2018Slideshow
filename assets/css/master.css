@@ -802,6 +802,7 @@ body:before {
   padding: 0 1em 1em 1.2em;
   height: 90%;
   max-width: 300px;
+  margin: 0;
 }
 .slideNav .list__item {
   display: block;

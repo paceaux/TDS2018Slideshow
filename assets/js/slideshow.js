@@ -116,6 +116,7 @@ slideshow.modules.navigation = (function () {
             history.pushState(currentSlide.dataset.title, "slide " + i, '#' + currentSlide.dataset.title.replace(' ', '-'));
             slideshow.modules.navigation.view.currentPanel = 0;
             this.setCurrentNav(currentSlide);
+            this.updateUrl(currentSlide);
         },
         next: function () {
             if (this.currentSlide < slideshow.modules.navigation.getSlideCount-1) this.currentSlide++;
@@ -125,17 +126,22 @@ slideshow.modules.navigation = (function () {
             if (this.currentSlide > 0) this.currentSlide--;
             this.gotoSlide(this.currentSlide);
         },
+        updateUrl : function (panelEl) {
+            var slideNav = document.querySelector('.slideNav'),
+                currentPanelHeader = panelEl.querySelector('.slide__header'),
+                currentId = currentPanelHeader.id;
+            history.pushState(null, null,'#' + currentId);
+        },
         setCurrentNav: function (panelEl) {
-            console.log('setting nav');
             var slideNav = document.querySelector('.slideNav'),
                 currentPanelHeader = panelEl.querySelector('.slide__header'),
                 currentId = currentPanelHeader.id,
                 currentNav = slideNav.querySelector('[href="#' + currentId +'"]');
-            console.log(currentId);
             if (slideNav.querySelector('.ui-active')) {
                 slideNav.querySelector('.ui-active').classList.remove('ui-active');
             }
             currentNav.classList.add('ui-active');
+
 
         }
     };
@@ -386,6 +392,15 @@ slideshow.modules.ui = (function () {
         pushHash: function (e) {
             console.log(e);
 
+        },
+        windowLoad: function (e) {
+            var slides = document.querySelector('.slides'),
+                hash;
+            if (window.location.hash) {
+                var hash = window.location.hash.replace('#',''),
+                    targetSlide = document.getElementById(hash).parentNode;
+                slideshow.modules.navigation.navigate.gotoSlide(parseInt(targetSlide.dataset.slideindex, 10));
+            }
         }
     };
     function setupFadeEffects() {
@@ -415,6 +430,7 @@ slideshow.modules.ui = (function () {
         });
         window.addEventListener('keyup', evtCbs.shortKey);
         window.addEventListener('hashchange', evtCbs.pushHash);
+        window.addEventListener('load', evtCbs.windowLoad);
         //to do: add in the history API, Hash by titles or slide number
     }
     function init() {
