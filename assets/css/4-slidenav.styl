@@ -28,20 +28,27 @@
     height: 90%;
     max-width: sideWidth;
     &__item {
+      display: block;
       &__link {
+        display: block;
         color: colorCoolDesat3
+        smoothTransition();
         &:hover, &:focus {
           color: colorCoolDesat2
         }
         &.visited {
           color: colorCoolDesat1
         }
+        &.ui-active {
+          background: colorCoolDesat3;
+          color: colorNeutralDarkest;
+        }
       }
     }
     .list {
       font-size: .75em;
       font-weight: normal;
-      align-items: flex-start;
+      align-items: stretch;
     }
   }
 }

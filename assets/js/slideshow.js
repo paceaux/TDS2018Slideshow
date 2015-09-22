@@ -115,7 +115,7 @@ slideshow.modules.navigation = (function () {
             currentPanel.classList.add('ui-visible');
             history.pushState(currentSlide.dataset.title, "slide " + i, '#' + currentSlide.dataset.title.replace(' ', '-'));
             slideshow.modules.navigation.view.currentPanel = 0;
-
+            this.setCurrentNav(currentSlide);
         },
         next: function () {
             if (this.currentSlide < slideshow.modules.navigation.getSlideCount-1) this.currentSlide++;
@@ -124,6 +124,19 @@ slideshow.modules.navigation = (function () {
         prev: function () {
             if (this.currentSlide > 0) this.currentSlide--;
             this.gotoSlide(this.currentSlide);
+        },
+        setCurrentNav: function (panelEl) {
+            console.log('setting nav');
+            var slideNav = document.querySelector('.slideNav'),
+                currentPanelHeader = panelEl.querySelector('.slide__header'),
+                currentId = currentPanelHeader.id,
+                currentNav = slideNav.querySelector('[href="#' + currentId +'"]');
+            console.log(currentId);
+            if (slideNav.querySelector('.ui-active')) {
+                slideNav.querySelector('.ui-active').classList.remove('ui-active');
+            }
+            currentNav.classList.add('ui-active');
+
         }
     };
     showPanel = {

@@ -803,8 +803,14 @@ body:before {
   height: 90%;
   max-width: 300px;
 }
+.slideNav .list__item {
+  display: block;
+}
 .slideNav .list__item__link {
+  display: block;
   color: #9fca7f;
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
 }
 .slideNav .list__item__link:hover,
 .slideNav .list__item__link:focus {
@@ -813,13 +819,17 @@ body:before {
 .slideNav .list__item__link.visited {
   color: #19503d;
 }
+.slideNav .list__item__link.ui-active {
+  background: #9fca7f;
+  color: #646464;
+}
 .slideNav .list .list {
   font-size: 0.75em;
   font-weight: normal;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 .slideNav.ui-expandedfull + .slides {
   width: 0%;
