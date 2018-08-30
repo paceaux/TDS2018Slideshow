@@ -1,0 +1,71 @@
+
+/*===============
+    #Slide Navigation
+===============*/
+
+.slideNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  border-right: 12px solid colorNeutralDarkest;
+  height: 80vh;
+  width: sideWidth;
+  margin: 0 1.618em 0 0;
+  flex-shrink: 0;
+  flex-grow: 1;
+  smoothTransition();
+  .list {
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 1.5em
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 1em 1em 1.2em;
+    height: 90%;
+    max-width: sideWidth;
+    margin: 0;
+    &__item {
+      display: block;
+      &__link {
+        display: block;
+        color: colorCoolDesat3
+        smoothTransition();
+        &:hover, &:focus {
+          color: colorCoolDesat2
+        }
+        &.visited {
+          color: colorCoolDesat1
+        }
+        &.ui-active {
+          background: colorCoolDesat3;
+          color: colorNeutralDarkest;
+        }
+      }
+    }
+    .list {
+      font-size: .75em;
+      font-weight: normal;
+      align-items: stretch;
+    }
+  }
+}
+
+.slideNav.ui-expandedfull + .slides {
+    width: 0%;
+}
+
+.slideNav.ui-collapsed {
+  width: 0%;
+    + .slides {
+      width: 100%;
+      .slide {
+          width: 100%;
+      }
+    }
+}
+
+

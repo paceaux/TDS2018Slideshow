@@ -1,0 +1,130 @@
+/*===============
+    #Code edit
+===============*/
+.highlight-code slide.current {
+  pre > * {
+    opacity: 0.25;
+    smoothTransition()
+  }
+  b {
+    opacity: 1;
+  }
+}
+[contenteditable="true"], [contenteditable] {
+  display: block;
+  resize: both;
+  min-height: 12em;
+  border: 1px dashed transparent;
+  &:focus, &:active{
+    outline: none;
+    border: 1px dashed colorNeturalLightest;
+  }
+}
+pre, [contenteditable]{
+  min-height: 12em;
+  overflow: scroll;
+}
+editAttributes() {
+    position: absolute;
+    color: white;
+    padding: 2px .618em;
+    text-transform: uppercase;
+    border-radius: 0 0 3px 3px;
+    background-color: colorNeutralDarkest;
+
+}
+pre, [contenteditable="true"], [contenteditable], style, script {
+  font-family: 'Source Code Pro', 'Courier New', monospace;
+  font-size: .8em;
+  line-height: 1.4;
+  padding: 10px 0 10px 1ch;
+  letter-spacing: -1px;
+  margin-bottom: 1em;
+  width: 90%;
+  background-color: colorNeutralLight;
+  position: relative;
+  overflow: scroll;
+  /*overflow: hidden;*/
+  &[data-lang]:after {
+    content: attr(data-lang);
+    right: 8px;
+    top: 0;
+    editAttributes();
+  }
+}
+
+pre[data-lang="go"] {
+  color: #333;
+}
+pre[data-lang="css"] {
+
+}
+[data-lang="html"] {
+  &:after {
+    color: colorWarm;
+  }
+}
+[data-lang="js"] {
+  &:after {
+    color: colorCool;
+  }
+}
+[contenteditable] {
+  white-space: pre;
+  &:before {
+    content: 'editable';
+    right: 65px;
+    top: 1em;
+    editAttributes();
+  }
+}
+style[contenteditable]:after {
+  content: 'CSS';
+  top: 1em;
+  right: 8px;
+  editAttributes();
+}
+code {
+  font-size: 95%;
+  font-family: 'Source Code Pro', 'Courier New', monospace;
+  color: black;
+}
+figure{
+  pre{
+    flex-basis: 17.5em;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+}
+/* Pretty print */
+
+.prettyprint .str, /* string content */
+.prettyprint .atv { /* a markup attribute value */
+  color: #009f5d; //rgb(0, 138, 53);
+}
+.prettyprint .kwd, /* a keyword */
+.prettyprint .tag { /* a markup tag name */
+  color: #0066cc;
+}
+.prettyprint .com { /* a comment */
+  color: colorNeutralDarkest; //rgb(127, 127, 127);
+  font-style: italic;
+}
+.prettyprint .lit { /* a literal value */
+  color: rgb(127, 0, 0);
+}
+.prettyprint .pun, /* punctuation, lisp open bracket, lisp close bracket */
+.prettyprint .opn,
+.prettyprint .clo {
+  color: #515151; //rgb(127, 127, 127);
+}
+.prettyprint .typ, /* a type name */
+.prettyprint .atn, /* a markup attribute name */
+.prettyprint .dec,
+.prettyprint .var { /* a declaration; a variable name */
+  color: #d94d3a; //rgb(127, 0, 127);
+}
+.prettyprint .pln {
+  color: colorNeutralDarkest;
+}

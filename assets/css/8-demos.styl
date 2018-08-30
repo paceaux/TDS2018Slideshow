@@ -1,0 +1,200 @@
+main[class*="demo"] {
+    &::after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+}
+[class*="demo"] {
+    article {
+    }
+    .product {
+        &::after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;  
+        }
+        &__cost {
+            display: inline-block;
+            float:left;
+        }
+        &__title {
+            margin: .618em;
+            border-bottom: 2px solid #d9d9d9;
+        }
+        &__img {
+            display: inline-block;
+            height: 45px;
+            width: 45px;
+            padding: 2px;
+            border: 1px solid #dedede;
+        }
+        p {
+            margin: .618em;
+        }
+    }
+}
+main.demo2 {
+width: 600px;
+margin: 0 auto;
+}
+main.demo2::after {
+content: ' ';
+display: block;
+clear: both;
+}
+.demo2 .sidebar {
+display: block;
+float: left;
+width: 25%;
+height: 100%;
+background: #efefef;
+}
+.demo2 .content {
+display:block;
+width: 100%;
+height: 100%;
+outline: 2px solid red;
+}
+.demo2 .sidebar + .content {
+width: 75%;
+float: left;
+}
+.demo2 .sidebar ~ .product, 
+.demo2 .sidebar ~ .header {
+    width: 75%;
+    float:left;
+}
+.demo4 {
+    font-family: arial, sans-serif;
+    width: 40em;
+    margin: 0 auto;
+    .ge-header, .ge-footer {
+        width: 100%;
+        min-height: 80px;
+    }
+    .ge-header {
+        border-bottom: 2px solid gray;
+        &_hgroup {
+            float: left;
+        }
+    }
+    .nav {
+        .list {
+            list-style-type: none;
+            width: inherit;
+            &_item {
+                margin: 2.5%;
+            }
+            &-horizontal {
+                .list_item {
+                    float: left;
+                    display: inline-block;
+                }
+            }
+        }
+        &-aux {
+            float: right;
+            width: 45%;
+            .list {
+                float: right;
+            }
+        }
+        &-primary {
+            width: 100%;
+            clear: both;
+        }
+    }
+    .sidebar {
+        float: left;
+        width: 25%;
+        height: 100%;
+    }
+    .main > .sidebar {
+        border-right: 1px solid gray;
+    }
+    .main {
+        &::after,
+        &::before {
+            content: '';
+            display: table;
+        }
+        &::after {
+            clear: both;
+        }
+        &: {
+            zoom: 1;
+        }
+    }
+    article {
+        padding: 2.5%;
+        margin: 2.5%;
+    }
+    .content {
+        .sidebar {
+            float: right;
+            border-left: 1px solid gray;
+        }
+        .sidebar + * {
+            float: left;
+        }
+    }
+    .featured {
+        &_product {
+            float: left;
+            &:nth-last-of-type(2):first-of-type,
+            &:nth-last-of-type(2):first-of-type ~.product {
+            width: 50%;
+            }
+            &:nth-last-of-type(3):first-of-type,
+            &:nth-last-of-type(3):first-of-type ~.product {
+            width: 33%;
+            }
+            &:nth-last-of-type(4):first-of-type,
+            &:nth-last-of-type(4):first-of-type ~.product {
+            width: 25%;
+            }
+        }
+    }   
+}
+.demo5 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .figure {
+        position: relative;
+        height: 200px;
+        width: 200px;
+        &__caption {
+            color: inherit;
+            position: absolute;
+            top: 15%;
+            font-size: 2em;
+            padding: .5em;
+        }
+    }
+    .imgDetect--bluer {
+        color: #992700;
+        .figure__caption {
+            background: rgba(41, 55, 127, .3)
+        }
+    }
+    .imgDetect--redder {
+        color: #5769CC;
+        .figure__caption {
+            background: rgba(153, 39, 0, .3)
+
+        }
+    }
+    .imgDetect--lighter{
+        text-shadow: 0px 1px 1px #333;
+    }
+    
+}

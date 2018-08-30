@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Slideshow</title>
+        <meta name="description" content="">
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
+<link href='http://fonts.googleapis.com/css?family=Asap:700,400|Palanquin+Dark:500' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="assets/css/master.css">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <script type="text/javascript" src="assets/js/modernizr.js"></script>
+
+    </head>
+    <body>
+    <header class="ge-header">
+        <img class="ge-header__logo" src="assets/img/tds-logo.png" />
+        <h1 class="ge-header__title">CSS3 and HTML5 for a Better Author Experience</h1>
+    </header>
+<main class="main">
+<nav class="slideNav">
+    <ul class="list list--unordered">
+        <li class="list__item"><a class="list__item__link" href="#introduction">Introduction and Goals</a></li>
+        <li class="list__item">HTML
+            <ul class="list list--unordered">
+                <li class="list__item"><a class="list__item__link" href="#html-semantics"> HTML5 Semantics </a></li>
+                <li class="list__item"><a class="list__item__link" href="#html-content-modelling">Markup-based content modelling</a></li>
+                <li class="list__item"><a class="list__item__link" href="#html-dediving-templates">Defeating the <code>div</code></a></li>
+            </ul>
+        </a></li>
+        <li class="list__item">CSS
+            <ul class="list list--unordered">
+                <li class="list__item"><a class="list__item__link" href="#conditional-content-conundrums">Conditional Content Conundrums </a></li>
+                <li class="list__item"><a class="list__item__link" href="#counting-content-blocks">Counting Content Blocks</a></li>
+            </ul>
+        </li>
+        <li class="list__item">Layout
+            <ul class="list list--unordered">
+                <li class="list__item"><a class="list__item__link" href="#one-page-template">One Page template to rule them all</a></li>
+                <li class="list__item"><a class="list__item__link" href="#">Layout management</a></li>
+            </ul>
+        </a></li>
+        <li class="list__item">JavaScript
+            <ul class="list list--unordered">
+                <li class="list__item"><a class="list__item__link" href="#">Content Manageable jQuery plugins</a></li>
+                <li class="list__item"><a class="list__item__link" href="#brightness-detection">Image detection with Canvas</a></li>
+            </ul>
+        </li>
+        <li class="list__item"><a class="list__item__link" href="#conclusion">The Big Ideas</a></li>
+    </ul>
+</nav>
+    <section class="slides"> <article class="slides__slide slide" data-title="">
+<header class="slide__header" id="introduction">
+        <h1 class="slide__header__title">
+            Introduction
+        </h1>
+    </header>
+<div class="slide__content">
+<h2>Why are we here?</h2>
+<h3>It's all about the users!</h3>
+
+<p>We have two types of users that we need to account for when we implement websites:</p>
+
+<ul>
+    <li>End-users</li>
+    <li>CMS-users (content authors/editors)</li>
+</ul>
+
+<p>When we build websites, we account for both kinds of user &mdash; but usually the back-end (Tridion) developers focus on the CMS user, while the front-end developers focus primarily on the end-user. </p>
+
+</div>
+<div class="slide__content">
+<h3>The Problem is the Balance</h3>
+<p>If front-end developers focus exclusively on the end-user experience, without considering the content-author experience, this can create a lot of strain on the Tridion developer and the Tridion user. </p>
+
+<p>If a Front-end developer codes, without thinking about thinking about how content will be managed, this leads to problems:</p>
+
+<ul>
+    <li data-fx="fadein">Inconsistent markup for the same content -> too many Component Templates</li>
+    <li data-fx="fadein">Too many divs -> developer gets lost in code, contracts '<code>div</code>itis', perpetuates drinking problem</li>
+    <li data-fx="fadein">Too many divs -> site isn't SEO friendly or accessible</li>
+    <li data-fx="fadein">Assuming a container always has content -> blank spaces and weird gaps</li>
+    <li data-fx="fadein">Hard-coded classes for layout -> no flexibility in adding removing items</li>
+    <li data-fx="fadein">Hard-coded background images and colors -> no flexibility in changing content areas</li>
+    <li data-fx="fadein">Every jQuery plugin ever -> content author can't change features in a plugin</li>
+
+</ul>
+</div>
+<div class="slide__content ">
+<h3>The solution is in the <del>code</del> content</h3>
+
+<ol class="fx" data-fx="fadein">
+    <li>Tell the FE dev about the content models (schemas)</li>
+    <li>Collect authoring rules before writing code</li>
+    <li>Accept FE code that's flexible, not fixed</li>
+</ol>
+
+<p class="fx" data-fx="callout">We're here today to talk about #3. You're on your own for those first two. </p>
+
+</div>
+
+    <footer class="slide__footer">
+        <small class="slide__footer__slideNum js-slideNum"></small>
+    </footer>
+</article>
+<article class="slides__slide slide" data-title="">
+<header class="slide__header" id="html-semantics">
+    <h1 class="slide__header__title">
+    HTML
+    </h1>
+    <h2 class="slide__header__subtitle">Introducing HTML5 Semantics</h2>
+</header>
+<div class="slide__content">
+    <h3>Grouping sets of content</h3>
+<pre class="prettyprint lang-html">
+&lt;!-- Put the things unique to this specific page in Main. --&gt;
+&lt;main&gt;
+  &lt;nav>;Navigation, for either a section, or the whole site&lt;/nav>;
+  &lt;aside&gt;Content not related to other stuff in my container&lt;/aside&gt;
+  &lt;section&gt;&lt;!-- I'm for a collection of similar pieces of content --&gt;&lt;/section&gt;
+&lt;/main&gt;
+</pre>
+</div>
+<div class="slide__content">
+    <h3>Classifying the kinds of content</h3>
+<pre class="prettyprint lang-html">
+&lt;article>&lt;!--I'm syndicatable content --&gt;&lt;/article&gt;
+&lt;figure&gt;
+    &lt;!-- I make the content better and easier to understand. 
+    It doesn't matter where you put me --&gt;
+    &lt;figcaption&gt;explanatory caption&lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+</pre>
+</div>
+<div class="slide__content">
+    <h3>Enhancing sections of content, and content</h3>
+<pre class="prettyprint lang-html">
+&lt;article>&lt;!--I'm syndicatable content --&gt;
+    &lt;header>
+    &lt;h1>A title for this piece of content&lt;/h1>
+    &lt;h1>spiffy subtitle&lt;/h1>
+    &lt;/header&gt;
+    &lt;div>
+    All the amazing content goes here
+    &lt;/div>
+&lt;footer>A Conclusion for the content. It was written by Frank. &lt;/footer&gt;
+&lt;/article&gt;
+</pre>
+</div>
+<div class="slide__content">
+<p>Uncertain as to which semantic element you should use?</p>
+
+<p data-fx="callout">There's actually a great <a href="http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf">flowchart</a> on the internet that you can review. </p>
+
+</div>
+
+    <footer class="slide__footer">
+        <small class="slide__footer__slideNum js-slideNum"></small>
+    </footer>
+</article>
+<article class="slides__slide slide" data-title="">
+<header class="slide__header" id="html-content-modelling">
+    <h1 class="slide__header__title">
+        HTML
+    </h1>
+    <h2 class="slide__header__subtitle">HTML5-inspired content modelling</h2>
+</header>
+<div class="slide__content">
+<h3>What does semantic markup mean for front end?</h3>
+<p data-fx="fadein">
+A web page is no longer a clump of content
+</p>
+<p data-fx="fadein">
+    A web page contains collections of content that relate to each other <span class="fx" data-fx="sizebounce">in a meaningful way</span>.
+</p>
+</div>
+<div class="slide__content">
+<pre class="prettyprint lang-html">
+&lt;section class="featuredProducts">
+    &lt;header>
+        &lt;h1>Check out these amazing products&lt;/h1>
+    &lt;/header>
+    &lt;article class="product">
+        &lt;h1 class="product__title">Premium Widget &trade;&lt;/h1>
+        &lt;p>This premium widget is superior to the regular widget&lt;/p>
+        &lt;div class="product__cost">$25.99&lt;/div>
+        &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    &lt;/article>
+    &lt;article class="product">
+        &lt;h1 class="product__title">Premium Widget &trade;&lt;/h1>
+        &lt;p>This premium widget is superior to the regular widget&lt;/p>
+        &lt;div class="product__cost">$25.99&lt;/div>
+        &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    &lt;/article>
+    &lt;article class="product">
+        &lt;h1 class="product__title">Premium Widget &trade;&lt;/h1>
+        &lt;p>This premium widget is superior to the regular widget&lt;/p>
+        &lt;div class="product__cost">$25.99&lt;/div>
+        &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    &lt;/article>
+&lt;/section>
+&lt;aside class="recommendations">
+    &lt;article class="product">
+        &lt;h1 class="product__title">Yesterday's Widget &trade;&lt;/h1>
+        &lt;p>Yep, it's a widget we're trying to get rid of&lt;/p>
+        &lt;div class="product__cost">$15.99&lt;/div>
+        &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    &lt;/article>
+    &lt;article class="product">
+        &lt;h1 class="product__title">Last year's Widget &trade;&lt;/h1>
+        &lt;p>Please buy this widget. Please&lt;/p>
+        &lt;div class="product__cost">$.99&lt;/div>
+        &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    &lt;/article>    
+&lt;/aside> 
+</pre>
+
+
+</div>
+<div class="slide__content">
+
+<div id="demo1" class="demo1">
+<section class="featuredProducts">
+    <header>
+        <h1>Check out these amazing products</h1>
+    </header>
+    <article class="product">
+        <h1 class="product__title">Premium Widget &trade;</h1>
+        <p>This premium widget is superior to the regular widget</p>
+        <div class="product__cost">$25.99</div>
+        <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    </article>
+    <article class="product">
+        <h1 class="product__title">Premium Widget &trade;</h1>
+        <p>This premium widget is superior to the regular widget</p>
+        <div class="product__cost">$25.99</div>
+        <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    </article>
+    <article class="product">
+        <h1 class="product__title">Premium Widget &trade;</h1>
+        <p>This premium widget is superior to the regular widget</p>
+        <div class="product__cost">$25.99</div>
+        <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    </article>
+</section>
+<aside class="recommendations">
+    <article class="product">
+        <h1 class="product__title">Yesterday's Widget &trade;</h1>
+        <p>Yep, it's a widget we're trying to get rid of</p>
+        <div class="product__cost">$15.99</div>
+        <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    </article>
+    <article class="product">
+        <h1 class="product__title">Last year's Widget &trade;</h1>
+        <p>Please buy this widget. Please</p>
+        <div class="product__cost">$.99</div>
+        <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    </article>    
+</aside>  
+</div>  
+</div>
+
+
+
+    <footer class="slide__footer">
+        <small class="slide__footer__slideNum js-slideNum"></small>
+    </footer>
+</article>
+<article class="slides__slide slide" data-title="">
+<header class="slide__header" id="html-dediving-templates">
+    <h1 class="slide__header__title">
+    HTML
+    </h1>
+    <h2 class="slide__header__subtitle">Dediving templates and views</h2>
+</header>
+<div class="slide__content">
+<h2>Let semantic markup drive meaningful schema design</h2>
+<ul data-fx="fadein">
+<li ><code>header</code> and <code>footer</code> can be embedded schemas</li>
+<li><code>figure</code> can be a multimedia schema &mdash; embedded or content</li>
+<li><code>aside</code> can be a single unit of content, or a collection of content, that isn't directly related to the stuff nearby. This is ideal for user targetted content. </li>
+<li><code>nav</code> can be any collection of link lists</li>
+<li><code>section</code> can be any component that contains component links</li>
+</ul>
+<h2>It's about relationships</h2>
+<p>A single unit of content can stand on its own, but it can still have a relationship to other pieces of content on the page. </p>
+<p>Teach content authors about these semantic containers so that they can form meaningful relationships between blocks of content. </p>
+</div>
+
+
+
+
+    <footer class="slide__footer">
+        <small class="slide__footer__slideNum js-slideNum"></small>
+    </footer>
+</article>
+<article class="slides__slide slide" data-title="">
+<header class="slide__header" id="conditional-content-conundrums">
+    <h1 class="slide__header__title">
+    CSS
+    </h1>
+    <h2 class="slide__header__subtitle">Conditional Content Conundrums</h2>
+</header>
+<div class="slide__content">
+<h2>Going from 1 to 2 columns: HTML</h2>
+
+<p>When making a container that can flex between one and two columns, put the optional column <em>first</em>.</p>
+
+<p>The block of content that is <em>always present</em> should be placed at the end of the container. </p>
+
+<p>First, Some HTML</p>
+<pre class="prettyprint lang-html">
+&lt;main class="demo2">
+&lt;aside class="recommendations sidebar">
+    &lt;article class="product">
+        &lt;h1 class="product__title">Yesterday's Widget &trade;&lt;/h1>
+        &lt;p>Yep, it's a widget we're trying to get rid of&lt;/p>
+        &lt;div class="product__cost">$15.99&lt;/div>
+        &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    &lt;/article>
+    &lt;article class="product">
+        &lt;h1 class="product__title">Last year's Widget &trade;&lt;/h1>
+        &lt;p>Please buy this widget. Please&lt;/p>
+        &lt;div class="product__cost">$.99&lt;/div>
+        &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    &lt;/article>    
+&lt;/aside>
+&lt;section class="content featuredProducts">
+    &lt;header>
+        &lt;h1>Check out these amazing products&lt;/h1>
+    &lt;/header>
+    &lt;article class="product">
+        &lt;h1 class="product__title">Premium Widget &trade;&lt;/h1>
+        &lt;p>This premium widget is superior to the regular widget&lt;/p>
+        &lt;div class="product__cost">$25.99&lt;/div>
+        &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    &lt;/article>
+    &lt;article class="product">
+        &lt;h1 class="product__title">Premium Widget &trade;&lt;/h1>
+        &lt;p>This premium widget is superior to the regular widget&lt;/p>
+        &lt;div class="product__cost">$25.99&lt;/div>
+        &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    &lt;/article>
+    &lt;article class="product">
+        &lt;h1 class="product__title">Premium Widget &trade;&lt;/h1>
+        &lt;p>This premium widget is superior to the regular widget&lt;/p>
+        &lt;div class="product__cost">$25.99&lt;/div>
+        &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+    &lt;/article>
+&lt;/section>
+
+
+</pre>
+
+
+</div>
+<div class="slide__content">
+<h2>1 to 2 columns: CSS</h2>
+<p>The sibling selectors are a great CSS2 approach to detecting whether an element is present.</p>
+<ol data-fx="fadein">
+    <li>Style the main container first</li>
+    <li>Style the sidebar second</li>
+    <li>Add the conditional style last</li>
+</ol>
+<pre class="prettyprint lang-css" type="text/css" data-lang="css">
+main.demo2 {
+width: 600px;
+margin: 0 auto;
+}
+.demo2 .sidebar {
+display: block;
+float: left;
+width: 25%;
+height: 100%;
+background: #efefef;
+}
+.demo2 .content {
+display:block;
+width: 100%;
+height: 100%;
+outline: 2px solid red;
+}
+.demo2 .sidebar + .content {
+width: 75%;
+float: left;
+}
+
+
+</pre>
+</div>
+<div class="slide__content">
+<h2>1 to 2 columns: example</h2>
+<main class="demo2">
+    <aside class="recommendations sidebar">
+        <article class="product">
+            <h1 class="product__title">Yesterday's Widget &trade;</h1>
+            <p>Yep, it's a widget we're trying to get rid of</p>
+            <div class="product__cost">$15.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+        <article class="product">
+            <h1 class="product__title">Last year's Widget &trade;</h1>
+            <p>Please buy this widget. Please</p>
+            <div class="product__cost">$.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>    
+    </aside>
+    <section class="content featuredProducts">
+        <header class="header">
+            <h1>Check out these amazing products</h1>
+        </header>
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+    </section>
+</main>
+
+
+</div>
+<div class="slide__content">
+<h2>The Big Idea</h2>
+<p>Sibling selectors are great for detecting whether one or two elements are present.</p>
+<p>The problem is that the sibling selectors only let you select the <em>last</em> element that's there. </p>
+</div>
+
+    <footer class="slide__footer">
+        <small class="slide__footer__slideNum js-slideNum"></small>
+    </footer>
+</article>
+<article class="slides__slide slide" data-title="">
+<header class="slide__header" id="counting-content-blocks">
+    <h1 class="slide__header__title">
+    CSS
+    </h1>
+    <h2 class="slide__header__subtitle">Counting Content Blocks</h2>
+</header>
+<div class="slide__content">
+<h2>New Pseudo classes</h2>
+<p>We can select any <code>nth</code> element.</p>
+<pre class="prettyprint lang-css" data-lang="css">
+/*the fifth element*/
+.demo3 :nth-child(5) {
+outline: 2px solid orange;
+}
+/*Even numbered .products of the same element type*/
+.demo3 .product:nth-of-type(even) {
+background: #fff;
+}
+/* a .product of the same element that's a multiple of 3*/
+.demo3 .product:nth-of-type(3n) {
+color: #c0ffee;
+}
+/*A multiple of four, starting from the last one*/
+.demo3 .product:nth-last-of-type(4n) {
+font-weight: bold;
+}
+</pre>
+
+</div>
+
+<div class="slide__content">
+    <h2>We can combine pseudo classes to count the number of elements  in a container</h2>
+<pre class="prettyprint lang-css" data-lang="css">
+.demo3 .product:nth-last-of-type(2):first-of-type,
+.demo3 .product:nth-last-of-type(2):first-of-type ~.product {
+width: 50%;
+}
+.demo3 .product:nth-last-of-type(3):first-of-type,
+.demo3 .product:nth-last-of-type(3):first-of-type ~.product {
+width: 33%;
+}
+.demo3 .product:nth-last-of-type(4):first-of-type,
+.demo3 .product:nth-last-of-type(4):first-of-type ~.product {
+width: 25%;
+}
+
+
+</pre>
+
+</div>
+<div class="slide__content">
+<h3>How does this affect <del>my</del> <em>your</em> template development?</h3>
+You can&hellip;
+<ul data-fx="fadein">
+    <li>Adjust dimensions of elements based on the number that appear on the page</li>
+    <li>Create zebra-stripe patterns unique to whether you have even or odd numbered rows or columns</li>
+    <li>Produce layouts that can adapt to the length of the content items on them</li>
+</ul>
+<p data-fx="callout">&hellip; without writing any logic in your templates at all. </p>
+
+<p>There's also a more in depth <a href="http://blog.frankmtaylor.com/2012/10/23/css3-structural-pseudo-class-patterns/">blog post</a> on this subject</p>
+</div>
+<div class="slide__content flex-two-col">
+<style type="text/css">
+.demo3 {
+width: 600px;
+margin: 0 auto;
+background: #dfefff;
+}
+.demo3::after {
+content: ' ';
+display: block;
+clear: both;
+}
+.demo3 article{
+float:left;
+min-width: 20%;
+}
+</style>
+<style type="text/css" contenteditable>
+.demo3 :nth-child(5) {
+outline: 2px solid orange;
+}
+.demo3 .product:nth-of-type(even) {
+background: #fff;
+}
+.demo3 .product:nth-of-type(3n) {
+color: #c0ffee;
+}
+.demo3 .product:nth-last-of-type(4n) {
+font-weight: bold;
+}
+.demo3 .product:nth-last-of-type(2):first-of-type,
+.demo3 .product:nth-last-of-type(2):first-of-type ~.product {
+width: 50%;
+}
+.demo3 .product:nth-last-of-type(3):first-of-type,
+.demo3 .product:nth-last-of-type(3):first-of-type ~.product {
+width: 33%;
+}
+.demo3 .product:nth-last-of-type(4):first-of-type,
+.demo3 .product:nth-last-of-type(4):first-of-type ~.product {
+width: 25%;
+}
+</style>
+ <main class="demo3">
+    <section class="content product features">
+        <header>
+            <h1>Check out these amazing products</h1>
+        </header>
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+    </section></main>   
+
+</div>
+<div class="slide__content">
+<h2>The Big Idea</h2>
+<p>The content author doesn't have to be concerned with how many items are in a container or on a page. </p>
+<p>Thanks to CSS3, enumerated class names are a thing of the past. </p>
+</div>
+
+    <footer class="slide__footer">
+        <small class="slide__footer__slideNum js-slideNum"></small>
+    </footer>
+</article>
+<article class="slides__slide slide" data-title="">
+<header class="slide__header" id="scalable-layouts">
+    <h1 class="slide__header__title">
+    One Page Template to Rule them All
+    </h1>
+    <h2 class="slide__header__subtitle">Scalable Layouts</h2>
+</header>
+<div class="slide__content">
+<pre class="prettyprint lang-html">
+&lt;div class="demo4">
+&lt;header class="ge-header">
+    &lt;div class="ge-header_hgroup">
+        &lt;h1>Site Title&lt;/h1>
+        &lt;h2>Site Subtitle&lt;/h2>
+    &lt;/div>
+    &lt;nav class="nav nav nav-aux">
+    &lt;ul class="nav_list list list-horizontal">
+        &lt;li class="list_item">&lt;a href="#">Aux 1&lt;/a>&lt;/li>
+        &lt;li class="list_item">&lt;a href="#">Aux 2&lt;/a>&lt;/li>
+    &lt;/ul>
+    &lt;/nav>
+    &lt;nav class="nav nav nav-primary">
+    &lt;ul class="nav_list list list-horizontal">
+        &lt;li class="list_item">&lt;a href="#">main 1&lt;/a>&lt;/li>
+        &lt;li class="list_item">&lt;a href="#">main2 &lt;/a>&lt;/li>
+        &lt;li class="list_item">&lt;a href="#">main 3 &lt;/a>&lt;/li>
+        &lt;li class="list_item">&lt;a href="#">main 4 &lt;/a>&lt;/li>
+    &lt;/ul>
+    &lt;/nav>
+&lt;/header>
+&lt;main class="main">
+&lt;aside class="sidebar">
+    &lt;h1>A sidebar&lt;/h1>
+    &lt;nav class="nav nav">
+        &lt;ul class="list list-vertical">
+            &lt;li class="list_item">&lt;a href="" title="">sidenav 1&lt;/a>&lt;/li>
+            &lt;li class="list_item">&lt;a href="" title="">sidenav 2&lt;/a>&lt;/li>
+            &lt;li class="list_item">&lt;a href="" title="">sidenav 3&lt;/a>&lt;/li>
+        &lt;/ul>
+    &lt;/nav>
+&lt;/aside>
+    &lt;section class="content">
+        &lt;aside class="sidebar">
+            &lt;h1>A sidebar&lt;/h1>
+            &lt;article class="product">
+                &lt;h1 class="product__title">Nifty Widget &trade;&lt;/h1>
+                &lt;p>This related-ish widget is similar to the regular widget&lt;/p>
+                &lt;div class="product__cost">$21.99&lt;/div>
+                &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+            &lt;/article>
+
+            &lt;article class="product">
+                &lt;h1 class="product__title">Less Nifty Widget &trade;&lt;/h1>
+                &lt;p>This premium widget is similar to the regular widget&lt;/p>
+                &lt;div class="product__cost">$9.99&lt;/div>
+                &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+            &lt;/article>
+            &lt;article class="product">
+                &lt;h1 class="product__title">Widget &trade;&lt;/h1>
+                &lt;p>This not so related widget  to the regular widget&lt;/p>
+                &lt;div class="product__cost">$12.99&lt;/div>
+                &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+            &lt;/article>
+        &lt;/aside>
+        &lt;header class="content_header">
+        &lt;h2>Premium Widgets&lt;/h2>
+        &lt;h3>Available at a store near you&lt;/h3>
+        &lt;/header>
+        &lt;article class="product">
+            &lt;h1 class="product__title">Premium Widget &trade;&lt;/h1>
+            &lt;p>This premium widget is superior to the regular widget&lt;/p>
+            &lt;div class="product__cost">$25.99&lt;/div>
+            &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        &lt;/article>
+
+        &lt;article class="product">
+            &lt;h1 class="product__title">Premium Widget &trade;&lt;/h1>
+            &lt;p>This premium widget is superior to the regular widget&lt;/p>
+            &lt;div class="product__cost">$25.99&lt;/div>
+            &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        &lt;/article>
+        &lt;article class="product">
+            &lt;h1 class="product__title">Premium Widget &trade;&lt;/h1>
+            &lt;p>This premium widget is superior to the regular widget&lt;/p>
+            &lt;div class="product__cost">$25.99&lt;/div>
+            &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        &lt;/article>
+        &lt;figure class="featured">
+            &lt;div class="featuredWrapper">
+                &lt;div class="featured_product">
+                    &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+                &lt;/div>
+                &lt;div class="featured_product">
+                    &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+                &lt;/div>
+                &lt;div class="featured_product">
+                    &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+                &lt;/div>
+                &lt;div class="featured_product">
+                    &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+                &lt;/div>
+            &lt;/div>
+            &lt;figcaption>Check out these sweet products&lt;/figcaption>
+            
+        &lt;/figure>
+    &lt;/section>
+&lt;/main>
+&lt;footer class="ge-footer">
+    &lt;small>Copyright. All rights reserved&lt;/small>
+&lt;/footer>
+&lt;/div>
+</div>
+<div class="slide__content">
+    <pre class="prettyprint lang-css">
+.demo4 {
+  font-family: arial, sans-serif;
+  width: 40em;
+  margin: 0 auto;
+}
+.demo4 .ge-header,
+.demo4 .ge-footer {
+  width: 100%;
+  min-height: 80px;
+}
+.demo4 .ge-header {
+  border-bottom: 2px solid #808080;
+}
+.demo4 .ge-header_hgroup {
+  float: left;
+}
+.demo4 .nav .list {
+  list-style-type: none;
+  width: inherit;
+}
+.demo4 .nav .list_item {
+  margin: 2.5%;
+}
+.demo4 .nav .list-horizontal .list_item {
+  float: left;
+  display: inline-block;
+}
+.demo4 .nav-aux {
+  float: right;
+  width: 45%;
+}
+.demo4 .nav-aux .list {
+  float: right;
+}
+.demo4 .nav-primary {
+  width: 100%;
+  clear: both;
+}
+.demo4 .sidebar {
+  float: left;
+  width: 25%;
+  height: 100%;
+}
+.demo4 .main > .sidebar {
+  border-right: 1px solid #808080;
+}
+.demo4 .main::after,
+.demo4 .main::before {
+  content: '';
+  display: table;
+}
+.demo4 .main::after {
+  clear: both;
+}
+.demo4 .main: {
+  zoom: 1;
+}
+.demo4 article {
+  padding: 2.5%;
+  margin: 2.5%;
+}
+.demo4 .content .sidebar {
+  float: right;
+  border-left: 1px solid #808080;
+}
+.demo4 .content .sidebar + * {
+  float: left;
+}
+.demo4 .featured_product {
+  float: left;
+}
+.demo4 .featured_product:nth-last-of-type(2):first-of-type,
+.demo4 .featured_product:nth-last-of-type(2):first-of-type ~.product {
+  width: 50%;
+}
+.demo4 .featured_product:nth-last-of-type(3):first-of-type,
+.demo4 .featured_product:nth-last-of-type(3):first-of-type ~.product {
+  width: 33%;
+}
+.demo4 .featured_product:nth-last-of-type(4):first-of-type,
+.demo4 .featured_product:nth-last-of-type(4):first-of-type ~.product {
+  width: 25%;
+}
+
+    </pre>
+</div>
+<div class="slide__content">
+<style type="text/css">
+.demo4 {
+  font-family: arial, sans-serif;
+  width: 40em;
+  margin: 0 auto;
+}
+.demo4 .ge-header,
+.demo4 .ge-footer {
+  width: 100%;
+  min-height: 80px;
+}
+.demo4 .ge-header {
+  border-bottom: 2px solid #808080;
+}
+.demo4 .ge-header_hgroup {
+  float: left;
+  display: inline-block;
+  width: 45%;
+}
+.demo4 .nav .list {
+  list-style-type: none;
+  width: inherit;
+}
+.demo4 .nav .list_item {
+  margin: 2.5%;
+}
+.demo4 .nav .list-horizontal .list_item {
+  display: inline-block;
+}
+.demo4 .nav-aux {
+  float: right;
+  width: 45%;
+  display: inline-block;
+}
+.demo4 .nav-aux .list-horizontal .list_item{
+  float:right;
+
+}
+.demo4 .nav-aux .list {
+  float: right;
+  width: 100%;
+}
+.demo4 .nav-primary {
+  width: 100%;
+  clear: both;
+}
+.demo4 .sidebar {
+  float: left;
+  width: 25%;
+  height: 100%;
+}
+.demo4 .main > .sidebar {
+  border-right: 1px solid #808080;
+}
+.demo4 .main::after,
+.demo4 .main::before {
+  content: '';
+  display: table;
+}
+.demo4 .main::after {
+  clear: both;
+}
+.demo4 .main: {
+  zoom: 1;
+}
+.demo4 article {
+  padding: 2.5%;
+  margin: 2.5%;
+}
+.demo4 .content .sidebar {
+  float: right;
+  border-left: 1px solid #808080;
+}
+.demo4 .content .sidebar + * {
+  float: left;
+}
+.demo4 .featured_product {
+  float: left;
+}
+.demo4 .featured_product:nth-last-of-type(2):first-of-type,
+.demo4 .featured_product:nth-last-of-type(2):first-of-type ~.product {
+  width: 50%;
+}
+.demo4 .featured_product:nth-last-of-type(3):first-of-type,
+.demo4 .featured_product:nth-last-of-type(3):first-of-type ~.product {
+  width: 33%;
+}
+.demo4 .featured_product:nth-last-of-type(4):first-of-type,
+.demo4 .featured_product:nth-last-of-type(4):first-of-type ~.product {
+  width: 25%;
+}
+</style>
+<div class="demo4">
+<header class="ge-header">
+    <div class="ge-header_hgroup">
+        <h1>Site Title</h1>
+        <h2>Site Subtitle</h2>
+    </div>
+    <nav class="nav nav nav-aux">
+    <ul class="nav_list list list-horizontal">
+        <li class="list_item"><a href="#">Aux 1</a></li>
+        <li class="list_item"><a href="#">Aux 2</a></li>
+    </ul>
+    </nav>
+    <nav class="nav nav nav-primary">
+    <ul class="nav_list list list-horizontal">
+        <li class="list_item"><a href="#">main 1</a></li>
+        <li class="list_item"><a href="#">main2 </a></li>
+        <li class="list_item"><a href="#">main 3 </a></li>
+        <li class="list_item"><a href="#">main 4 </a></li>
+    </ul>
+    </nav>
+</header>
+<main class="main">
+<aside class="sidebar">
+    <h1>A sidebar</h1>
+    <nav class="nav nav">
+        <ul class="list list-vertical">
+            <li class="list_item"><a href="" title="">sidenav 1</a></li>
+            <li class="list_item"><a href="" title="">sidenav 2</a></li>
+            <li class="list_item"><a href="" title="">sidenav 3</a></li>
+        </ul>
+    </nav>
+</aside>
+    <section class="content">
+        <aside class="sidebar">
+            <h1>A sidebar</h1>
+            <article class="product">
+                <h1 class="product__title">Nifty Widget &trade;</h1>
+                <p>This related-ish widget is similar to the regular widget</p>
+                <div class="product__cost">$21.99</div>
+                <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+            </article>
+
+            <article class="product">
+                <h1 class="product__title">Less Nifty Widget &trade;</h1>
+                <p>This premium widget is similar to the regular widget</p>
+                <div class="product__cost">$9.99</div>
+                <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+            </article>
+            <article class="product">
+                <h1 class="product__title">Widget &trade;</h1>
+                <p>This not so related widget  to the regular widget</p>
+                <div class="product__cost">$12.99</div>
+                <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+            </article>
+        </aside>
+        <header class="content_header">
+        <h2>Premium Widgets</h2>
+        <h3>Available at a store near you</h3>
+        </header>
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+        <figure class="featured">
+            <div class="featuredWrapper">
+                <div class="featured_product">
+                    <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+                </div>
+                <div class="featured_product">
+                    <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+                </div>
+                <div class="featured_product">
+                    <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+                </div>
+                <div class="featured_product">
+                    <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+                </div>
+            </div>
+            <figcaption>Check out these sweet products</figcaption>
+            
+        </figure>
+    </section>
+</main>
+<footer class="ge-footer">
+    <small>Copyright. All rights reserved</small>
+</footer>
+</div>
+</div>
+
+
+    <footer class="slide__footer">
+        <small class="slide__footer__slideNum js-slideNum"></small>
+    </footer>
+</article>
+<article class="slides__slide slide" data-title="">
+<header class="slide__header" id="content-manageable-jquery-plugins">
+    <h1 class="slide__header__title">
+    JavaScript
+    </h1>
+    <h2 class="slide__header__subtitle">Content Manageable jQuery Plugins </h2>
+</header>
+<div class="slide__content">
+<h2>The Problem</h2>
+<p>jQuery plugins are used everywhere, and there's millions to choose from. But few were made to work well with a CMS.</p>
+<p>The challenge is when a content author wants to be able to control something within the jQuery plugin. </p>
+<ul data-fx="fadein">
+<li>Content Authors don't usually know JavaScript</li>
+<li>Generating <code>script</code> elements on the page containing parameters can get messy</li>
+<li>Generating JavaScript from a schema can be time-consuming</li>
+</ul>
+
+</div>
+
+<div class="slide__content">
+<h2>The Solution</h2>
+<p>The best way to output a content-author's preferences for a given jQuery widget is to do it within the markup that has been generated. For this, the <code>data-</code> attribute is our friend</p>.
+<pre class="prettyprint lang-html">
+&lt;div id="video__player2" data-video='{"height": "300px", "type":"embed"}' data-video-url="http://nationwide.dist.sdlmedia.com/Distributions/?o=1F2C97BE-DE64-467C-A6D1-3A5DCFE38215" data-video-player='{"autoplay": "false"}'></div>
+
+</pre>
+</div>
+<div class="slide__content">
+<ul>
+    <li>A data attribute can contain any kind of string we want, even JSON </li>
+    <li>We can give our attribute any name we want, so long as it starts with <code>data-</code></li>
+    <li>Browsers that support the <code>data-</code> attribute will create a <code>dataset</code> property on the element that we can access</li>
+</div>
+
+<div class="slide__content">
+<h2>Modifying a jQuery plugin</h2>
+<p>You can modify  any existing plugin to accept <code>data-</code> attributes.</p>
+
+<pre class="prettyprint lang-js">
+    /*Added to the top of the plugin*/
+this.data = $.extend($(this).data('sdlmm'), params);
+</pre>
+<p>
+Then, loop over the data attributes and add them to the data:
+</p>
+<pre class="prettyprint lang-js">
+    /*Added near the top, before you get too deep into the plugin*/
+for (var attr, i = 0, attrs = $this[0].attributes, l = attrs.length; i < l; i++) {
+    attr = attrs.item(i);
+    if (attr.nodeName.match('data-sdlmm-')) {
+        name = attr.nodeName.replace('data-sdlmm-', '');
+        this.data[name] = attr.nodeValue;
+    }
+}
+    </pre>
+    </div>
+<div class="slide__content">
+<h2>The Big Idea</h2>
+<p>jQuery plugins can easily be made CMS-friendly if you employ <code>data-</code> attributes. </p>
+<p data-fx="callout">You need to partner with your front-end developers to design the schema for your plugins</p>
+<p><code>&lt;shameless-plug></code>There's even some examples for you to see:</p>
+<ul>
+    <li><a href="https://github.com/paceaux/Media-Manager-Plugins-for-Tridion" target="_blank">Media Manager plugins</a></li>
+    <li><a href="https://github.com/paceaux/flex-modal" target="blank">Modal Window</a></li>
+    <li><a href="http://blog.frankmtaylor.com/2014/03/27/cms-friendly-jquery-widgets/" target="blank">A helpful blog post</a></li>
+</ul>
+</div>
+    <footer class="slide__footer">
+        <small class="slide__footer__slideNum js-slideNum"></small>
+    </footer>
+</article>
+<article class="slides__slide slide" data-title="">
+<header class="slide__header" id="brightness-detection">
+    <h1 class="slide__header__title">
+    JavaScript
+    </h1>
+    <h2 class="slide__header__subtitle">Brightness Detection with Canvas </h2>
+</header>
+<div class="slide__content">
+<p>One of the new features of 'HTML5' is the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API" target="blank">Canvas API</a>, which allows you to draw bitmap graphics on to the web page. </p>
+
+<p>Canvas has a lesser-known interface, called <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData" target="blank">ImageData</a> that lets us get information about an image that's been loaded into the canvas.   </p>
+
+<pre class="prettyprint lang-javascript">
+getData= function (imgEl) {
+ var _this = imgDetect,
+    ctx = _this.CvsCtx(imgEl), //declare a context of the canvas and then grab it
+    imageData = ctx.getImageData(0,0,imgEl.width,imgEl.height), //get the data about the image in the canvas
+      data = imageData.data,
+      colorSum = 0,
+      imgData = {},
+      r, g, b, avg, brightness; // other variables for later fun and profit
+}
+</pre>
+</div>
+<div class="slide__content">
+<h2>First a pixel, then the world</h2>
+<pre class="prettyprint lang-javascript">
+  getData: function (imgEl) {
+     var _this = imgDetect,
+        ctx = _this.CvsCtx(imgEl),
+        imageData = ctx.getImageData(0,0,imgEl.width,imgEl.height),
+          data = imageData.data,
+          colorSum = 0,
+          imgData = {},
+          r, g, b, avg, brightness;
+    //Loop through the entire array of pixels
+    // every fourth element in the array starts a new pixel
+      for(var x = 0, len = data.length; x < len; x+=4) {
+        r = data[x]; // red value
+        g = data[x+1]; // green value
+        b = data[x+2]; //blue value
+        avg = Math.floor((r+g+b)/3); 
+        colorSum += avg; // let's track the average f=of the colors
+      }
+      imgData.r = r;
+      imgData.g=  g;
+      imgData.b = b;
+      imgData.avg = avg;
+      //simple math to calculate brightness
+      imgData.brightness = Math.floor(colorSum / (imgEl.width*imgEl.height));
+      return imgData;
+  }
+</pre>
+</div>
+<div class="slide__content">
+<pre class="prettyprint lang-javascript">
+//Declare the img detection variable
+var imgDetect;
+imgDetect = {
+  init: function (selector) {
+    var _this = this,
+        els = document.querySelectorAll(selector);
+    //loop through every element 
+    [].forEach.call(els, function (el) {
+      if (el.complete) {
+        _this.setAttributes(el);
+      }
+      
+    });
+  },
+  helpers: {
+    getRelativeBrightness: function (brightness) {
+      return brightness > 125 ? 'imgDetect--lighter' : 'imgDetect--darker';
+    },
+    getRelativeColor:function (data) {
+      var highClr = Math.max(data.r, data.g, data.b),
+          color = '';
+      console.log(data);
+      switch (highClr) {
+        case data.r:
+          color = 'imgDetect--redder';
+          break;
+        case data.g:
+          color = 'imgDetect--greener';
+          break;
+        case data.b:
+          color = 'imgDetect--bluer';
+        default:
+          break;
+      }
+      return color;      
+    }
+  },
+  CvsCtx: function (imgEl) {
+      var canvas = document.createElement('canvas'),
+          ctx = canvas.getContext('2d');
+      canvas.width = imgEl.width;
+      canvas.height = imgEl.height;
+      ctx.drawImage(imgEl,0,0);
+      return ctx;
+  },
+  getData: function (imgEl) {
+     var _this = imgDetect,
+        ctx = _this.CvsCtx(imgEl),
+        imageData = ctx.getImageData(0,0,imgEl.width,imgEl.height),
+          data = imageData.data,
+          colorSum = 0,
+          imgData = {},
+          r, g, b, avg, brightness;
+      for(var x = 0, len = data.length; x < len; x+=4) {
+        r = data[x];
+        g = data[x+1];
+        b = data[x+2];
+        avg = Math.floor((r+g+b)/3);
+        colorSum += avg;
+      }
+      imgData.r = r;
+      imgData.g=  g;
+      imgData.b = b;
+      imgData.avg = avg;
+      imgData.brightness = Math.floor(colorSum / (imgEl.width*imgEl.height));
+      return imgData;
+  },
+  setClass: function (el, className) {
+    el.classList.add(className);
+  },
+
+  setAttributes: function (imgEl) {
+    var _this = imgDetect,
+        data = _this.getData(imgEl);
+    switch (imgEl.getAttribute('data-imgDetect')) {
+      case 'parentClass':
+        _this.setClass(imgEl.parentNode, 'brightness--' + data.brightness);
+        _this.setClass(imgEl.parentNode, _this.helpers.getRelativeBrightness(data.brightness));
+        _this.setClass(imgEl.parentNode, _this.helpers.getRelativeColor(data));
+        break;
+      case 'selfClass':
+        _this.setClass(imgEl, 'brightness--' + data.brightness);
+        _this.setClass(imgEl, _this.helpers.getRelativeBrightness(data.brightness));
+        _this.setClass(imgEl, _this.helpers.getRelativeColor(data));
+
+
+      default:
+      break;
+    }
+  },
+};
+imgDetect.init('[data-imgDetect]');
+
+</pre>
+</div>
+<div class="slide__content">
+<h2>A live action example</h2>
+<div class="demo5">
+   <figure class="figure">
+        <img class="figure__media" src="content-assets/placeimg_200_200_animals.jpg" data-imgDetect="parentClass" />
+        <figcaption class="figure__caption">Animals!</figcaption>
+    </figure>
+    <figure class="figure">
+        <img class="figure__media" src="content-assets/placeimg_200_200_nature.jpg" data-imgDetect="parentClass" />
+        <figcaption class="figure__caption">Nature!</figcaption>
+    </figure>
+    <figure class="figure">
+        <img class="figure__media" src="content-assets/placeimg_200_200_tech.jpg" data-imgDetect="parentClass" />
+        <figcaption class="figure__caption">Tech! Wait, what?</figcaption>
+    </figure>
+    <figure class="figure">
+        <img class="figure__media" src="content-assets/placeimg_200_200_people.jpg" data-imgDetect="parentClass" />
+        <figcaption class="figure__caption">People, everywhere</figcaption>
+    </figure>
+    </div>
+<p>It's only polite to<a href="https://gist.github.com/paceaux/ccc878ec0bcd5e68ef60"> share a gist</a></p>
+</div>
+    <footer class="slide__footer">
+        <small class="slide__footer__slideNum js-slideNum"></small>
+    </footer>
+</article>
+<article class="slides__slide slide" data-title="">
+<header class="slide__header" id="conclusion">
+    <h1 class="slide__header__title">
+    Conclusions
+    </h1>
+</header>
+<div class="slide__content">
+<h2>What have we learned</h2>
+<ul data-fx="fadein">
+<li>Semantic HTML5 makes templates easier to read, and a way to help content authors form relationships between types of content</li>
+<li>Layouts get better, with minimal code, when using semantic containers</li>
+<li>CSS enables ways to style enumerated elements without creating extra classes</li>
+<li>CSS enables us to count the number of items in a container</li>
+<li>The data attribute is our friend, and helps us make CMS-friendly plugins</li>
+<li>The Canvas API enables client-side detection of image brightness, dominant color, and much more</li>
+</ul>
+<h3>Browser support</h3>
+<p>Just about everything here is supported in IE9 and up. But if you're ever curious, there's some tools</p>
+<ul>
+    <li><a href="http://caniuse.com/">caniuse</a></li>
+    <li><a href="http://shouldiprefix.com/">Should I prefix</a></li>
+    <li><a href="https://modernizr.com">modernizr</a></li>
+</ul>
+</div>
+<div class="slide__content">
+<h2>Thank You</h2>
+
+<h3>Give me a buzz sometime</h3>
+<ul>
+    <li><a href="https://twitter.com/paceaux">Twitter @paceaux</a></li>
+    <li><a href="https://github.com/paceaux">Github: paceaux</a></li>
+    <li><a href="http://tridion.stackexchange.com/users/119/paceaux">Tridion Stack Exchange</a></li>
+    <li><a href="http://blog.frankmtaylor.com"><code>blog</code>.frankmtaylor.com</a></li>
+</ul>
+</div>
+    <footer class="slide__footer">
+        <small class="slide__footer__slideNum js-slideNum"></small>
+    </footer>
+</article> </section>
+
+</main>
+<footer class="ge-footer">
+    <small class="ge-footer__legalese">Copyright 2015. All Rights Reserved</small>
+</footer>
+
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script type="text/javascript" src="assets/js/prettify/prettify.js">
+            prettyPrint();
+        </script>
+        <script type="text/javascript" src="assets/js/hammer.min.js"></script>
+        <script type="text/javascript" src="assets/js/slideshow.js"></script>
+        <script type="text/javascript" src="assets/js/imgdetect.js"></script>
+    </body>
+</html>

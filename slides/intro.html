@@ -1,0 +1,48 @@
+<header class="slide__header" id="introduction">
+        <h1 class="slide__header__title">
+            Introduction
+        </h1>
+    </header>
+<div class="slide__content">
+<h2>Why are we here?</h2>
+<h3>It's all about the users!</h3>
+
+<p>We have two types of users that we need to account for when we implement websites:</p>
+
+<ul>
+    <li>End-users</li>
+    <li>CMS-users (content authors/editors)</li>
+</ul>
+
+<p>When we build websites, we account for both kinds of user &mdash; but usually the back-end (Tridion) developers focus on the CMS user, while the front-end developers focus primarily on the end-user. </p>
+
+</div>
+<div class="slide__content">
+<h3>The Problem is the Balance</h3>
+<p>If front-end developers focus exclusively on the end-user experience, without considering the content-author experience, this can create a lot of strain on the Tridion developer and the Tridion user. </p>
+
+<p>If a Front-end developer codes, without thinking about thinking about how content will be managed, this leads to problems:</p>
+
+<ul>
+    <li data-fx="fadein">Inconsistent markup for the same content -> too many Component Templates</li>
+    <li data-fx="fadein">Too many divs -> developer gets lost in code, contracts '<code>div</code>itis', perpetuates drinking problem</li>
+    <li data-fx="fadein">Too many divs -> site isn't SEO friendly or accessible</li>
+    <li data-fx="fadein">Assuming a container always has content -> blank spaces and weird gaps</li>
+    <li data-fx="fadein">Hard-coded classes for layout -> no flexibility in adding removing items</li>
+    <li data-fx="fadein">Hard-coded background images and colors -> no flexibility in changing content areas</li>
+    <li data-fx="fadein">Every jQuery plugin ever -> content author can't change features in a plugin</li>
+
+</ul>
+</div>
+<div class="slide__content ">
+<h3>The solution is in the <del>code</del> content</h3>
+
+<ol class="fx" data-fx="fadein">
+    <li>Tell the FE dev about the content models (schemas)</li>
+    <li>Collect authoring rules before writing code</li>
+    <li>Accept FE code that's flexible, not fixed</li>
+</ol>
+
+<p class="fx" data-fx="callout">We're here today to talk about #3. You're on your own for those first two. </p>
+
+</div>

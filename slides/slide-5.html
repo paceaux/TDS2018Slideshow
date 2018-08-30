@@ -1,0 +1,144 @@
+<header class="slide__header" id="counting-content-blocks">
+    <h1 class="slide__header__title">
+    CSS
+    </h1>
+    <h2 class="slide__header__subtitle">Counting Content Blocks</h2>
+</header>
+<div class="slide__content">
+<h2>New Pseudo classes</h2>
+<p>We can select any <code>nth</code> element.</p>
+<pre class="prettyprint lang-css" data-lang="css">
+/*the fifth element*/
+.demo3 :nth-child(5) {
+outline: 2px solid orange;
+}
+/*Even numbered .products of the same element type*/
+.demo3 .product:nth-of-type(even) {
+background: #fff;
+}
+/* a .product of the same element that's a multiple of 3*/
+.demo3 .product:nth-of-type(3n) {
+color: #c0ffee;
+}
+/*A multiple of four, starting from the last one*/
+.demo3 .product:nth-last-of-type(4n) {
+font-weight: bold;
+}
+</pre>
+
+</div>
+
+<div class="slide__content">
+    <h2>We can combine pseudo classes to count the number of elements  in a container</h2>
+<pre class="prettyprint lang-css" data-lang="css">
+.demo3 .product:nth-last-of-type(2):first-of-type,
+.demo3 .product:nth-last-of-type(2):first-of-type ~.product {
+width: 50%;
+}
+.demo3 .product:nth-last-of-type(3):first-of-type,
+.demo3 .product:nth-last-of-type(3):first-of-type ~.product {
+width: 33%;
+}
+.demo3 .product:nth-last-of-type(4):first-of-type,
+.demo3 .product:nth-last-of-type(4):first-of-type ~.product {
+width: 25%;
+}
+
+
+</pre>
+
+</div>
+<div class="slide__content">
+<h3>How does this affect <del>my</del> <em>your</em> template development?</h3>
+You can&hellip;
+<ul data-fx="fadein">
+    <li>Adjust dimensions of elements based on the number that appear on the page</li>
+    <li>Create zebra-stripe patterns unique to whether you have even or odd numbered rows or columns</li>
+    <li>Produce layouts that can adapt to the length of the content items on them</li>
+</ul>
+<p data-fx="callout">&hellip; without writing any logic in your templates at all. </p>
+
+<p>There's also a more in depth <a href="http://blog.frankmtaylor.com/2012/10/23/css3-structural-pseudo-class-patterns/">blog post</a> on this subject</p>
+</div>
+<div class="slide__content flex-two-col">
+<style type="text/css">
+.demo3 {
+width: 600px;
+margin: 0 auto;
+background: #dfefff;
+}
+.demo3::after {
+content: ' ';
+display: block;
+clear: both;
+}
+.demo3 article{
+float:left;
+min-width: 20%;
+}
+</style>
+<style type="text/css" contenteditable>
+.demo3 :nth-child(5) {
+outline: 2px solid orange;
+}
+.demo3 .product:nth-of-type(even) {
+background: #fff;
+}
+.demo3 .product:nth-of-type(3n) {
+color: #c0ffee;
+}
+.demo3 .product:nth-last-of-type(4n) {
+font-weight: bold;
+}
+.demo3 .product:nth-last-of-type(2):first-of-type,
+.demo3 .product:nth-last-of-type(2):first-of-type ~.product {
+width: 50%;
+}
+.demo3 .product:nth-last-of-type(3):first-of-type,
+.demo3 .product:nth-last-of-type(3):first-of-type ~.product {
+width: 33%;
+}
+.demo3 .product:nth-last-of-type(4):first-of-type,
+.demo3 .product:nth-last-of-type(4):first-of-type ~.product {
+width: 25%;
+}
+</style>
+ <main class="demo3">
+    <section class="content product features">
+        <header>
+            <h1>Check out these amazing products</h1>
+        </header>
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+    </section></main>   
+
+</div>
+<div class="slide__content">
+<h2>The Big Idea</h2>
+<p>The content author doesn't have to be concerned with how many items are in a container or on a page. </p>
+<p>Thanks to CSS3, enumerated class names are a thing of the past. </p>
+</div>

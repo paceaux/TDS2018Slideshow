@@ -1,0 +1,95 @@
+/*===============
+    #slide-effects
+===============*/
+fxAnimation(name) {
+    animation-name: name;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sizeBounce {
+    33% {
+        transform: scale(1.5)
+    }
+    50% {
+        transform: scale(.5)
+    }
+    66% {
+        transform: scale(1.2)
+    }
+}
+@media screen {
+[class*="fx"], [data-fx] {
+    transition: .4s all ease-in-out;
+}
+[data-fx*="slidefromleft"] {
+    transform: translateX(-100vw);
+}
+[data-fx*="slidefromright"] {
+    transform: translateX(100vw);
+}
+[data-fx*="fadein"] {
+    opacity: 0;
+}
+[data-fx*="fadeout"] {
+    opacity: 1
+}
+[data-fx*="callout"] {
+
+}
+[data-fx*="grow"] {
+
+}
+[data-fx*="shrink"] {
+    transform: scale(1);
+}
+&[data-fx*="sizebounce"] {
+    
+}
+.fx {
+
+    &-slidefromleft {
+    }
+
+    &-slidefromright {
+        
+    }
+    &-fadein {
+       opacity: 1; 
+    }
+
+    &-fadeout {
+        opacity: 0;
+    }
+
+    &-callout {
+        background: rgba(63,192,214,.6);
+    }
+
+    &-grow {
+        transform: scale(1.3)
+    }
+
+    &-shrink {
+        transform: scale(.1)
+    }
+
+    
+    &-sizebounce {
+        animation-name: sizeBounce;
+        animation-iteration-count: 2;
+        animation-duration: 1.5s;
+    }
+
+}
+}

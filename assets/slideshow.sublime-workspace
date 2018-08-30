@@ -1,0 +1,1978 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"curre",
+				"currentPanel"
+			],
+			[
+				"curr",
+				"currentPanel"
+			],
+			[
+				"query",
+				"querySelector"
+			],
+			[
+				"figure",
+				"figure__caption"
+			],
+			[
+				"fig",
+				"figcaption	<figcaption>"
+			],
+			[
+				"img",
+				"imgDetect"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"smal",
+				"small	Tag"
+			],
+			[
+				"footer",
+				"footer	Tag"
+			],
+			[
+				"content",
+				"contenteditable"
+			],
+			[
+				"em",
+				"em	Tag"
+			],
+			[
+				"aside",
+				"aside	Tag"
+			],
+			[
+				"header",
+				"header	Tag"
+			],
+			[
+				"pre",
+				"pre	Tag"
+			],
+			[
+				"fx",
+				"fxAnimation"
+			],
+			[
+				"removeClass",
+				"removeClassByPartialName"
+			],
+			[
+				"cur",
+				"currentSlide"
+			],
+			[
+				"show",
+				"showEffect"
+			],
+			[
+				"ctrl",
+				"ctrlPlusKey"
+			],
+			[
+				"div",
+				"div	Tag"
+			],
+			[
+				"ul",
+				"ul	Tag"
+			],
+			[
+				"p",
+				"p	Tag"
+			],
+			[
+				"swipe",
+				"swipeleft"
+			],
+			[
+				"target",
+				"targetIndex"
+			],
+			[
+				"push",
+				"pushState"
+			],
+			[
+				"targe",
+				"targetIndex"
+			],
+			[
+				"go",
+				"gotoSlide"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"add",
+				"addEventListener"
+			],
+			[
+				"prev",
+				"preventDefault"
+			],
+			[
+				"color",
+				"colorWarm"
+			],
+			[
+				"slide",
+				"slideshow"
+			],
+			[
+				"styl",
+				"stylFilter"
+			],
+			[
+				"style",
+				"styleGlobals"
+			],
+			[
+				"last",
+				"lastPanel"
+			],
+			[
+				"current",
+				"currentSlide"
+			],
+			[
+				"cu",
+				"currentSlide"
+			],
+			[
+				"ui",
+				"ui-visible"
+			],
+			[
+				"curren",
+				"currentPanel"
+			],
+			[
+				"ui-",
+				"ui-current"
+			],
+			[
+				"panel",
+				"panelcount"
+			],
+			[
+				"data",
+				"dataset"
+			],
+			[
+				"setup",
+				"setupSlides"
+			],
+			[
+				"js-sli",
+				"js-slideNum"
+			],
+			[
+				"next",
+				"nextSibling"
+			],
+			[
+				"cure",
+				"currentSlide"
+			],
+			[
+				"global",
+				"globalStyles"
+			],
+			[
+				"Styl",
+				"styleGlobals"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"togg",
+				"toggleSidebar"
+			],
+			[
+				"key",
+				"keydown	.keydown()"
+			],
+			[
+				"toggle",
+				"toggleFullscreen"
+			],
+			[
+				"move",
+				"moveSlide"
+			],
+			[
+				"navi",
+				"navigation"
+			],
+			[
+				"s",
+				"slideCounter"
+			],
+			[
+				"getsli",
+				"getSlideCount"
+			],
+			[
+				"navig",
+				"navigate"
+			],
+			[
+				"over",
+				"overflow"
+			],
+			[
+				"flex",
+				"flex-direction"
+			],
+			[
+				"ge",
+				"ge-header"
+			],
+			[
+				"navIt",
+				"navItemClick"
+			],
+			[
+				"bind",
+				"bindUiEvts"
+			],
+			[
+				"overflow",
+				"overflow-y"
+			],
+			[
+				"new",
+				"newNavItem"
+			],
+			[
+				"nav",
+				"navContainer"
+			],
+			[
+				"newSlide",
+				"newSlideIndex"
+			],
+			[
+				"nex",
+				"nextSibling"
+			],
+			[
+				"getSlid",
+				"getSlideArray"
+			],
+			[
+				"fo",
+				"fontBody"
+			],
+			[
+				"link",
+				"links	link - stylesheet"
+			],
+			[
+				"article",
+				"article	Tag"
+			],
+			[
+				"section",
+				"section	Tag"
+			],
+			[
+				"foo",
+				"footer	Tag"
+			],
+			[
+				"hash",
+				"hashArray"
+			],
+			[
+				"sub",
+				"substring"
+			],
+			[
+				"selec",
+				"selectTag"
+			],
+			[
+				"this",
+				"thisVal"
+			],
+			[
+				"coff",
+				"coffeeFilter"
+			],
+			[
+				"has",
+				"hashCategories"
+			],
+			[
+				"ite",
+				"itemInView"
+			],
+			[
+				"index",
+				"indexOf"
+			],
+			[
+				"coffe",
+				"coffeeData"
+			],
+			[
+				"select",
+				"selectItem"
+			],
+			[
+				"coffee",
+				"coffeeItems"
+			],
+			[
+				"coffeeItems",
+				"coffeeItemsLength"
+			],
+			[
+				"hide",
+				"hideFilteredItems"
+			],
+			[
+				"categories",
+				"categoriesNodelist"
+			],
+			[
+				"on",
+				"onVisChange"
+			],
+			[
+				"is",
+				"isElInViewport"
+			],
+			[
+				"selected",
+				"selectedList"
+			],
+			[
+				"class",
+				"classList"
+			],
+			[
+				"app",
+				"applyTagInCategory"
+			],
+			[
+				"getT",
+				"getTagsInCategory"
+			],
+			[
+				"unse",
+				"unselectedList"
+			],
+			[
+				"cat",
+				"categoriesObj"
+			],
+			[
+				"c",
+				"console"
+			],
+			[
+				"ca",
+				"categoriesObj"
+			],
+			[
+				"cate",
+				"categoriesObj"
+			],
+			[
+				"qu",
+				"queryCategoryByTag"
+			],
+			[
+				"cof",
+				"coffeeData"
+			],
+			[
+				"coffeeFilters",
+				"coffeeFilters__list__list__item"
+			],
+			[
+				"qer",
+				"querySelectorAll"
+			],
+			[
+				"data-",
+				"data-category"
+			],
+			[
+				"categor",
+				"categories"
+			],
+			[
+				"categ",
+				"categories"
+			],
+			[
+				"up",
+				"updateCategoryFilter"
+			],
+			[
+				"update",
+				"updateVisibleList"
+			],
+			[
+				"coffeeFi",
+				"coffeeFilters__list__list__item"
+			],
+			[
+				"coffeFilters",
+				"coffeeFilters__list__item"
+			],
+			[
+				"backgrou",
+				"background-position"
+			],
+			[
+				"hero",
+				"hero__wrapper"
+			],
+			[
+				"mega",
+				"megaNav__wrapper"
+			],
+			[
+				"__logo",
+				"__logoTitle"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"hero__",
+				"hero__wrapper"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"sty",
+				"style	Tag"
+			],
+			[
+				"backgroun",
+				"background-image"
+			],
+			[
+				"backg",
+				"background-image"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"__",
+				"__content"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"border",
+				"border-right"
+			],
+			[
+				"__legal",
+				"__legalPages"
+			],
+			[
+				"tog",
+				"toggleFilters"
+			],
+			[
+				"script",
+				"script	Tag"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"op",
+				"opacity"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<div class=\"demo4\">\n<header class=\"ge-header\">\n    <div class=\"ge-header_hgroup\">\n        <h1>Site Title</h1>\n        <h2>Site Subtitle</h2>\n    </div>\n    <nav class=\"nav nav nav-aux\">\n    <ul class=\"nav_list list list-horizontal\">\n        <li class=\"list_item\"><a href=\"#\">Aux 1</a></li>\n        <li class=\"list_item\"><a href=\"#\">Aux 2</a></li>\n    </ul>\n    </nav>\n    <nav class=\"nav nav nav-primary\">\n    <ul class=\"nav_list list list-horizontal\">\n        <li class=\"list_item\"><a href=\"#\">main 1</a></li>\n        <li class=\"list_item\"><a href=\"#\">main2 </a></li>\n        <li class=\"list_item\"><a href=\"#\">main 3 </a></li>\n        <li class=\"list_item\"><a href=\"#\">main 4 </a></li>\n    </ul>\n    </nav>\n</header>\n<main class=\"main\">\n<aside class=\"sidebar\">\n    <h1>A sidebar</h1>\n    <nav class=\"nav nav\">\n        <ul class=\"list list-vertical\">\n            <li class=\"list_item\"><a href=\"\" title=\"\">sidenav 1</a></li>\n            <li class=\"list_item\"><a href=\"\" title=\"\">sidenav 2</a></li>\n            <li class=\"list_item\"><a href=\"\" title=\"\">sidenav 3</a></li>\n        </ul>\n    </nav>\n</aside>\n    <section class=\"content\">\n        <aside class=\"sidebar\">\n            <h1>A sidebar</h1>\n            <article class=\"product\">\n                <h1 class=\"product__title\">Nifty Widget &trade;</h1>\n                <p>This related-ish widget is similar to the regular widget</p>\n                <div class=\"product__cost\">$21.99</div>\n                <img class=\"product__img\" src=\"http://placeimg.com/120/120/tech\" alt=\"widget\"/>\n            </article>\n\n            <article class=\"product\">\n                <h1 class=\"product__title\">Less Nifty Widget &trade;</h1>\n                <p>This premium widget is similar to the regular widget</p>\n                <div class=\"product__cost\">$9.99</div>\n                <img class=\"product__img\" src=\"http://placeimg.com/120/120/tech\" alt=\"widget\"/>\n            </article>\n            <article class=\"product\">\n                <h1 class=\"product__title\">Widget &trade;</h1>\n                <p>This not so related widget  to the regular widget</p>\n                <div class=\"product__cost\">$12.99</div>\n                <img class=\"product__img\" src=\"http://placeimg.com/120/120/tech\" alt=\"widget\"/>\n            </article>\n        </aside>\n        <header class=\"content_header\">\n        <h2>Premium Widgets</h2>\n        <h3>Available at a store near you</h3>\n        </header>\n        <article class=\"product\">\n            <h1 class=\"product__title\">Premium Widget &trade;</h1>\n            <p>This premium widget is superior to the regular widget</p>\n            <div class=\"product__cost\">$25.99</div>\n            <img class=\"product__img\" src=\"http://placeimg.com/120/120/tech\" alt=\"widget\"/>\n        </article>\n\n        <article class=\"product\">\n            <h1 class=\"product__title\">Premium Widget &trade;</h1>\n            <p>This premium widget is superior to the regular widget</p>\n            <div class=\"product__cost\">$25.99</div>\n            <img class=\"product__img\" src=\"http://placeimg.com/120/120/tech\" alt=\"widget\"/>\n        </article>\n        <article class=\"product\">\n            <h1 class=\"product__title\">Premium Widget &trade;</h1>\n            <p>This premium widget is superior to the regular widget</p>\n            <div class=\"product__cost\">$25.99</div>\n            <img class=\"product__img\" src=\"http://placeimg.com/120/120/tech\" alt=\"widget\"/>\n        </article>\n        <figure class=\"featured\">\n            <div class=\"featuredWrapper\">\n                <div class=\"featured_product\">\n                    <img class=\"product__img\" src=\"http://placeimg.com/120/120/tech\" alt=\"widget\"/>\n                </div>\n                <div class=\"featured_product\">\n                    <img class=\"product__img\" src=\"http://placeimg.com/120/120/tech\" alt=\"widget\"/>\n                </div>\n                <div class=\"featured_product\">\n                    <img class=\"product__img\" src=\"http://placeimg.com/120/120/tech\" alt=\"widget\"/>\n                </div>\n                <div class=\"featured_product\">\n                    <img class=\"product__img\" src=\"http://placeimg.com/120/120/tech\" alt=\"widget\"/>\n                </div>\n            </div>\n            <figcaption>Check out these sweet products</figcaption>\n            \n        </figure>\n    </section>\n</main>\n<footer class=\"ge-footer\">\n    <small>Copyright. All rights reserved</small>\n</footer>\n</div>",
+			"settings":
+			{
+				"buffer_size": 4428,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/8-demos.styl",
+			"settings":
+			{
+				"buffer_size": 3977,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/imgdetect.js",
+			"settings":
+			{
+				"buffer_size": 3802,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/6-codeedit.styl",
+			"settings":
+			{
+				"buffer_size": 2348,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-1.html",
+			"settings":
+			{
+				"buffer_size": 1802,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-2.html",
+			"settings":
+			{
+				"buffer_size": 4271,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-3.html",
+			"settings":
+			{
+				"buffer_size": 1116,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-4.html",
+			"settings":
+			{
+				"buffer_size": 5410,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<header class=\"slide__header\" id=\"counting-content-blocks\">\n    <h1 class=\"slide__header__title\">\n    CSS\n    </h1>\n    <h2 class=\"slide__header__subtitle\">Counting Content Blocks</h2>\n</header>\n<div class=\"slide__content\">\n<h2>New Pseudo classes</h2>\n<p>We can select any <code>nth</code> element.</p>\n<pre class=\"prettyprint lang-css\" data-lang=\"css\">\n/*the fifth element*/\n.demo3 :nth-child(5) {\noutline: 2px solid orange;\n}\n/*Even numbered .products of the same element type*/\n.demo3 .product:nth-of-type(even) {\nbackground: #fff;\n}\n/* a .product of the same element that's a multiple of 3*/\n.demo3 .product:nth-of-type(3n) {\ncolor: #c0ffee;\n}\n/*A multiple of four, starting from the last one*/\n.demo3 .product:nth-last-of-type(4n) {\nfont-weight: bold;\n}\n</pre>\n\n</div>\n\n<div class=\"slide__content\">\n    <h2>We can combine pseudo classes to count the number of elements  in a container</h2>\n<pre class=\"prettyprint lang-css\" data-lang=\"css\">\n.demo3 .product:nth-last-of-type(2):first-of-type,\n.demo3 .product:nth-last-of-type(2):first-of-type ~.product {\nwidth: 50%;\n}\n.demo3 .product:nth-last-of-type(3):first-of-type,\n.demo3 .product:nth-last-of-type(3):first-of-type ~.product {\nwidth: 33%;\n}\n.demo3 .product:nth-last-of-type(4):first-of-type,\n.demo3 .product:nth-last-of-type(4):first-of-type ~.product {\nwidth: 25%;\n}\n\n\n</pre>\n\n</div>\n<div class=\"slide__content\">\n<h3>How does this affect my template development?</h3>\nAdjust width or height of elements based on the number that appear on the page\nCreate Zebra-stripe patterns unique to whether you have even or odd numbered rows or columns\nSwitch from liquid, to fluid, to semi elastic widths or heights by including or excluding outermost elements within a group\nDemonstrate more stylistic complexity that can make tables easier to read\nProduce Layouts that can adapt easily to even vs. odd-numbered columns\n\n\n<p>There's also a more in depth <a href=\"http://blog.frankmtaylor.com/2012/10/23/css3-structural-pseudo-class-patterns/\">blog post</a> on this subject</p>\n</div>\n<div class=\"slide__content flex-two-col\">\n<style type=\"text/css\">\n.demo3 {\nwidth: 600px;\nmargin: 0 auto;\nbackground: #dfefff;\n}\n.demo3::after {\ncontent: ' ';\ndisplay: block;\nclear: both;\n}\n.demo3 article{\nfloat:left;\nmin-width: 20%;\n}\n</style>\n<style type=\"text/css\" contenteditable>\n.demo3 :nth-child(5) {\noutline: 2px solid orange;\n}\n.demo3 .product:nth-of-type(even) {\nbackground: #fff;\n}\n.demo3 .product:nth-of-type(3n) {\ncolor: #c0ffee;\n}\n.demo3 .product:nth-last-of-type(4n) {\nfont-weight: bold;\n}\n.demo3 .product:nth-last-of-type(2):first-of-type,\n.demo3 .product:nth-last-of-type(2):first-of-type ~.product {\nwidth: 50%;\n}\n.demo3 .product:nth-last-of-type(3):first-of-type,\n.demo3 .product:nth-last-of-type(3):first-of-type ~.product {\nwidth: 33%;\n}\n.demo3 .product:nth-last-of-type(4):first-of-type,\n.demo3 .product:nth-last-of-type(4):first-of-type ~.product {\nwidth: 25%;\n}\n</style>\n <main class=\"demo3\">\n    <section class=\"content product features\">\n        <header>\n            <h1>Check out these amazing products</h1>\n        </header>\n        <article class=\"product\">\n            <h1 class=\"product__title\">Premium Widget &trade;</h1>\n            <p>This premium widget is superior to the regular widget</p>\n            <div class=\"product__cost\">$25.99</div>\n            <img class=\"product__img\" src=\"http://placeimg.com/120/120/tech\" alt=\"widget\"/>\n        </article>\n\n        <article class=\"product\">\n            <h1 class=\"product__title\">Premium Widget &trade;</h1>\n            <p>This premium widget is superior to the regular widget</p>\n            <div class=\"product__cost\">$25.99</div>\n            <img class=\"product__img\" src=\"http://placeimg.com/120/120/tech\" alt=\"widget\"/>\n        </article>\n\n        <article class=\"product\">\n            <h1 class=\"product__title\">Premium Widget &trade;</h1>\n            <p>This premium widget is superior to the regular widget</p>\n            <div class=\"product__cost\">$25.99</div>\n            <img class=\"product__img\" src=\"http://placeimg.com/120/120/tech\" alt=\"widget\"/>\n        </article>\n        <article class=\"product\">\n            <h1 class=\"product__title\">Premium Widget &trade;</h1>\n            <p>This premium widget is superior to the regular widget</p>\n            <div class=\"product__cost\">$25.99</div>\n            <img class=\"product__img\" src=\"http://placeimg.com/120/120/tech\" alt=\"widget\"/>\n        </article>\n    </section></main>   \n\n</div>\n<div class=\"slide__content\">\n<h2>The Big Idea</h2>\n<p>The content author doesn't have to be concerned with how many items are in a container or on a page. </p>\n<p>Thanks to CSS3, enumerated class names are a thing of the past. </p>\n</div>\n",
+			"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-5.html",
+			"file_size": 4018,
+			"file_write_time": 130867092670000000,
+			"settings":
+			{
+				"buffer_size": 4707,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-7.html",
+			"settings":
+			{
+				"buffer_size": 3122,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-6.html",
+			"settings":
+			{
+				"buffer_size": 12820,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-8.html",
+			"settings":
+			{
+				"buffer_size": 6049,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-9.html",
+			"settings":
+			{
+				"buffer_size": 1252,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/shell.html",
+			"settings":
+			{
+				"buffer_size": 3777,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Stylus/Stylus.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/SASS Build/SASS - Compressed.sublime-build",
+					""
+				],
+				[
+					"Packages/SASS Build/SASS.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/SASS Build/SASS - Compressed.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Stylus/Stylus.sublime-build",
+					""
+				],
+				[
+					"Packages/Stylus/Stylus.sublime-build",
+					"compress"
+				]
+			],
+			[
+				"Packages/Stylus/Stylus.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "clear",
+		"selected_items":
+		[
+			[
+				"clear",
+				"Snippet: CSS - clearfix"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"csshead",
+				"Snippet: CSS Header"
+			],
+			[
+				"snippet:",
+				"Snippet: CSS - /* -----*/"
+			],
+			[
+				"block",
+				"Snippet: CSS Comment Block"
+			],
+			[
+				"bloc",
+				"Toggle Block Comment"
+			],
+			[
+				"pretty",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"lorem",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"boiler",
+				"Snippet: htmlboiler"
+			],
+			[
+				"mini",
+				"Minify::Minify File"
+			],
+			[
+				"min",
+				"Minify::Default File Settings"
+			],
+			[
+				"cms",
+				"Snippet: CMS Comment Open"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"header",
+				"Snippet: Section Header for CSS"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"comm",
+				"Snippet: Comment block for CSS"
+			],
+			[
+				"refre",
+				"Project: Refresh Folders"
+			],
+			[
+				"jsh",
+				"Build With: JSHint"
+			],
+			[
+				"js",
+				"JSHint"
+			],
+			[
+				"refresh",
+				"Project: Refresh Folders"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"CS",
+				"Snippet: css-header"
+			],
+			[
+				"CSS",
+				"Snippet: css-header"
+			],
+			[
+				"css",
+				"Snippet: css-header"
+			],
+			[
+				"beau",
+				"Beautify::Beautify File"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"",
+				"Beautify::Beautify File"
+			],
+			[
+				"lo",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"lore",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"json",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"j",
+				"JSHint"
+			],
+			[
+				"prett",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"jade",
+				"Set Syntax: Jade"
+			],
+			[
+				"color",
+				"Color Picker"
+			],
+			[
+				"pre",
+				"HTMLPrettify"
+			],
+			[
+				"bea",
+				"Beautify::Beautify File"
+			],
+			[
+				"stylus",
+				"Snippet: Stylus Vars"
+			],
+			[
+				"boil",
+				"Snippet: h5-boilerplate"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"pret",
+				"HTMLPrettify"
+			],
+			[
+				"jsli",
+				"JSLint"
+			],
+			[
+				"jslint",
+				"JSLint"
+			],
+			[
+				"git",
+				"GitHub Flavored Markdown: Preview"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"lint",
+				"JSLint"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"type",
+				"Set Syntax: TypeScript"
+			],
+			[
+				"javascript",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"appl",
+				"Set Syntax: AppleScript"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"sty",
+				"Set Syntax: Stylus"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"jsp",
+				"Set Syntax: Java Server Page (JSP)"
+			],
+			[
+				"jquer",
+				"Snippet: Google AJAX Libraries: jQuery UI"
+			],
+			[
+				"jq",
+				"Snippet: Google AJAX Libraries: jQuery UI"
+			],
+			[
+				"Snippet: ",
+				"Snippet: IE-Conditionals"
+			],
+			[
+				"javascri",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"tidy",
+				"TidyHTML"
+			],
+			[
+				"tid",
+				"Tidy HTML"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"htmlpretty",
+				"HTMLPrettify: Prettify"
+			],
+			[
+				"c#",
+				"Set Syntax: C#"
+			],
+			[
+				"jslin",
+				"JSLint: Run JSLint"
+			],
+			[
+				"forma",
+				"Format: Javascript"
+			],
+			[
+				"html5",
+				"Set Syntax: HTML5"
+			],
+			[
+				"C#",
+				"Set Syntax: C#"
+			],
+			[
+				"set",
+				"Set Syntax: C#"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML5"
+			],
+			[
+				"set ",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"h",
+				"Set Syntax: HTML5"
+			],
+			[
+				"c #",
+				"Set Syntax: C#"
+			],
+			[
+				"jsl",
+				"Preferences: JSLint Settings – Default"
+			],
+			[
+				"set syntax",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"lor",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"no",
+				"Snippet: normalize"
+			],
+			[
+				"mod",
+				"Snippet: jquery-modr"
+			],
+			[
+				"clos",
+				"Snippet: Wrap Selection in Open/Close Tag"
+			],
+			[
+				"reset",
+				"Snippet: reset"
+			],
+			[
+				"f",
+				"Format: Javascript"
+			],
+			[
+				"form",
+				"Format: Javascript"
+			]
+		],
+		"width": 466.0
+	},
+	"console":
+	{
+		"height": 115.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": true,
+		"show_tabs": false,
+		"side_bar_visible": true,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/js",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/styleImports",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/templates",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/slides",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/content-assets"
+	],
+	"file_history":
+	[
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/js/slideshow.js",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/intro.html",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/8-demos.styl",
+		"/Users/franktaylor/Desktop/super-layout.css",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/js/imgdetect.js",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/templates/shell.html",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-8.html",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/5-slides.styl",
+		"/Users/franktaylor/Desktop/super-layout.styl",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/package.json",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/gulpfile.js",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/1-theme.styl",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/styleImports/vars.styl",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/2-transitions.styl",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/4-slidenav.styl",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/README.md",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/7-slideeffects.styl",
+		"/Users/franktaylor/Downloads/Tridion-Developer-Summit-slidedeck-master/README.md",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/.gitignore",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/3-layout.styl",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/6-codeedit.styl",
+		"/Users/franktaylor/Downloads/Tridion-Developer-Summit-slidedeck-master/js/slide-controller.js",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/js/prettify/prettify.css",
+		"/Users/franktaylor/Downloads/Tridion-Developer-Summit-slidedeck-master/js/slide-deck.js",
+		"/Users/franktaylor/Downloads/Tridion-Developer-Summit-slidedeck-master/js/slides.js",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/master.css",
+		"/Users/franktaylor/Downloads/Tridion-Developer-Summit-slidedeck-master/content/slides/22.html",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/styleGlobals/vars.styl",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/styleGlobals/mixins.styl",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/master.css/master.css",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/master.styl",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/1-theme.css",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/bcg/bcg-dot-com-app/gulpfile.js",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/bcg/bcg-dot-com-app/gulp/config.js",
+		"/Users/franktaylor/Dropbox/Web-apps-sites/blog/stylus/Gruntfile.js",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-4.html",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/templates/slide.html",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-3.html",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/styleGlobals/index.styl",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/layout.styl",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/styles.styl",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/slides.styl",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/mixins.styl",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/assets/css/vars.styl",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/index.html",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-1.html",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-2.html",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/intro.md",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-1.md",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-1.json",
+		"/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-2.json",
+		"/Users/franktaylor/Desktop/mm.json",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/Practices/css-guidelines.md",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/README.md",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/our-coffees.html",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/index.html",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/src/css/presentation/020-content/001-hero.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/src/css/presentation/010-theme/000-base.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/src/css/presentation/010-theme/005-meganav.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/src/css/presentation/010-theme/004-footer.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/src/css/presentation/010-theme/003-header.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/src/css/presentation/000-reset.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/src/css/presentation/030-layout/001-main.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/src/css/presentation/010-theme/002-ui.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/src/css/presentation/010-theme/001-typography.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/src/css/presentation/020-content/003-primarycontent.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/src/css/presentation/020-content/004-secondarycontent.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/src/css/presentation/020-content/005-coffeefilter.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/views/globalheader.html",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/src/css/imports/_vars.scss",
+		"/Users/franktaylor/Library/Application Support/Sublime Text 3/Packages/Minify/Minify.sublime-settings",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/src/js/main.js",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/src/css/master.css",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/src/js/jquery.inview.js",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/src/js/jquery.withinviewport.js",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/views/megamenu.html",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/career-center.html",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/views/footer.html",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/src/css/master.scss",
+		"/Users/franktaylor/Library/Application Support/Sublime Text 3/Packages/User/cms-comment-close.sublime-snippet",
+		"/Users/franktaylor/Library/Application Support/Sublime Text 3/Packages/User/cms-comment-open.sublime-snippet",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/megamenu.html",
+		"/Users/franktaylor/Library/Application Support/Sublime Text 3/Packages/User/html-ie-conditional-comments.sublime-snippet",
+		"/Users/franktaylor/Library/Application Support/Sublime Text 3/Packages/User/css-header.sublime-snippet",
+		"/Users/franktaylor/Library/Application Support/Sublime Text 3/Packages/User/css-comment.sublime-snippet",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/src/css/presentation/010-theme/theme.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/js/main.js",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/css/presentation/020-content/005-coffeefilter.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/js/framework.js",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/css/master.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/sbux.sublime-project",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/src/css/outline.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/src/css/layout.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/js/coffee.js",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/css/presentation/030-layout/001-main.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/js/backbone.js",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/css/master.css",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/css/presentation/020-content/003-primarycontent.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/js/backbone-min.js",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/css/main.css",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/css/imports/_vars.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/css/presentation/010-theme/001-typography.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/css/presentation/010-theme/000-base.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/css/presentation/020-content/004-secondarycontent.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/css/presentation/010-theme/theme.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/css/presentation/010-theme/002-ui.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/css/presentation/020-content/content.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/css/presentation/020-content/002-media.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/css/presentation/010-theme/005-main.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/css/presentation/presentation.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/css/presentation/030-layout/layout.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/css/presentation/010-theme/004-footer.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/css/presentation/020-content/001-hero.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/css/presentation/010-theme/003-header.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/css/presentation/000-reset.scss",
+		"/Users/franktaylor/Library/Application Support/Sublime Text 3/Packages/User/CSS Header",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/sbux/proto/css/layout.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/tahzoo/tahzoo_dotcom/app/views/home/home-digital-transformation.html",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/tahzoo/tahzoo_dotcom/app/styles/003-components/homepage.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/tahzoo/tahzoo_dotcom/app/styles/003-components/panels/service-pioneer-engage-panels.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/tahzoo/tahzoo_dotcom/app/views/common/webinar.html",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/tahzoo/tahzoo_dotcom/app/views/home/home-page-header.html",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/tahzoo/tahzoo_dotcom/app/views/common/company-locations.html",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/tahzoo/tahzoo_dotcom/app/index.html",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/tahzoo/tahzoo_dotcom/Gruntfile.js",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/tahzoo/tahzoo_dotcom/app/styles/main.scss",
+		"/Users/franktaylor/Dropbox/Work/Tahzoo-2/clients/tahzoo/tahzoo_dotcom/app/styles/003-components/panels/common-panels.scss",
+		"/Users/franktaylor/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"<open folders>",
+			"/Users/franktaylor/Dropbox/Google Drive/Tahzoo-2/clients/tahzoo/tahzoo_dotcom/client/app/data/job-details",
+			"",
+			"/Users/franktaylor/Dropbox/Google Drive/miscreant-repo/combat-static/NethStaticCombatDemo/static/css",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"data-fx=\"fadein\"",
+			"static",
+			"class=\"static__img\"",
+			"<figcaption",
+			"<img",
+			"\"static\"",
+			"static",
+			"<",
+			".demo3 .product",
+			".cf",
+			"<",
+			"ul",
+			"<",
+			"<li>",
+			"p>",
+			"p",
+			"h3",
+			"class=\"fx\"",
+			"ctrlPlusKey",
+			"prettify",
+			"pretty",
+			"mc",
+			"body",
+			"ul",
+			"><a href=",
+			">",
+			"<",
+			"<li>",
+			"</ul class=\"list list--unordered\">",
+			"</li>",
+			"<li class=\"list__item\">",
+			"<li>",
+			"ul",
+			"$slide-left-right-padding",
+			"$gray-2",
+			" $gray-4;",
+			"styleImports",
+			"globalStyles",
+			"sideWidth",
+			"slides",
+			"import",
+			"slideUpToVisible",
+			"slideUpToHidden",
+			"slideUp",
+			"hiddentTopPanel",
+			"lastPanel",
+			"panelDown",
+			"panelUp",
+			"lastPaneli",
+			"90vh",
+			"currentSlide",
+			"articleWidth",
+			"</p>",
+			"  <p>",
+			"<p>",
+			"</li>",
+			"moveSlide",
+			"%;\n",
+			"moveSlides",
+			"addCountersToSlides",
+			"sbux",
+			"        </article>",
+			"@include ",
+			"@mixin ",
+			":",
+			"$",
+			"addHashToURL",
+			"hashes",
+			"setTag",
+			"selectTag",
+			"hashCategories",
+			"type dark",
+			"type core",
+			"type reserve",
+			"type blonde",
+			"type medium",
+			"class=\"type",
+			"<h5>",
+			"                        </a>\n                        <p>",
+			"<p>",
+			"minor",
+			"border",
+			".minor",
+			"button_cta",
+			"tertiary",
+			"button_wrap",
+			"image_link",
+			"<img src=\"//assets.starbucks.com/static/images/transparent.gif\"",
+			"<img src=\"",
+			"<img ",
+			" image_link\"",
+			"class=\" image_link\"",
+			"<a href=\"//en",
+			"<!--COMPONENT: COFFEEITEM -->",
+			"data-roast-display=\" Dark Roast \"",
+			"data-roast-display=\" Blonde Roast \"",
+			"data-roast-display=\" Reserve Coffees \"",
+			"data-roast-display=\" Seasonal Favourites \"",
+			"<li class=\"coffeeFilters__list__list__item\"",
+			"<article ",
+			"veranda",
+			"espresso",
+			"</div>\n                    <article",
+			"<div class=\"coffeeItem\"",
+			"filterInCategory",
+			"applyTagInCategory",
+			"$tag",
+			"$(this)",
+			"filterOut",
+			"unselectedNodeList",
+			"filter\"",
+			"getCategories",
+			"updateCoffeeItemList",
+			"updateHiddenList",
+			"updateVisibleList",
+			"data-cat",
+			" <!--",
+			"-->",
+			"                            <!--NAVIGATION GROUP: 2nd level Structure Group Title. -->\n",
+			"NAVIGATION PROMO",
+			"<p class=\"menuList__item__listTitle\">",
+			"<ul class=\"menuList__item__list\">",
+			"<li class=\"menuList__item\">",
+			"<!--FIELD: NAVIGATION GROUP. ",
+			"<ul class=\"navGroup__menu__list menuList\">",
+			"<p class=\"menu_suggestion_title",
+			"explanation",
+			" </aside>"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"<a href=\"mailto:careers@tahzoo.com\" class=\"white-button button\">Apply</a>",
+			".jpeg",
+			"k-146.jpg",
+			"adverts/146.jpg",
+			"146.jpg",
+			"http://placekitten.com/g/151/146",
+			"colorGradientBackgroundPanelSecondaryHeader",
+			"colorGradientBackgroundStatusHeader",
+			"colorGradientBackgroundMainHeader",
+			"colorGradientBackgroundMainHeaderA--Before",
+			"colorGradientBackgroundCombatHeader",
+			"colorBackgroundUIPanels",
+			"",
+			" ",
+			";",
+			" ",
+			"",
+			"space",
+			"",
+			"</aside>",
+			"<article><div class=\"content\">",
+			"</div><aside class=\"price\">",
+			"<article><div class=\"content\">",
+			"</div>",
+			"<div class=\"product\"><article>",
+			"<figure class=\"price\">",
+			"../../img/",
+			"@",
+			" ",
+			"https://www.titaninsurance.com/titan/",
+			" ",
+			"tahzooed",
+			"moved",
+			"../../img",
+			"../img",
+			"paceauxnotes",
+			"'demo/ajax",
+			"  <li class=\"lp-icon\"><a href=\"#\" title=\"Channel Base Packages\"><span>Credit Cards</span></a></li>\n                                        <li class=\"lp-icon\"><a href=\"#\" title=\"Mas Packages\"><span>ATM Terminals</span></a></li>\n                                        <li class=\"cp-icon\"><a href=\"#\" title=\"Premiums\"><span>Bonds</a></span></li>\n                                        <li class=\"lp-icon\"><a href=\"#\" title=\"Sports Packages\"><span>Checks</span></a></li>\n                                        <li class=\"cp-icon\"><a href=\"#\" title=\"PPV &amp; DTV Cinema\"><span>Compliance</span></a></li>\n                                        <li class=\"cp-icon\"><a href=\"#\" title=\"A la Carte\"><span>Facilities</span></a></li>\n                                        <li class=\"lp-icon\"><a href=\"#\" title=\"Incl. Programming\"><span>Safety &amp; Security</span></a></li>\n                                        <li class=\"cp-icon\"><a href=\"#\" title=\"Whole Home DVR\"><span>General Ledger</span></a></li>",
+			" <ul class=\"quick-link-list\">\n                                    <li><a href=\"#\" class=\"ql-rebate-tool\" title=\"KeyNet\">\n                                            <span>KeyNet</span></a></li>\n                                    <li><a href=\"#\" class=\"ql-channel-lineup\" title=\"Key.com\">\n                                            <span>Key.com</span></a></li>\n                                    <li><a href=\"#\" class=\"ql-sell-premium-tool\" title=\"Product Guide\">\n                                            <span>Product Guide</span></a></li>\n                                    <li><a href=\"#\" class=\"ql-ecf-tool\" title=\"DocBox\">\n                                            <span>DocBox</span></a></li>\n                                    <li><a href=\"#\" class=\"ql-package-compare-tool\" title=\"Package Compare\"><!--that's what she said-->\n                                            <span>Your Systems</span></a></li><!--also what she said-->\n                                        <li><a href=\"#\" class=\"ql-phone-list\" title=\"Contact List\">\n                                            <span>Contact List</span></a></li>\n                                    </ul>",
+			"Branch",
+			"ATM Support",
+			"eManuals",
+			"ee3524"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4428,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4212,
+								4212
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "html",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 2.0,
+						"translation.y": 1277.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "css/8-demos.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3977,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1054,
+								1054
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "stylus",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 640.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/imgdetect.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3802,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1150,
+								1150
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": false,
+							"WordCountSyntax": "javascript",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 526.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "css/6-codeedit.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2348,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								612,
+								612
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "stylus",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 253.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-1.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1802,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1639,
+								1639
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "html",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 414.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-2.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4271,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3824,
+								3824
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "html",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 9.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-3.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1116,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								803,
+								803
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "html",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-4.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5410,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								393,
+								393
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "html",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 16.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-5.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4707,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1868,
+								1428
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "html",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 372.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-7.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3122,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2385,
+								2385
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "html",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 281.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-6.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12820,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7452,
+								7452
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "html",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 4122.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-8.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6049,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								237,
+								237
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "html",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/Users/franktaylor/Dropbox/web-pieces/slideshow/slides/slide-9.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1252,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								179,
+								179
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "plain text",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "templates/shell.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3777,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2774,
+								2774
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "html",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Flatland Dark (SL).tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 530.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.460535602304,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.csslint_result_view":
+	{
+		"height": 118.0
+	},
+	"output.csspecific":
+	{
+		"height": 118.0
+	},
+	"output.exec":
+	{
+		"height": 118.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.jslint_result_view":
+	{
+		"height": 118.0
+	},
+	"output.markdown":
+	{
+		"height": 112.0
+	},
+	"pinned_build_system": "",
+	"project": "slideshow.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"README.md"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 1,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 206.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

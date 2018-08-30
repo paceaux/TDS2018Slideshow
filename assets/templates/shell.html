@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Slideshow</title>
+        <meta name="description" content="">
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
+<link href='http://fonts.googleapis.com/css?family=Asap:700,400|Palanquin+Dark:500' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="assets/css/master.css">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <script type="text/javascript" src="assets/js/modernizr.js"></script>
+
+    </head>
+    <body>
+    <header class="ge-header">
+        <img class="ge-header__logo" src="assets/img/tds-logo.png" />
+        <h1 class="ge-header__title">CSS3 and HTML5 for a Better Author Experience</h1>
+    </header>
+<main class="main">
+<nav class="slideNav">
+    <ul class="list list--unordered">
+        <li class="list__item"><a class="list__item__link" href="#introduction">Introduction and Goals</a></li>
+        <li class="list__item">HTML
+            <ul class="list list--unordered">
+                <li class="list__item"><a class="list__item__link" href="#html-semantics"> HTML5 Semantics </a></li>
+                <li class="list__item"><a class="list__item__link" href="#html-content-modelling">Markup-based content modelling</a></li>
+                <li class="list__item"><a class="list__item__link" href="#html-dediving-templates">Defeating the <code>div</code></a></li>
+            </ul>
+        </a></li>
+        <li class="list__item">CSS
+            <ul class="list list--unordered">
+                <li class="list__item"><a class="list__item__link" href="#conditional-content-conundrums">Conditional Content Conundrums </a></li>
+                <li class="list__item"><a class="list__item__link" href="#counting-content-blocks">Counting Content Blocks</a></li>
+            </ul>
+        </li>
+        <li class="list__item">Layout
+            <ul class="list list--unordered">
+                <li class="list__item"><a class="list__item__link" href="#one-page-template">One Page template to rule them all</a></li>
+                <li class="list__item"><a class="list__item__link" href="#">Layout management</a></li>
+            </ul>
+        </a></li>
+        <li class="list__item">JavaScript
+            <ul class="list list--unordered">
+                <li class="list__item"><a class="list__item__link" href="#">Content Manageable jQuery plugins</a></li>
+                <li class="list__item"><a class="list__item__link" href="#brightness-detection">Image detection with Canvas</a></li>
+            </ul>
+        </li>
+        <li class="list__item"><a class="list__item__link" href="#conclusion">The Big Ideas</a></li>
+    </ul>
+</nav>
+    <%= contents %>
+
+</main>
+<footer class="ge-footer">
+    <small class="ge-footer__legalese">Copyright 2015. All Rights Reserved</small>
+</footer>
+
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script type="text/javascript" src="assets/js/prettify/prettify.js">
+            prettyPrint();
+        </script>
+        <script type="text/javascript" src="assets/js/hammer.min.js"></script>
+        <script type="text/javascript" src="assets/js/slideshow.js"></script>
+        <script type="text/javascript" src="assets/js/imgdetect.js"></script>
+    </body>
+</html>

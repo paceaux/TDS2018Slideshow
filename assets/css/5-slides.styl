@@ -1,0 +1,120 @@
+
+/*===============
+    #Slides fool
+===============*/
+
+$sideWidth = 350px;
+
+@media screen {
+    .slides {
+        position: relative;
+        display: flex;
+        height: 80vh;
+        overflow: hidden;
+        width: unquote('calc(100vw - ') $sideWidth unquote(')');
+        smoothTransition()
+    }
+
+
+    .slide {
+        flex-shrink: 0;
+        flex-grow: 0;
+        position: relative;
+        float:left;
+        display: inline-flex;
+        flex-direction: column;
+        padding: 0 .618em 1.618em .618em;
+        height: 100%;
+        width: unquote('calc(100vw - ') $sideWidth unquote(')');
+        margin: 0 0vw 0 0;
+        background-color: #DAE4EC;
+        transition: .25s all ease-in-out;
+        justify-content: flex-start;
+        smoothTransition();
+        [contenteditable] {
+            display: none;
+        }
+        &__header {
+        }
+        &__footer {
+            font-size: .85em;
+            position: absolute;
+            bottom: 20px;
+        }
+        &.ui-current {
+        }
+        &.ui-hiddenTop {
+
+        }
+        &.ui-prev {
+            margin-left: -100vw;
+
+        }
+        &.ui-next {
+
+        }
+        
+    }
+    .slide__content + .slide__content:before {
+        content: '\21A8';
+        position: absolute;
+        display: block;
+        top: -26px;
+        font-size: 1.45em;
+        height: 1.5em;
+        width: 1em;
+        left: 97%;
+    }
+    .slide__content {
+        position: relative;
+        flex-grow: 1;
+        flex-shrink: 0;
+        font-size: 1.4rem;
+        padding: 0 1.618em;
+        height: 0%;
+        overflow-y: visible;
+        transition: all .5s ease-in-out;
+        &.ui-visible {
+            height: 94%;
+            slideAnim(slideUpToVisible);
+            overflow-y: scroll;
+            visibility: visible;
+            [class*="demo"] {
+                visibility: visible;
+            }
+            [contenteditable] {
+                display: block;
+            }
+        }
+        &.ui-hiddenTop {
+            flex-grow: 0;
+            flex-shrink: 1;
+            height: 0%;
+            overflow: hidden;
+            [class*="demo"] {
+                visibility: hidden;
+            }
+            [contenteditable] {
+                display: none;
+            }
+        }
+        [contenteditable] {
+            display: none;
+        }
+        [class*="demo"] {
+            visibility: hidden;
+        }
+    }
+}
+.slide__content {
+    [class*="demo"], [id*="demo"] {
+        font-family: Helvetica, arial;
+        font-size: .8rem;
+        border: 2px solid #545456;
+    }
+}
+.flex-two-col {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

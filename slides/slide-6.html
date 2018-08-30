@@ -1,0 +1,396 @@
+<header class="slide__header" id="scalable-layouts">
+    <h1 class="slide__header__title">
+    One Page Template to Rule them All
+    </h1>
+    <h2 class="slide__header__subtitle">Scalable Layouts</h2>
+</header>
+<div class="slide__content">
+<pre class="prettyprint lang-html">
+&lt;div class="demo4">
+&lt;header class="ge-header">
+    &lt;div class="ge-header_hgroup">
+        &lt;h1>Site Title&lt;/h1>
+        &lt;h2>Site Subtitle&lt;/h2>
+    &lt;/div>
+    &lt;nav class="nav nav nav-aux">
+    &lt;ul class="nav_list list list-horizontal">
+        &lt;li class="list_item">&lt;a href="#">Aux 1&lt;/a>&lt;/li>
+        &lt;li class="list_item">&lt;a href="#">Aux 2&lt;/a>&lt;/li>
+    &lt;/ul>
+    &lt;/nav>
+    &lt;nav class="nav nav nav-primary">
+    &lt;ul class="nav_list list list-horizontal">
+        &lt;li class="list_item">&lt;a href="#">main 1&lt;/a>&lt;/li>
+        &lt;li class="list_item">&lt;a href="#">main2 &lt;/a>&lt;/li>
+        &lt;li class="list_item">&lt;a href="#">main 3 &lt;/a>&lt;/li>
+        &lt;li class="list_item">&lt;a href="#">main 4 &lt;/a>&lt;/li>
+    &lt;/ul>
+    &lt;/nav>
+&lt;/header>
+&lt;main class="main">
+&lt;aside class="sidebar">
+    &lt;h1>A sidebar&lt;/h1>
+    &lt;nav class="nav nav">
+        &lt;ul class="list list-vertical">
+            &lt;li class="list_item">&lt;a href="" title="">sidenav 1&lt;/a>&lt;/li>
+            &lt;li class="list_item">&lt;a href="" title="">sidenav 2&lt;/a>&lt;/li>
+            &lt;li class="list_item">&lt;a href="" title="">sidenav 3&lt;/a>&lt;/li>
+        &lt;/ul>
+    &lt;/nav>
+&lt;/aside>
+    &lt;section class="content">
+        &lt;aside class="sidebar">
+            &lt;h1>A sidebar&lt;/h1>
+            &lt;article class="product">
+                &lt;h1 class="product__title">Nifty Widget &trade;&lt;/h1>
+                &lt;p>This related-ish widget is similar to the regular widget&lt;/p>
+                &lt;div class="product__cost">$21.99&lt;/div>
+                &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+            &lt;/article>
+
+            &lt;article class="product">
+                &lt;h1 class="product__title">Less Nifty Widget &trade;&lt;/h1>
+                &lt;p>This premium widget is similar to the regular widget&lt;/p>
+                &lt;div class="product__cost">$9.99&lt;/div>
+                &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+            &lt;/article>
+            &lt;article class="product">
+                &lt;h1 class="product__title">Widget &trade;&lt;/h1>
+                &lt;p>This not so related widget  to the regular widget&lt;/p>
+                &lt;div class="product__cost">$12.99&lt;/div>
+                &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+            &lt;/article>
+        &lt;/aside>
+        &lt;header class="content_header">
+        &lt;h2>Premium Widgets&lt;/h2>
+        &lt;h3>Available at a store near you&lt;/h3>
+        &lt;/header>
+        &lt;article class="product">
+            &lt;h1 class="product__title">Premium Widget &trade;&lt;/h1>
+            &lt;p>This premium widget is superior to the regular widget&lt;/p>
+            &lt;div class="product__cost">$25.99&lt;/div>
+            &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        &lt;/article>
+
+        &lt;article class="product">
+            &lt;h1 class="product__title">Premium Widget &trade;&lt;/h1>
+            &lt;p>This premium widget is superior to the regular widget&lt;/p>
+            &lt;div class="product__cost">$25.99&lt;/div>
+            &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        &lt;/article>
+        &lt;article class="product">
+            &lt;h1 class="product__title">Premium Widget &trade;&lt;/h1>
+            &lt;p>This premium widget is superior to the regular widget&lt;/p>
+            &lt;div class="product__cost">$25.99&lt;/div>
+            &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        &lt;/article>
+        &lt;figure class="featured">
+            &lt;div class="featuredWrapper">
+                &lt;div class="featured_product">
+                    &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+                &lt;/div>
+                &lt;div class="featured_product">
+                    &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+                &lt;/div>
+                &lt;div class="featured_product">
+                    &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+                &lt;/div>
+                &lt;div class="featured_product">
+                    &lt;img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+                &lt;/div>
+            &lt;/div>
+            &lt;figcaption>Check out these sweet products&lt;/figcaption>
+            
+        &lt;/figure>
+    &lt;/section>
+&lt;/main>
+&lt;footer class="ge-footer">
+    &lt;small>Copyright. All rights reserved&lt;/small>
+&lt;/footer>
+&lt;/div>
+</div>
+<div class="slide__content">
+    <pre class="prettyprint lang-css">
+.demo4 {
+  font-family: arial, sans-serif;
+  width: 40em;
+  margin: 0 auto;
+}
+.demo4 .ge-header,
+.demo4 .ge-footer {
+  width: 100%;
+  min-height: 80px;
+}
+.demo4 .ge-header {
+  border-bottom: 2px solid #808080;
+}
+.demo4 .ge-header_hgroup {
+  float: left;
+}
+.demo4 .nav .list {
+  list-style-type: none;
+  width: inherit;
+}
+.demo4 .nav .list_item {
+  margin: 2.5%;
+}
+.demo4 .nav .list-horizontal .list_item {
+  float: left;
+  display: inline-block;
+}
+.demo4 .nav-aux {
+  float: right;
+  width: 45%;
+}
+.demo4 .nav-aux .list {
+  float: right;
+}
+.demo4 .nav-primary {
+  width: 100%;
+  clear: both;
+}
+.demo4 .sidebar {
+  float: left;
+  width: 25%;
+  height: 100%;
+}
+.demo4 .main > .sidebar {
+  border-right: 1px solid #808080;
+}
+.demo4 .main::after,
+.demo4 .main::before {
+  content: '';
+  display: table;
+}
+.demo4 .main::after {
+  clear: both;
+}
+.demo4 .main: {
+  zoom: 1;
+}
+.demo4 article {
+  padding: 2.5%;
+  margin: 2.5%;
+}
+.demo4 .content .sidebar {
+  float: right;
+  border-left: 1px solid #808080;
+}
+.demo4 .content .sidebar + * {
+  float: left;
+}
+.demo4 .featured_product {
+  float: left;
+}
+.demo4 .featured_product:nth-last-of-type(2):first-of-type,
+.demo4 .featured_product:nth-last-of-type(2):first-of-type ~.product {
+  width: 50%;
+}
+.demo4 .featured_product:nth-last-of-type(3):first-of-type,
+.demo4 .featured_product:nth-last-of-type(3):first-of-type ~.product {
+  width: 33%;
+}
+.demo4 .featured_product:nth-last-of-type(4):first-of-type,
+.demo4 .featured_product:nth-last-of-type(4):first-of-type ~.product {
+  width: 25%;
+}
+
+    </pre>
+</div>
+<div class="slide__content">
+<style type="text/css">
+.demo4 {
+  font-family: arial, sans-serif;
+  width: 40em;
+  margin: 0 auto;
+}
+.demo4 .ge-header,
+.demo4 .ge-footer {
+  width: 100%;
+  min-height: 80px;
+}
+.demo4 .ge-header {
+  border-bottom: 2px solid #808080;
+}
+.demo4 .ge-header_hgroup {
+  float: left;
+  display: inline-block;
+  width: 45%;
+}
+.demo4 .nav .list {
+  list-style-type: none;
+  width: inherit;
+}
+.demo4 .nav .list_item {
+  margin: 2.5%;
+}
+.demo4 .nav .list-horizontal .list_item {
+  display: inline-block;
+}
+.demo4 .nav-aux {
+  float: right;
+  width: 45%;
+  display: inline-block;
+}
+.demo4 .nav-aux .list-horizontal .list_item{
+  float:right;
+
+}
+.demo4 .nav-aux .list {
+  float: right;
+  width: 100%;
+}
+.demo4 .nav-primary {
+  width: 100%;
+  clear: both;
+}
+.demo4 .sidebar {
+  float: left;
+  width: 25%;
+  height: 100%;
+}
+.demo4 .main > .sidebar {
+  border-right: 1px solid #808080;
+}
+.demo4 .main::after,
+.demo4 .main::before {
+  content: '';
+  display: table;
+}
+.demo4 .main::after {
+  clear: both;
+}
+.demo4 .main: {
+  zoom: 1;
+}
+.demo4 article {
+  padding: 2.5%;
+  margin: 2.5%;
+}
+.demo4 .content .sidebar {
+  float: right;
+  border-left: 1px solid #808080;
+}
+.demo4 .content .sidebar + * {
+  float: left;
+}
+.demo4 .featured_product {
+  float: left;
+}
+.demo4 .featured_product:nth-last-of-type(2):first-of-type,
+.demo4 .featured_product:nth-last-of-type(2):first-of-type ~.product {
+  width: 50%;
+}
+.demo4 .featured_product:nth-last-of-type(3):first-of-type,
+.demo4 .featured_product:nth-last-of-type(3):first-of-type ~.product {
+  width: 33%;
+}
+.demo4 .featured_product:nth-last-of-type(4):first-of-type,
+.demo4 .featured_product:nth-last-of-type(4):first-of-type ~.product {
+  width: 25%;
+}
+</style>
+<div class="demo4">
+<header class="ge-header">
+    <div class="ge-header_hgroup">
+        <h1>Site Title</h1>
+        <h2>Site Subtitle</h2>
+    </div>
+    <nav class="nav nav nav-aux">
+    <ul class="nav_list list list-horizontal">
+        <li class="list_item"><a href="#">Aux 1</a></li>
+        <li class="list_item"><a href="#">Aux 2</a></li>
+    </ul>
+    </nav>
+    <nav class="nav nav nav-primary">
+    <ul class="nav_list list list-horizontal">
+        <li class="list_item"><a href="#">main 1</a></li>
+        <li class="list_item"><a href="#">main2 </a></li>
+        <li class="list_item"><a href="#">main 3 </a></li>
+        <li class="list_item"><a href="#">main 4 </a></li>
+    </ul>
+    </nav>
+</header>
+<main class="main">
+<aside class="sidebar">
+    <h1>A sidebar</h1>
+    <nav class="nav nav">
+        <ul class="list list-vertical">
+            <li class="list_item"><a href="" title="">sidenav 1</a></li>
+            <li class="list_item"><a href="" title="">sidenav 2</a></li>
+            <li class="list_item"><a href="" title="">sidenav 3</a></li>
+        </ul>
+    </nav>
+</aside>
+    <section class="content">
+        <aside class="sidebar">
+            <h1>A sidebar</h1>
+            <article class="product">
+                <h1 class="product__title">Nifty Widget &trade;</h1>
+                <p>This related-ish widget is similar to the regular widget</p>
+                <div class="product__cost">$21.99</div>
+                <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+            </article>
+
+            <article class="product">
+                <h1 class="product__title">Less Nifty Widget &trade;</h1>
+                <p>This premium widget is similar to the regular widget</p>
+                <div class="product__cost">$9.99</div>
+                <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+            </article>
+            <article class="product">
+                <h1 class="product__title">Widget &trade;</h1>
+                <p>This not so related widget  to the regular widget</p>
+                <div class="product__cost">$12.99</div>
+                <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+            </article>
+        </aside>
+        <header class="content_header">
+        <h2>Premium Widgets</h2>
+        <h3>Available at a store near you</h3>
+        </header>
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+        <article class="product">
+            <h1 class="product__title">Premium Widget &trade;</h1>
+            <p>This premium widget is superior to the regular widget</p>
+            <div class="product__cost">$25.99</div>
+            <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+        </article>
+        <figure class="featured">
+            <div class="featuredWrapper">
+                <div class="featured_product">
+                    <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+                </div>
+                <div class="featured_product">
+                    <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+                </div>
+                <div class="featured_product">
+                    <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+                </div>
+                <div class="featured_product">
+                    <img class="product__img" src="http://placeimg.com/120/120/tech" alt="widget"/>
+                </div>
+            </div>
+            <figcaption>Check out these sweet products</figcaption>
+            
+        </figure>
+    </section>
+</main>
+<footer class="ge-footer">
+    <small>Copyright. All rights reserved</small>
+</footer>
+</div>
+</div>
+

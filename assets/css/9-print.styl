@@ -1,0 +1,54 @@
+@media print {
+    html {
+        font-size: 18pt;
+    }
+    .slideNav {
+        display :none;
+    }
+  .ge-header {
+    width: 100%;
+    height: 6pt;
+  }
+  .ge-header__title {
+    font-size: 2em;
+    margin: 0em 0 0 0em;
+  }
+  .ge-header__subtitle {
+    font-size: 2.25em;
+  }
+  .ge-header__logo {
+    width: 18em;
+    height: 6em;
+    position: static;
+    
+  }
+  .ge-footer {
+    display: none;
+  }
+  .slide {
+    &__header {
+        page-break-before: always;
+        running-head: chapter;
+    }
+    &__content {
+        page-break-after: always;
+        page-break-inside: avoid;
+        border: 2px solid #dae4ec;
+        padding: 2cm;
+        running-head: section;
+
+    }
+    &__footer {
+        display: none;
+    }
+   a[href^=http]:after {
+      content:" <" attr(href) "> ";
+   }
+  }
+  
+  @page {
+    margin: 1cm;
+    size: portrait;
+  }
+
+}

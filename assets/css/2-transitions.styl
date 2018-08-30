@@ -1,0 +1,41 @@
+
+/*===============
+    #Transition effects
+===============*/
+slideAnim(name) {
+    animation-name: name;
+    animation-duration: .75s;
+    animation-iteration-count: 1;
+    
+}
+
+@keyframes slideUpToHidden {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-130vh);
+
+  }
+}
+
+@keyframes slideUpToVisible {
+  from {
+    transform: translateY(130vh);
+  }
+  to {
+    transform: translateY(0);
+
+  }
+}
+
+
+@keyframes slideDownToVisible {
+  from {
+    transform: translateY(-100vh);
+  }
+  to {
+    transform: translateY(0);
+
+  }
+}
