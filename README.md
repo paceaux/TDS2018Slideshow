@@ -1,4 +1,4 @@
-# Tridion Developer Summit 2015 Slideshow
+# Tridion Developer Summit 2018 Slideshow
 
 ## Installation
 
