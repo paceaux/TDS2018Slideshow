@@ -14,50 +14,21 @@
 </div>
 
 <div class="slide__content">
-<h2>The Solution</h2>
-<p>The best way to output a content-author's preferences for a given jQuery widget is to do it within the markup that has been generated. For this, the <code>data-</code> attribute is our friend</p>.
-<pre class="prettyprint lang-html">
-&lt;div id="video__player2" data-video='{"height": "300px", "type":"embed"}' data-video-url="http://nationwide.dist.sdlmedia.com/Distributions/?o=1F2C97BE-DE64-467C-A6D1-3A5DCFE38215" data-video-player='{"autoplay": "false"}'></div>
+<h2></h2>
 
-</pre>
 </div>
 <div class="slide__content">
-<ul>
-    <li>A data attribute can contain any kind of string we want, even JSON </li>
-    <li>We can give our attribute any name we want, so long as it starts with <code>data-</code></li>
-    <li>Browsers that support the <code>data-</code> attribute will create a <code>dataset</code> property on the element that we can access</li>
+
 </div>
 
 <div class="slide__content">
 <h2>Modifying a jQuery plugin</h2>
-<p>You can modify  any existing plugin to accept <code>data-</code> attributes.</p>
 
-<pre class="prettyprint lang-js">
-    /*Added to the top of the plugin*/
-this.data = $.extend($(this).data('sdlmm'), params);
-</pre>
-<p>
-Then, loop over the data attributes and add them to the data:
-</p>
-<pre class="prettyprint lang-js">
-    /*Added near the top, before you get too deep into the plugin*/
-for (var attr, i = 0, attrs = $this[0].attributes, l = attrs.length; i < l; i++) {
-    attr = attrs.item(i);
-    if (attr.nodeName.match('data-sdlmm-')) {
-        name = attr.nodeName.replace('data-sdlmm-', '');
-        this.data[name] = attr.nodeValue;
-    }
-}
-    </pre>
+
+
+
     </div>
 <div class="slide__content">
-<h2>The Big Idea</h2>
-<p>jQuery plugins can easily be made CMS-friendly if you employ <code>data-</code> attributes. </p>
-<p data-fx="callout">You need to partner with your front-end developers to design the schema for your plugins</p>
-<p><code>&lt;shameless-plug></code>There's even some examples for you to see:</p>
-<ul>
-    <li><a href="https://github.com/paceaux/Media-Manager-Plugins-for-Tridion" target="_blank">Media Manager plugins</a></li>
-    <li><a href="https://github.com/paceaux/flex-modal" target="blank">Modal Window</a></li>
-    <li><a href="http://blog.frankmtaylor.com/2014/03/27/cms-friendly-jquery-widgets/" target="blank">A helpful blog post</a></li>
-</ul>
+<h2></h2>
+
 </div>
