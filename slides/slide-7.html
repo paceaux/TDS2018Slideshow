@@ -1,19 +1,16 @@
-<header class="slide__header" id="content-manageable-jquery-plugins">
+<header class="slide__header" id="node-and-dxa">
     <h1 class="slide__header__title">
-    JavaScript
+    The Bad Side of Node
     </h1>
-    <h2 class="slide__header__subtitle">Content Manageable jQuery Plugins </h2>
+    <h2 class="slide__header__subtitle">Node Together with DXA? </h2>
 </header>
 <div class="slide__content">
 <h2>The Problem</h2>
-<p>jQuery plugins are used everywhere, and there's millions to choose from. But few were made to work well with a CMS.</p>
-<p>The challenge is when a content author wants to be able to control something within the jQuery plugin. </p>
-<ul data-fx="fadein">
-<li>Content Authors don't usually know JavaScript</li>
-<li>Generating <code>script</code> elements on the page containing parameters can get messy</li>
-<li>Generating JavaScript from a schema can be time-consuming</li>
-</ul>
-
+<p>Except that it has to call the OData (micro-services) directly... and manually handle everything... BUT, if you did reverse engineer and duplicate the Tridion libraries and create Node compatible one . . . that would be AWESOME!</p>
+<p>It's all totally possible, and would be a SMART thing to prevent from every single api working with raw OData responses, etc...</p>
+<p>Yeah... the Tridion API has additional methods that use other endpoints -- that have to be done just right with encoding, syntax, etc.  Such as the Metadata search endpoint.</p>
+<p>because I want to make the point that the idea of a content-api is a good idea with node. But it's still just a layer (façade) over Odata. So you accomplish a goal of creating a service that works easier for applications </p>
+<p>BAD thing that Sodexo did was "assume" that just because DXA is provided that there are no risks of bugs -- or serious-server-stability-crashing-bugs....</p>
 </div>
 
 <div class="slide__content">
