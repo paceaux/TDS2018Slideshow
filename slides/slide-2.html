@@ -5,14 +5,55 @@
     <h2 class="slide__header__subtitle">ES6++</h2>
 </header>
 <div class="slide__content">
-<h3></h3>
 
+<h3>ES6 / ECMAScript 2015<sup>1</sup></h3>
+<ul>
+    <li><samp>const, let</samp> block-scoped variables</li>
+    <li><samp>()=>{}</samp>Arrow functions; "lambdas", with added bonus of inheriting <code>this</code> </li>
+    <li><samp>class, super, extends, static</samp>Classes; Syntactic sugar for being object-oriented</li>
+    <li><samp>import, export</samp> Modules; The ability to import and export JavaScript files </li>
+    <li><samp>`Hello ${planet}`</samp> Template Literals (strings that allow multilines and variable interpolation) </li>
+    <li><samp>Promise()</samp> Promises; a way to guarantee asynchronous functions always resolve</li>
+    <li><samp>const { mammalia } = Chordata </samp>Destructuring; it's better than <code>mammalia = Chordata.mammalia</code> </li>
+    <li><samp>function isVenomous (isAustralian = false){} </samp> Default parameters FTW </li>
+    
+</ul>
 </div>
 <div class="slide__content">
-
+    <h3>ES7 / ECMAScript 2016<sup>2</sup></h3>
+    <ul>
+        <li><samp>['mammals', 'reptiles'].includes('mammals')</samp> A better way to find things in an array</li>
+        <li><samp>3**2; // 9</samp> An exponents operator</li>
+    </ul>
+    <img src ="content-assets/es7-hipster.jpg" alt="hipster who thinks ES6 is too mainstream" style="width:20%" />
 </div>
 <div class="slide__content">
+    <h3>ES8 / ECMAScript 2017<sup>3</sup></h3>
+    <ul>
+        <li><samp>'foo'.padStart(4); 'foo'.padEnd('4')</samp> String padding. </li>
+        <li><samp>Object.entries(mammalia)</samp>Get enumerable parts of an object as an array</li>
+        <li><samp>Object.values(mammalia)</samp>Get the values from properties as an array</li>
+        <li><samp>async/await</samp> A cleaner way to deal with promises<sup>*</sup>
+            <pre class="prettyprint lang-javascript" >
+            async function animalsOnBoat() {
+                const  canEat = await ajaxGetAnimals('kosher');
+                const  cannotEat = await ajaxGetAnimals('unkosher');
 
+                return canEat.length + cannotEat.length;
+            }</pre>
+
+        </li>
+    </ul>
+    <small>* May require a <code>try/catch</code></small>
 </div>
+<footer class="slide__content slide__content--footer">
+    <h3>The Big Idea</h3>
+    <p>JavaScript is getting better. <span data-fx="highlight">It's starting to look more like the kind of language you'd want to build software with.</span></p>
 
+    <p class="slide__sources">
+        <small>1</small><a href="https://webapplog.com/es6/">Web App Blog</a> <br />
+        <small>2</small><a href="https://medium.freecodecamp.org/ecmascript-2016-es7-features-86903c5cab70">Sanket Meghani</a> <br />
+        <small>3</small><a href="https://dormoshe.io/articles/es8-was-released-and-here-are-its-main-new-features-15">Dor Moshe</a>
+    </p>
+</footer>
 
