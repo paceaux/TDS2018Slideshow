@@ -5,18 +5,83 @@
     <h2 class="slide__header__subtitle">When Other Frameworks Try to Node </h2>
 </header>
 <div class="slide__content">
-<h2>Node and .net core</h2>
+        <h2>Story time</h2>
+        <ul>
+            <li data-fx="fadein">It's a B2B Project; our client is providing websites to about 700 of their clients</li>
+            <li data-fx="fadein">Each "end-client" may have multiple sites with the same brand, but a different purpose (main, blog, etc)</li>
+            <li data-fx="fadein">We'd have upwards of 1,000 content authors</li>
+            <li data-fx="fadein">End-client need to have some control over the brand </li>
+            <li data-fx="fadein">Need to offer user authentication</li>
+            <li data-fx="fadein">Need to offer some "dynamic content"</li>
+            <li data-fx="fadein">Going to be hosted on AWS</li>
+        </ul>
+    <p></p>
+</div>
+<div class="slide__content">
+    <h2>An Architecture that we tried</h2>
 
+    <ul>
+        <li>DXA would become a Rest API</li>
+        <li>The front-end would be a .net core + vue.js </li>
+        <li>Authentication would be handled by a .net core application that talked to audience manager endpoints</li>
+    </ul>
+
+    <h3>Motivations</h3>
+        <p data-fx="fadein">We didn't want one huge app; three small apps would be easier to scale</li>
+        <p data-fx="fadein">Platform independence; only the content api <em>had</em> to be on windows</li>
+        <p data-fx="fadein">Application independence; we could run our web app against dev, QA, or production content-services</p>
+        <p data-fx="fadein">We had a small team with disparate skills; our front-end dev didn't want to write C# or razor, and our back-end dev didn't want to write front-end</p>
+    </div>
+<div class="slide__content">
+    <h2>.NET core with node</h2>
+    <ul>
+        <li>Node is still single-threaded; we were worried about CPU usage</li>
+        <li>.net core offers this groovy feature called Node Services<sup>1</sup></li>
+        <li>Node Services allows .net core to run JavaScript in a Node environment</li>
+    </ul>
+
+    <p>The main reason that folks might want to try Node Services is for the packages. There's a lot more in NPM than there is in Nuget </p>
 
 </div>
 <div class="slide__content">
-<h2></h2>
+    <h2>_layout.cshtml</h2>
+    <pre class="prettyprint lang-html">
+@model App.ViewModels.SpaViewModel
+&lt;body class="@Html.Raw(Model.HtmlClasses)"&gt;
+    @if (Model.XpmEnable) {
+        @Html.Raw(Model.PageXpmHtml);
+    }
+    @RenderBody();
+    @RenderSection("topscripts", required: false)
+    &lt;script src="/dist/main.min.js"&gt;&lt;/script&gt;
+    @RenderSection("scripts", required: false)
+&lt;/body&gt;
+    </pre>
 
+    <h2>Any ol' page view:</h2>
+    <pre class="prettyprint lang-html">
+@model App.SpaViewModel
+&lt;div class="my-app" asp-prerender-module="wwwroot/main.js" asp-prerender-data="Model" asp-&gt;&lt;/div&gt;
+    </pre>
 </div>
 <div class="slide__content">
-<h2></h2>
+    <h2>The Ugly side of Integrating Node with .net core</h2>
 
+    <h3>Confusing views</h3>
+    <p>We had views of identical name in two places, for two languages.</p>
+    <ul>
+        <li>In our setup, we had to create a .cshtml page for each page template. </li>
+        <li>We still had to create Vue versions of our page templates</li>
+    </ul>
+    <h3>Node could crash the .net core app</h3>
+    <p>Node, still being single-threaded, could bring the app to a screeching halt under the right conditions.  This is because .net core is expecting something to be returned from the Node Service.</p>
+    
+    <p>This means a <code>while</code> loop that never terminated would lock up .net core. Logic inside of .vue files was safe as the framework had plenty of logic for handling errors. But logic not used by the templating framework had to be extremely well tested.</p>
+    <p></p>
+    
 </div>
-<div class="slide__content">
-<h2>The Big Idea</h2>
-</div>
+<footer class="slide__content slide__content--footer">
+    <p class="slide__sources">
+        <small>1</small><a href="https://dotnetthoughts.net/using-node-services-in-aspnet-core/">dot net thoughts</a> <br />
+    </p>
+</footer>
