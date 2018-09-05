@@ -12,21 +12,47 @@
         The final product is a single "bundle" that is ready to be executed <span data-fx="highlight">by the browser</span></p>
 
         
-        <p data-fx="sizebounce"><strong>But what if the browser isn't executing your code</strong></p>
+        <p data-fx="fadein"><strong>But what if the browser isn't executing your code?</strong></p>
 </div>
 
 
 <div class="slide__content">
-    <h2></h2>
+    <h2>Debugging Webpack</h2>
+    <p>It's easy to debug a webpack bundle in the browser. Because the browser has debugging tools.</p>
+    <p>At worst, you may need to modify a webpack config to add map files or prevent obfuscation/minification.</p>
+
+     <p>When Webpack bundles an entire SPA, and then turns it over to .net core's Node Services, you lose the ability to debug.</p>
+
+     <p>All we had for debugging was <code>console.log()</code>. We could set breakpoints on the .net parts of the implementation, but not on the JavaScript!</p>
 
 </div>
+
 <div class="slide__content">
-<h3></h3>
+        <h2>Stateless-state-based SPAs</h2>
+        <p>JavaScript frameworks like React and Vue are state-based. That means they store data as a "state" and then the DOM is rendered and re-rendered based on that "state".</p>
 
-</div>
-<div class="slide__content flex-two-col">
+        <p>Our "state" was the page model that we'd retrieved from our Content API.</p>
 
-</div>
-<div class="slide__content">
-<h2>The Big Idea</h2>
-</div>
+        <p>.net core was passing a model into the Node Services, and it was getting HTML rendered by Vue back. </p>
+
+        <p>Since we were getting fully-rendered HTML, we lost out on an important feature: replenishing "state" (called hydration) after page load</p>
+        
+        <p>The <em>advantage</em> of getting fully-rendered HTML, though, was that XPM worked flawlessly. Because it wasn't really a SPA. </p>
+    
+    </div>
+
+<footer class="slide__content slide__content--footer">
+    <h2>What We Learned with Node.js as a part of our front-end Architecture</h2>
+
+    <li>Separating the architecture into multiple applications was a good idea</li>
+    <li>.net core wasn't a bad idea as an agility layer within our front-end application</li>
+    <li>The way that .net core evaluated JavaScript revealed a weak point in our architecture </li>
+    <li>Not being able to debug a SPA in any runtime is a serious bummer </li>
+    <li>We lost out on some of the cool flexibility of Vue, like being able to hydrate state in the browser</li>
+
+    <h2>What we'd do differently</h2>
+    <ul>
+        <li>Unit-testing in the non-vue JavaScript</li>
+        <li>Consider a pure node.js front-end; it'd give us the ability to debug the templating, and also properly hydrate state</li>
+    </ul>
+</footer>
