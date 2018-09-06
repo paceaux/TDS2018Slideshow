@@ -56,6 +56,11 @@ fxAnimation(name) {
 &[data-fx*="sizebounce"] {
     
 }
+
+&[data-fx*="underline"] {
+    border-bottom: 1px solid transparent;
+}
+
 .fx {
 
     &-slidefromleft {
@@ -90,6 +95,10 @@ fxAnimation(name) {
         animation-name: sizeBounce;
         animation-iteration-count: 2;
         animation-duration: 1.5s;
+    }
+
+    &-underline {
+        border-color: colorCoolest;
     }
 
 }
