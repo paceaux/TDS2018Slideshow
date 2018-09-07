@@ -7,32 +7,54 @@
 <div class="slide__content">
     <h2>Story Time</h2>
     <ul>
-        <li data-fx="fadein">It's a B2B project; our client has a few websites available in dozens of language </li>
+        <li data-fx="fadein">It's a B2B project; our client has a few websites available in dozens of languages </li>
         <li data-fx="fadein">Client has multiple sites in multiple languages with same brand, different layouts </li>
-        <li data-fx="fadein">Client's main sites were already using DXA</li>
+        <li data-fx="fadein"><span data-fx="underline">Client's main sites were already using DXA</span></li>
         <li data-fx="fadein">Client has content that is displayed in screens in on-site facilities; not strictly "web content"</li>
-        <li data-fx="fadein">The content stored in the CMS will have variables. Those variables will get resolved in an application which manages the on-site displays</li>
+        <li data-fx="fadein">The content stored in the CMS will have variables&hellip; that get resolved outside of our applications&hellip;</li>
     </ul>
 </div>
 <div class="slide__content">
     <h2>An Architecture that we tried</h2>
     <ul>
-        <li>We would use DXA TBBs in Tridion</li>
-        <li>We would build a Rest API in Node.js that provided content</li>
-        <li>A third party would be responsible for managing the screen displays</li>
-        <li>But we had to build a site preview that showed what content would look like in those displays</li>
+        <li>We were already using DXA for the main sites, so we'd keep using DXA TBBs in Tridion</li>
+        <li>We would build a Rest API in Node.js so that these custom displays could have a Restful API</li>
+        <li>We would  build component templates in DXA so that content authors could use XPM and get a "preview" of what their edits would look like on a physical device</li>
     </ul>
 
     <h3>Motivations</h3>
-    <p data-fx="fadein"></p>
-    <p data-fx="fadein">This wasn't browser content, client didn't need a web app</p>
-    <p data-fx="fadein">The client needed an API for another application</p>
-    <p data-fx="fadein">The client suggested node.js because it would appeal to their skillsets </p>
+    <ul>
+    <li data-fx="fadein">We needed an endpoint</li>
+    <li data-fx="fadein">We didn't want to build something custom with the DXA web app</li>
+    <li data-fx="fadein">The client was already using Node.js for other applications </li>
+    </ul>
 </div>
 <div class="slide__content">
     <h3>Building a Rest API with node</h3>
     <p>This is kind of node's bread and butter here. Node loves it some Rest APIs</p>
-    <p>We created a facade for the OData microservices. Instead of OData requests, we made much more routed API requests. All using GET. </p>
+    <p>Our Rest API was more of a façade for the OData microservices </p>
 
+    <div data-fx="fadein">
+        <img class="slide__media" style="width: 300px; float:left; margin-right: 1.618em" src="https://media.giphy.com/media/xT77Y36ijyuwn58bja/giphy.gif" alt="so what's the problem" />
+        <p>So what's the problem?</p>
+    </div>
+</div>
+<div class="slide__content">
+    <h2>There was a complexity that we left&hellip; complex</h2>
+    <ul>
+            <li>The thing on-site that was consuming this data was <em>also</em> Node.js</li>
+            <li>It needed to stay on-site for an important reason. The content had variables in it that needed to be interpolated</li>
+    </ul>
+    <figure>
+        <figcaption>This is the content that was coming out of our API:</figcaption>
+            <pre class="prettyprint lang-json">
+"SomeData" :{
+    "content" : "{{Product_name}} is hipper than a scarf in July."
+}
+            </pre>
+    </figure>
+    <p>That variable was determined by hardware on-site based on environmental factors. So the display application was retrieving text <samp>get/genericText</samp>, then getting the environment variable <samp>{ProductId: 123}</samp>, and hitting the Rest API a second time to get the content of that <code>productId</code>.  </p>
+
+    <p>Every piece of content with an environment variable needed 2 Rest calls. <span class="fadein">Just to print out <code>Avocado toast is hipper than a scarf in July</code></span>.</p>
 </div>
 
