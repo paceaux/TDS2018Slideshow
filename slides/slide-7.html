@@ -2,33 +2,35 @@
     <h1 class="slide__header__title">
     The Bad Side of Node
     </h1>
-    <h2 class="slide__header__subtitle">Node Together with DXA? </h2>
+    <h2 class="slide__header__subtitle">When you over-node&hellip; </h2>
 </header>
-<div class="slide__content">
-<h2>The Problem</h2>
-<p>Except that it has to call the OData (micro-services) directly... and manually handle everything... BUT, if you did reverse engineer and duplicate the Tridion libraries and create Node compatible one . . . that would be AWESOME!</p>
-<p>It's all totally possible, and would be a SMART thing to prevent from every single api working with raw OData responses, etc...</p>
-<p>Yeah... the Tridion API has additional methods that use other endpoints -- that have to be done just right with encoding, syntax, etc.  Such as the Metadata search endpoint.</p>
-<p>because I want to make the point that the idea of a content-api is a good idea with node. But it's still just a layer (façade) over Odata. So you accomplish a goal of creating a service that works easier for applications </p>
-<p>BAD thing that Sodexo did was "assume" that just because DXA is provided that there are no risks of bugs -- or serious-server-stability-crashing-bugs....</p>
+<div class="slide__content slide__content--hasMedia">
+    <img class="slide__media" src="content-assets/hipsters-everywhere.jpg" alt="Meme about damned dirty hipsters"/>
 </div>
 
 <div class="slide__content">
-<h2></h2>
+    <h2>Another phase of work, and more Node</h2>
+    <p>
+        We had a new phase of work. This time a section of the existing site would be redone. This client's front-end team decided to use React as a templating engine to generate static HTML.
+    </p>
+    <p data-fx="highlight">So the front-end team needed a Rest API</p>
+
+    <p data-fx="fadein">So our small API that was built for a handful of displays ended up being an API for a web application. We ended up modelling our JSON in JavaScript manually, and missing core features that DXA offers (like link resolving).</p>
 
 </div>
-<div class="slide__content">
+<div class="slide__content slide__content--footer">
+<h2>What we learned with Node.js as a web server</h2>
+<ul>
+    <li>We needed to ask how our end users were consuming our content</li>
+    <li>Because it's JavaScript, the tendency is to reinvent</li>
+    <li>Node-as-a-tool can easily segue into Node-as-an-application without proper architectural oversight </li>
+</ul>
 
-</div>
-
-<div class="slide__content">
-<h2>Modifying a jQuery plugin</h2>
-
-
-
-
-    </div>
-<div class="slide__content">
-<h2></h2>
+<h2>What we'd do differently</h2>
+<ul>
+    <li>If Node is in more than one place in the architecture, we should create a private NPM registry to share code common to both apps</li>
+    <li>We should have looked to DXA for inspiration for how to solve link resolving and content modelling</li>
+    <li>We should have built a proper DXA.js library at the very beginning so that all consumers of our API could use the same code</li>
+</ul>
 
 </div>
