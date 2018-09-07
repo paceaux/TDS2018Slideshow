@@ -3,15 +3,57 @@
     The Good Side of Node
     </h1>
     <h2 class="slide__header__subtitle">Web Sockets </h2>
-
 </header>
 <div class="slide__content">
 <h2>WTHaWS (What the heck are web sockets)</h2>
+<p>A web socket is a persistent connection between the client and the server.<sup>1</sup> </p>
 
+<p>What's cool about web sockets is that they're <span data-fx="highlight">event-driven</span></p>
 
+<figure>
+    <figcaption>A Server-side example</figcaption>
+    <pre class="prettyprint lang-javascript">
+const io = require('socket.io')(server);
+
+io.on('connection', socket => {
+    socket.on('regionUpdate', (evt) => {
+        socket.emit('regionsUpdated', evt.data.regions);
+    });
+});
+        </pre>
+</figure>
+
+<figure>
+        <figcaption>A client-side example</figcaption>
+<pre class="prettyprint lang-javascript">
+const socket = io.connect();
+    
+socket.on('regionUpdate', (evt) => {
+    const { regions } = evt.data;
+
+    updateRegions(regions);
+});
+            </pre>
+    </figure>
 </div>
 <div class="slide__content">
-<h2>Web Sockets in a web site </h2>
+    <h2>But what can we do with it</h2>
+    <ul>
+        <li>Chat Applications are the obvious thing</li>
+        <li>Real time user messaging (emergency messages)</li>
+        <li>Smarter Smart Target: track cursor movements, scroll behaviors, send and receive new claims on-page, without a refresh</li>
+        <li>Real-time MVC?</li>
+    </ul>
+</div>
+<div class="slide__content">
+<h2> What could a real-time MVC framework look like?</h2>
 
 <div style="width: 61vw; height: 60vh; margin: 0 auto; position: relative;"><iframe allowfullscreen frameborder="0" style="width:61vw; height:60vh" src="https://www.lucidchart.com/documents/embeddedchart/060118d9-a302-4237-8650-815bd8470573" id="fyS_mppphCCI"></iframe></div>
 </div>
+
+<footer class="slide__content slide__content--footer">
+
+    <p class="slide__sources">
+        <small>1</small> <a href="https://www.html5rocks.com/en/tutorials/websockets/basics/" target="_blank"> HTML5 Rocks/</a>
+    </p>
+</footer>
